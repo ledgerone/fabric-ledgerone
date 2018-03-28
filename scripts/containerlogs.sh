@@ -6,7 +6,7 @@
 #
 
 
-cd $HOME/gopath/src/github.com/hyperledger/fabric/bddtests
+cd $HOME/gopath/src/github.com/ledgerone/fabric-ledgerone/bddtests
 
 count=$(git ls-files -o | wc -l)
 

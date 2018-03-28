@@ -14,10 +14,10 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	localconfig "github.com/hyperledger/fabric/orderer/common/localconfig"
-	cb "github.com/hyperledger/fabric/protos/common"
-	ab "github.com/hyperledger/fabric/protos/orderer"
-	"github.com/hyperledger/fabric/protos/utils"
+	localconfig "github.com/ledgerone/fabric-ledgerone/orderer/common/localconfig"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	ab "github.com/ledgerone/fabric-ledgerone/protos/orderer"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/net/context"

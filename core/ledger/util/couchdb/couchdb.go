@@ -37,8 +37,8 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/core/ledger/ledgerconfig"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/ledgerconfig"
 	logging "github.com/op/go-logging"
 )
 

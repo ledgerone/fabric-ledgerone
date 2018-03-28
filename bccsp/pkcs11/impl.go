@@ -24,10 +24,10 @@ import (
 	"math/big"
 	"os"
 
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/bccsp/sw"
-	"github.com/hyperledger/fabric/bccsp/utils"
-	"github.com/hyperledger/fabric/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/bccsp"
+	"github.com/ledgerone/fabric-ledgerone/bccsp/sw"
+	"github.com/ledgerone/fabric-ledgerone/bccsp/utils"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
 	"github.com/miekg/pkcs11"
 	"github.com/pkg/errors"
 )

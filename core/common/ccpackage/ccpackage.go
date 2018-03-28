@@ -22,10 +22,10 @@ import (
 	"fmt"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/msp"
-	"github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/peer"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/msp"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 )
 
 // ExtractSignedCCDepSpec extracts the messages from the envelope

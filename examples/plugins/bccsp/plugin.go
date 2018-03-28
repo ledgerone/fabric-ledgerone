@@ -9,7 +9,7 @@ import (
 	"C"
 	"hash"
 
-	"github.com/hyperledger/fabric/bccsp"
+	"github.com/ledgerone/fabric-ledgerone/bccsp"
 )
 
 type impl struct{}

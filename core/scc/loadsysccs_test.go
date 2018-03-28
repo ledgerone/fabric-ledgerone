@@ -16,13 +16,13 @@ import (
 	"os/exec"
 	"testing"
 
-	"github.com/hyperledger/fabric/core/chaincode/shim"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/shim"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/assert"
 )
 
 const (
-	examplePluginPackage = "github.com/hyperledger/fabric/examples/plugins/scc"
+	examplePluginPackage = "github.com/ledgerone/fabric-ledgerone/examples/plugins/scc"
 	pluginName           = "testscc"
 )
 

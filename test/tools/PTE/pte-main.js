@@ -924,7 +924,7 @@ function createOneChannel(client, org) {
 
                 // readin the envelope to send to the orderer
 /*
-                cfgtxFile=gopath+'/src/github.com/hyperledger/fabric/common/tools/cryptogen/crypto-config/ordererOrganizations/'+channelName+'.tx';
+                cfgtxFile=gopath+'/src/github.com/ledgerone/fabric-ledgerone/common/tools/cryptogen/crypto-config/ordererOrganizations/'+channelName+'.tx';
                 var data =fs.readFileSync(cfgtxFile);
                 console.log('[createOneChannel] Successfully read file: %s', cfgtxFile);
                 var request = {

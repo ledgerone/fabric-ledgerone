@@ -17,8 +17,8 @@ limitations under the License.
 package clilogging
 
 import (
-	"github.com/hyperledger/fabric/peer/common"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/peer/common"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"

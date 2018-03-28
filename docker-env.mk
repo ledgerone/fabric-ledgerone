@@ -60,7 +60,7 @@ DOCKER_NS ?= hyperledger
 DOCKER_TAG=$(ARCH)-$(PROJECT_VERSION)
 PREV_TAG=$(ARCH)-$(PREV_VERSION)
 
-BASE_DOCKER_LABEL=org.hyperledger.fabric
+BASE_DOCKER_LABEL=org.ledgerone.fabric-ledgerone
 
 DOCKER_DYNAMIC_LINK ?= false
 DOCKER_GO_LDFLAGS += $(GO_LDFLAGS)

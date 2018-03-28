@@ -10,7 +10,7 @@ import (
 	"encoding/binary"
 	"testing"
 
-	"github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"github.com/stretchr/testify/assert"
 )
 

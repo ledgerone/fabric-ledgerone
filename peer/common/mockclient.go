@@ -18,8 +18,8 @@ package common
 
 import (
 	"github.com/golang/protobuf/ptypes/empty"
-	cb "github.com/hyperledger/fabric/protos/common"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
 )

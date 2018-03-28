@@ -26,13 +26,13 @@ import (
 	"testing"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/msp"
-	mspmgmt "github.com/hyperledger/fabric/msp/mgmt"
-	"github.com/hyperledger/fabric/msp/mgmt/testtools"
-	"github.com/hyperledger/fabric/protos/common"
-	pb "github.com/hyperledger/fabric/protos/peer"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/common/util"
+	"github.com/ledgerone/fabric-ledgerone/msp"
+	mspmgmt "github.com/ledgerone/fabric-ledgerone/msp/mgmt"
+	"github.com/ledgerone/fabric-ledgerone/msp/mgmt/testtools"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 	"github.com/stretchr/testify/assert"
 )
 

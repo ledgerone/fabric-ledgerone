@@ -23,8 +23,8 @@ package ccintf
 import (
 	"encoding/hex"
 
-	"github.com/hyperledger/fabric/common/util"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/util"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"golang.org/x/net/context"
 )
 

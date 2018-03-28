@@ -22,7 +22,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/hyperledger/fabric/core/config"
+	"github.com/ledgerone/fabric-ledgerone/core/config"
 	"github.com/stretchr/testify/assert"
 )
 

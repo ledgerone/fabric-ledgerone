@@ -16,9 +16,9 @@ import (
 
 	"archive/tar"
 
-	"github.com/hyperledger/fabric/common/metadata"
-	"github.com/hyperledger/fabric/core/chaincode/platforms/golang"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/metadata"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/platforms/golang"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"github.com/stretchr/testify/assert"
 )
 

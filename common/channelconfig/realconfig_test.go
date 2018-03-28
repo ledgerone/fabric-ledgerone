@@ -9,10 +9,10 @@ package channelconfig_test
 import (
 	"testing"
 
-	newchannelconfig "github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/common/tools/configtxgen/encoder"
-	genesisconfig "github.com/hyperledger/fabric/common/tools/configtxgen/localconfig"
-	"github.com/hyperledger/fabric/protos/utils"
+	newchannelconfig "github.com/ledgerone/fabric-ledgerone/common/channelconfig"
+	"github.com/ledgerone/fabric-ledgerone/common/tools/configtxgen/encoder"
+	genesisconfig "github.com/ledgerone/fabric-ledgerone/common/tools/configtxgen/localconfig"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 
 	"github.com/stretchr/testify/assert"
 )

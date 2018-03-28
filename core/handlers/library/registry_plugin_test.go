@@ -19,13 +19,13 @@ import (
 	"golang.org/x/net/context"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"github.com/stretchr/testify/assert"
 )
 
 const (
-	authPluginPackage      = "github.com/hyperledger/fabric/core/handlers/auth/plugin"
-	decoratorPluginPackage = "github.com/hyperledger/fabric/core/handlers/decoration/plugin"
+	authPluginPackage      = "github.com/ledgerone/fabric-ledgerone/core/handlers/auth/plugin"
+	decoratorPluginPackage = "github.com/ledgerone/fabric-ledgerone/core/handlers/decoration/plugin"
 )
 
 func TestLoadAuthPlugin(t *testing.T) {

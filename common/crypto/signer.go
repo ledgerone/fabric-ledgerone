@@ -16,7 +16,7 @@ limitations under the License.
 
 package crypto
 
-import cb "github.com/hyperledger/fabric/protos/common"
+import cb "github.com/ledgerone/fabric-ledgerone/protos/common"
 
 // LocalSigner is a temporary stub interface which will be implemented by the local MSP
 type LocalSigner interface {

@@ -9,13 +9,13 @@ package resourcesconfig
 import (
 	"fmt"
 
-	"github.com/hyperledger/fabric/common/cauthdsl"
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/common/configtx"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/policies"
-	cb "github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/common/cauthdsl"
+	"github.com/ledgerone/fabric-ledgerone/common/channelconfig"
+	"github.com/ledgerone/fabric-ledgerone/common/configtx"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/common/policies"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 
 	"github.com/pkg/errors"
 )

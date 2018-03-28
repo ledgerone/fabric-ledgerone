@@ -10,12 +10,12 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/ledger/testutil"
-	"github.com/hyperledger/fabric/common/util"
-	lutils "github.com/hyperledger/fabric/core/ledger/util"
-	"github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/peer"
-	putils "github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/testutil"
+	"github.com/ledgerone/fabric-ledgerone/common/util"
+	lutils "github.com/ledgerone/fabric-ledgerone/core/ledger/util"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/peer"
+	putils "github.com/ledgerone/fabric-ledgerone/protos/utils"
 	"github.com/op/go-logging"
 	"github.com/stretchr/testify/assert"
 )

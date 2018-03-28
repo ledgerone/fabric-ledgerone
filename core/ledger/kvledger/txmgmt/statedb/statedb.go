@@ -8,8 +8,8 @@ package statedb
 import (
 	"sort"
 
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/version"
-	"github.com/hyperledger/fabric/core/ledger/util"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/version"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/util"
 )
 
 // VersionedDBProvider provides an instance of an versioned DB

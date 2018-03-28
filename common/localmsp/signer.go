@@ -19,9 +19,9 @@ package localmsp
 import (
 	"fmt"
 
-	"github.com/hyperledger/fabric/common/crypto"
-	mspmgmt "github.com/hyperledger/fabric/msp/mgmt"
-	cb "github.com/hyperledger/fabric/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/common/crypto"
+	mspmgmt "github.com/ledgerone/fabric-ledgerone/msp/mgmt"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
 )
 
 type mspSigner struct {

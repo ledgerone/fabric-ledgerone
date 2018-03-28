@@ -24,29 +24,29 @@ import (
 	"testing"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/cauthdsl"
-	mc "github.com/hyperledger/fabric/common/mocks/config"
-	lm "github.com/hyperledger/fabric/common/mocks/ledger"
-	"github.com/hyperledger/fabric/common/mocks/scc"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/chaincode/shim"
-	"github.com/hyperledger/fabric/core/common/ccpackage"
-	"github.com/hyperledger/fabric/core/common/ccprovider"
-	"github.com/hyperledger/fabric/core/common/privdata"
-	"github.com/hyperledger/fabric/core/common/sysccprovider"
-	cutils "github.com/hyperledger/fabric/core/container/util"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
-	per "github.com/hyperledger/fabric/core/peer"
-	"github.com/hyperledger/fabric/core/policy"
-	"github.com/hyperledger/fabric/core/scc/lscc"
-	"github.com/hyperledger/fabric/msp"
-	mspmgmt "github.com/hyperledger/fabric/msp/mgmt"
-	"github.com/hyperledger/fabric/msp/mgmt/testtools"
-	"github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/ledger/rwset/kvrwset"
-	mspproto "github.com/hyperledger/fabric/protos/msp"
-	"github.com/hyperledger/fabric/protos/peer"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/common/cauthdsl"
+	mc "github.com/ledgerone/fabric-ledgerone/common/mocks/config"
+	lm "github.com/ledgerone/fabric-ledgerone/common/mocks/ledger"
+	"github.com/ledgerone/fabric-ledgerone/common/mocks/scc"
+	"github.com/ledgerone/fabric-ledgerone/common/util"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/shim"
+	"github.com/ledgerone/fabric-ledgerone/core/common/ccpackage"
+	"github.com/ledgerone/fabric-ledgerone/core/common/ccprovider"
+	"github.com/ledgerone/fabric-ledgerone/core/common/privdata"
+	"github.com/ledgerone/fabric-ledgerone/core/common/sysccprovider"
+	cutils "github.com/ledgerone/fabric-ledgerone/core/container/util"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/rwsetutil"
+	per "github.com/ledgerone/fabric-ledgerone/core/peer"
+	"github.com/ledgerone/fabric-ledgerone/core/policy"
+	"github.com/ledgerone/fabric-ledgerone/core/scc/lscc"
+	"github.com/ledgerone/fabric-ledgerone/msp"
+	mspmgmt "github.com/ledgerone/fabric-ledgerone/msp/mgmt"
+	"github.com/ledgerone/fabric-ledgerone/msp/mgmt/testtools"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/ledger/rwset/kvrwset"
+	mspproto "github.com/ledgerone/fabric-ledgerone/protos/msp"
+	"github.com/ledgerone/fabric-ledgerone/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -821,7 +821,7 @@ func TestAlreadyDeployed(t *testing.T) {
 
 	ccname := "mycc"
 	ccver := "1"
-	path := "github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02"
+	path := "github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/chaincode_example02"
 
 	ppath := lccctestpath + "/" + ccname + "." + ccver
 
@@ -1160,7 +1160,7 @@ func TestValidateUpgradeOK(t *testing.T) {
 
 	ccname := "mycc"
 	ccver := "1"
-	path := "github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02"
+	path := "github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/chaincode_example02"
 
 	ppath := lccctestpath + "/" + ccname + "." + ccver
 
@@ -1241,7 +1241,7 @@ func TestInvalidateUpgradeBadVersion(t *testing.T) {
 
 	ccname := "mycc"
 	ccver := "1"
-	path := "github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02"
+	path := "github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/chaincode_example02"
 
 	ppath := lccctestpath + "/" + ccname + "." + ccver
 
@@ -1320,7 +1320,7 @@ func TestValidateUpgradeWithPoliciesOK(t *testing.T) {
 
 	ccname := "mycc"
 	ccver := "1"
-	path := "github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02"
+	path := "github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/chaincode_example02"
 
 	ppath := lccctestpath + "/" + ccname + "." + ccver
 
@@ -1421,7 +1421,7 @@ func validateUpgradeWithNewFailAllIP(t *testing.T, v11capability, expecterr bool
 
 	ccname := "mycc"
 	ccver := "1"
-	path := "github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02"
+	path := "github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/chaincode_example02"
 	ppath := lccctestpath + "/" + ccname + "." + ccver
 
 	os.Remove(ppath)
@@ -1515,7 +1515,7 @@ func TestValidateUpgradeWithPoliciesFail(t *testing.T) {
 
 	ccname := "mycc"
 	ccver := "1"
-	path := "github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02"
+	path := "github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/chaincode_example02"
 
 	ppath := lccctestpath + "/" + ccname + "." + ccver
 

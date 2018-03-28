@@ -20,8 +20,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/statedb"
-	"github.com/hyperledger/fabric/core/ledger/util/couchdb"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/statedb"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/util/couchdb"
 )
 
 // TestVDBEnv provides a couch db backed versioned db for testing

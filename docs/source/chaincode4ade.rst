@@ -27,7 +27,7 @@ Chaincode API
 
 Every chaincode program must implement the ``Chaincode interface``:
 
-  - `Go <http://godoc.org/github.com/hyperledger/fabric/core/chaincode/shim#Chaincode>`_
+  - `Go <http://godoc.org/github.com/ledgerone/fabric-ledgerone/core/chaincode/shim#Chaincode>`_
   - `node.js <https://fabric-shim.github.io/ChaincodeInterface.html>`_
 
 whose methods are called in response to received transactions.
@@ -39,7 +39,7 @@ application state. The ``Invoke`` method is called in response to receiving an
 
 The other interface in the chaincode "shim" APIs is the ``ChaincodeStubInterface``:
 
-  - `Go <http://godoc.org/github.com/hyperledger/fabric/core/chaincode/shim#ChaincodeStub>`_
+  - `Go <http://godoc.org/github.com/ledgerone/fabric-ledgerone/core/chaincode/shim#ChaincodeStub>`_
   - `node.js <https://fabric-shim.github.io/ChaincodeStub.html>`_
 
 which is used to access and modify the ledger, and to make invocations between
@@ -80,11 +80,11 @@ Housekeeping
 ^^^^^^^^^^^^
 
 First, let's start with some housekeeping. As with every chaincode, it implements the
-`Chaincode interface <http://godoc.org/github.com/hyperledger/fabric/core/chaincode/shim#Chaincode>`_
+`Chaincode interface <http://godoc.org/github.com/ledgerone/fabric-ledgerone/core/chaincode/shim#Chaincode>`_
 in particular, ``Init`` and ``Invoke`` functions. So, let's add the go import
 statements for the necessary dependencies for our chaincode. We'll import the
 chaincode shim package and the
-`peer protobuf package <http://godoc.org/github.com/hyperledger/fabric/protos/peer>`_.
+`peer protobuf package <http://godoc.org/github.com/ledgerone/fabric-ledgerone/protos/peer>`_.
 Next, let's add a struct ``SimpleAsset`` as a receiver for Chaincode shim functions.
 
 .. code:: go
@@ -94,8 +94,8 @@ Next, let's add a struct ``SimpleAsset`` as a receiver for Chaincode shim functi
     import (
     	"fmt"
 
-    	"github.com/hyperledger/fabric/core/chaincode/shim"
-    	"github.com/hyperledger/fabric/protos/peer"
+    	"github.com/ledgerone/fabric-ledgerone/core/chaincode/shim"
+    	"github.com/ledgerone/fabric-ledgerone/protos/peer"
     )
 
     // SimpleAsset implements a simple chaincode to manage an asset
@@ -120,7 +120,7 @@ Next, we'll implement the ``Init`` function.
           no "migration" or nothing to be initialized as part of the upgrade.
 
 Next, we'll retrieve the arguments to the ``Init`` call using the
-`ChaincodeStubInterface.GetStringArgs <http://godoc.org/github.com/hyperledger/fabric/core/chaincode/shim#ChaincodeStub.GetStringArgs>`_
+`ChaincodeStubInterface.GetStringArgs <http://godoc.org/github.com/ledgerone/fabric-ledgerone/core/chaincode/shim#ChaincodeStub.GetStringArgs>`_
 function and check for validity. In our case, we are expecting a key-value pair.
 
   .. code:: go
@@ -139,7 +139,7 @@ function and check for validity. In our case, we are expecting a key-value pair.
 
 Next, now that we have established that the call is valid, we'll store the
 initial state in the ledger. To do this, we will call
-`ChaincodeStubInterface.PutState <http://godoc.org/github.com/hyperledger/fabric/core/chaincode/shim#ChaincodeStub.PutState>`_
+`ChaincodeStubInterface.PutState <http://godoc.org/github.com/ledgerone/fabric-ledgerone/core/chaincode/shim#ChaincodeStub.PutState>`_
 with the key and value passed in as the arguments. Assuming all went well,
 return a peer.Response object that indicates the initialization was a success.
 
@@ -185,7 +185,7 @@ As with the ``Init`` function above, we need to extract the arguments from the
 name of the chaincode application function to invoke. In our case, our application
 will simply have two functions: ``set`` and ``get``, that allow the value of an
 asset to be set or its current state to be retrieved. We first call
-`ChaincodeStubInterface.GetFunctionAndParameters <http://godoc.org/github.com/hyperledger/fabric/core/chaincode/shim#ChaincodeStub.GetFunctionAndParameters>`_
+`ChaincodeStubInterface.GetFunctionAndParameters <http://godoc.org/github.com/ledgerone/fabric-ledgerone/core/chaincode/shim#ChaincodeStub.GetFunctionAndParameters>`_
 to extract the function name and the parameters to that chaincode application
 function.
 
@@ -235,8 +235,8 @@ Implementing the Chaincode Application
 As noted, our chaincode application implements two functions that can be
 invoked via the ``Invoke`` function. Let's implement those functions now.
 Note that as we mentioned above, to access the ledger's state, we will leverage
-the `ChaincodeStubInterface.PutState <http://godoc.org/github.com/hyperledger/fabric/core/chaincode/shim#ChaincodeStub.PutState>`_
-and `ChaincodeStubInterface.GetState <http://godoc.org/github.com/hyperledger/fabric/core/chaincode/shim#ChaincodeStub.GetState>`_
+the `ChaincodeStubInterface.PutState <http://godoc.org/github.com/ledgerone/fabric-ledgerone/core/chaincode/shim#ChaincodeStub.PutState>`_
+and `ChaincodeStubInterface.GetState <http://godoc.org/github.com/ledgerone/fabric-ledgerone/core/chaincode/shim#ChaincodeStub.GetState>`_
 functions of the chaincode shim API.
 
 .. code:: go
@@ -277,7 +277,7 @@ Pulling it All Together
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 Finally, we need to add the ``main`` function, which will call the
-`shim.Start <http://godoc.org/github.com/hyperledger/fabric/core/chaincode/shim#Start>`_
+`shim.Start <http://godoc.org/github.com/ledgerone/fabric-ledgerone/core/chaincode/shim#Start>`_
 function. Here's the whole chaincode program source.
 
 .. code:: go
@@ -287,8 +287,8 @@ function. Here's the whole chaincode program source.
     import (
     	"fmt"
 
-    	"github.com/hyperledger/fabric/core/chaincode/shim"
-    	"github.com/hyperledger/fabric/protos/peer"
+    	"github.com/ledgerone/fabric-ledgerone/core/chaincode/shim"
+    	"github.com/ledgerone/fabric-ledgerone/protos/peer"
     )
 
     // SimpleAsset implements a simple chaincode to manage an asset
@@ -381,7 +381,7 @@ Now let's compile your chaincode.
 
 .. code:: bash
 
-  go get -u --tags nopkcs11 github.com/hyperledger/fabric/core/chaincode/shim
+  go get -u --tags nopkcs11 github.com/ledgerone/fabric-ledgerone/core/chaincode/shim
   go build --tags nopkcs11
 
 Assuming there are no errors, now we can proceed to the next step, testing
@@ -534,7 +534,7 @@ In certain scenarios, it may be useful to encrypt values associated with a key
 in their entirety or simply in part.  For example, if a person's social security
 number or address was being written to the ledger, then you likely would not want
 this data to appear in plaintext.  Chaincode encryption is achieved by leveraging
-the `entities extension <https://github.com/hyperledger/fabric/tree/master/core/chaincode/shim/ext/entities>`__
+the `entities extension <https://github.com/ledgerone/fabric-ledgerone/tree/master/core/chaincode/shim/ext/entities>`__
 which is a BCCSP wrapper with commodity factories and functions to perform cryptographic
 operations such as encryption and elliptic curve digital signatures.  For example,
 to encrypt, the invoker of a chaincode passes in a cryptographic key via the
@@ -542,7 +542,7 @@ transient field.  The same key may then be used for subsequent query operations,
 for proper decryption of the encrypted state values.
 
 For more information and samples, see the
-`Encc Example <https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go/enccc_example>`__
+`Encc Example <https://github.com/ledgerone/fabric-ledgerone/tree/master/examples/chaincode/go/enccc_example>`__
 within the ``fabric/examples`` directory.  Pay specific attention to the ``utils.go``
 helper program.  This utility loads the chaincode shim APIs and Entities extension
 and builds a new class of functions (e.g. ``encryptAndPutState`` & ``getStateAndDecrypt``)

@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hyperledger/fabric/core/chaincode/shim"
-	ex02 "github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/shim"
+	ex02 "github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/chaincode_example02"
 )
 
 // this is the response to any successful Invoke() on chaincode_example04

@@ -10,10 +10,10 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/transientstore"
-	gossip2 "github.com/hyperledger/fabric/protos/gossip"
-	"github.com/hyperledger/fabric/protos/ledger/rwset"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger"
+	"github.com/ledgerone/fabric-ledgerone/core/transientstore"
+	gossip2 "github.com/ledgerone/fabric-ledgerone/protos/gossip"
+	"github.com/ledgerone/fabric-ledgerone/protos/ledger/rwset"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )

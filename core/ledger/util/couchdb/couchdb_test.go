@@ -26,9 +26,9 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/hyperledger/fabric/common/ledger/testutil"
-	"github.com/hyperledger/fabric/core/ledger/ledgerconfig"
-	ledgertestutil "github.com/hyperledger/fabric/core/ledger/testutil"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/testutil"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/ledgerconfig"
+	ledgertestutil "github.com/ledgerone/fabric-ledgerone/core/ledger/testutil"
 	logging "github.com/op/go-logging"
 	"github.com/spf13/viper"
 )

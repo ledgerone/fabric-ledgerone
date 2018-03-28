@@ -10,7 +10,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hyperledger/fabric/core/ledger/ledgerconfig"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/ledgerconfig"
 	"github.com/stretchr/testify/assert"
 )
 

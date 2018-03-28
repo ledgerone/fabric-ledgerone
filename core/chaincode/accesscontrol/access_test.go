@@ -16,8 +16,8 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/flogging"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"github.com/op/go-logging"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/net/context"

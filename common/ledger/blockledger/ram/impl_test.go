@@ -19,11 +19,11 @@ package ramledger
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/ledger/blockledger"
-	genesisconfig "github.com/hyperledger/fabric/common/tools/configtxgen/localconfig"
-	cb "github.com/hyperledger/fabric/protos/common"
-	ab "github.com/hyperledger/fabric/protos/orderer"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/blockledger"
+	genesisconfig "github.com/ledgerone/fabric-ledgerone/common/tools/configtxgen/localconfig"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	ab "github.com/ledgerone/fabric-ledgerone/protos/orderer"
 )
 
 var genesisBlock = cb.NewBlock(0, nil)

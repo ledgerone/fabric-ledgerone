@@ -20,16 +20,16 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/txmgr"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/txmgr"
 
-	commonledger "github.com/hyperledger/fabric/common/ledger"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/rwsetutil"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/statedb"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/version"
-	"github.com/hyperledger/fabric/core/ledger/ledgerconfig"
-	"github.com/hyperledger/fabric/core/ledger/util"
-	"github.com/hyperledger/fabric/protos/ledger/queryresult"
-	"github.com/hyperledger/fabric/protos/ledger/rwset/kvrwset"
+	commonledger "github.com/ledgerone/fabric-ledgerone/common/ledger"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/rwsetutil"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/statedb"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/version"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/ledgerconfig"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/util"
+	"github.com/ledgerone/fabric-ledgerone/protos/ledger/queryresult"
+	"github.com/ledgerone/fabric-ledgerone/protos/ledger/rwset/kvrwset"
 )
 
 type queryHelper struct {

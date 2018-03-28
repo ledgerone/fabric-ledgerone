@@ -27,7 +27,7 @@ LOG_FILE="scripts1/logs.txt"
 : ${TIMEOUT:="60"}
 COUNTER=1
 MAX_RETRY=5
-ORDERER_CA=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+ORDERER_CA=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
 
 echo "Channel name : $CHANNEL_NAME" >>$LOG_FILE
 echo "Channels: $CHANNELS" >>$LOG_FILE
@@ -49,8 +49,8 @@ verifyResult () {
 setGlobals () {
 	if [ $1 -eq 0 -o $1 -eq 1 ] ; then
 		export CORE_PEER_LOCALMSPID="Org1MSP"
-		export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
-		export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+		export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+		export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
 		if [ $1 -eq 0 ]; then
 			export CORE_PEER_ADDRESS=peer0.org1.example.com:7051
 		else
@@ -58,8 +58,8 @@ setGlobals () {
 		fi
 	else
 		export CORE_PEER_LOCALMSPID="Org2MSP"
-		export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
-		export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
+		export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
+		export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
 		if [ $1 -eq 2 ]; then
 			export CORE_PEER_ADDRESS=peer0.org2.example.com:7051
 		else

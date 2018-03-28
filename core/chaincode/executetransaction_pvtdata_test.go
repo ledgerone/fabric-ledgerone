@@ -14,10 +14,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/common/ccprovider"
-	"github.com/hyperledger/fabric/core/ledger/ledgerconfig"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/util"
+	"github.com/ledgerone/fabric-ledgerone/core/common/ccprovider"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/ledgerconfig"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"github.com/spf13/viper"
 	"golang.org/x/net/context"
 )
@@ -37,7 +37,7 @@ func TestQueriesPrivateData(t *testing.T) {
 
 	var ctxt = context.Background()
 
-	url := "github.com/hyperledger/fabric/examples/chaincode/go/map"
+	url := "github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/map"
 	cID := &pb.ChaincodeID{Name: "tmap", Path: url, Version: "0"}
 
 	f := "init"

@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"reflect"
 
-	cb "github.com/hyperledger/fabric/protos/common"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
 )
 
 func computePoliciesMapUpdate(original, updated map[string]*cb.ConfigPolicy) (readSet, writeSet, sameSet map[string]*cb.ConfigPolicy, updatedMembers bool) {

@@ -7,8 +7,8 @@ SPDX-License-Identifier: Apache-2.0
 package peer
 
 import (
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/common/resourcesconfig"
+	"github.com/ledgerone/fabric-ledgerone/common/channelconfig"
+	"github.com/ledgerone/fabric-ledgerone/common/resourcesconfig"
 )
 
 var supportFactory SupportFactory

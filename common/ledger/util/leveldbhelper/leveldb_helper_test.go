@@ -21,7 +21,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/ledger/testutil"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/testutil"
 	"github.com/syndtr/goleveldb/leveldb"
 )
 

@@ -9,8 +9,8 @@ package chaincode
 import (
 	"fmt"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/peer/common"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/peer/common"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 )

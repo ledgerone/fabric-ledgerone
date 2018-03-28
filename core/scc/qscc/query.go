@@ -20,14 +20,14 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/hyperledger/fabric/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
 
-	"github.com/hyperledger/fabric/core/aclmgmt"
-	"github.com/hyperledger/fabric/core/chaincode/shim"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/peer"
-	pb "github.com/hyperledger/fabric/protos/peer"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/core/aclmgmt"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/shim"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger"
+	"github.com/ledgerone/fabric-ledgerone/core/peer"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 )
 
 // LedgerQuerier implements the ledger query functions, including:

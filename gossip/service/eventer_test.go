@@ -10,9 +10,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/gossip/util"
-	"github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/channelconfig"
+	"github.com/ledgerone/fabric-ledgerone/gossip/util"
+	"github.com/ledgerone/fabric-ledgerone/protos/peer"
 )
 
 const testChainID = "foo"

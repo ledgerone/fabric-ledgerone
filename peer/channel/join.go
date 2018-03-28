@@ -21,11 +21,11 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/hyperledger/fabric/core/scc/cscc"
-	"github.com/hyperledger/fabric/peer/common"
-	pcommon "github.com/hyperledger/fabric/protos/common"
-	pb "github.com/hyperledger/fabric/protos/peer"
-	putils "github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/core/scc/cscc"
+	"github.com/ledgerone/fabric-ledgerone/peer/common"
+	pcommon "github.com/ledgerone/fabric-ledgerone/protos/common"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
+	putils "github.com/ledgerone/fabric-ledgerone/protos/utils"
 	"github.com/spf13/cobra"
 	"golang.org/x/net/context"
 )

@@ -6,7 +6,7 @@ SPDX-License-Identifier: Apache-2.0
 
 package config
 
-import "github.com/hyperledger/fabric/common/channelconfig"
+import "github.com/ledgerone/fabric-ledgerone/common/channelconfig"
 
 type MockApplication struct {
 	CapabilitiesRv channelconfig.ApplicationCapabilities

@@ -23,11 +23,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/ledger/blkstorage"
-	"github.com/hyperledger/fabric/common/ledger/testutil"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/blkstorage"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/testutil"
 
-	"github.com/hyperledger/fabric/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
 )
 
 func TestMain(m *testing.M) {

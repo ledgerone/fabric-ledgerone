@@ -19,11 +19,11 @@ package scc
 import (
 	"fmt"
 
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/core/common/sysccprovider"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/channelconfig"
+	"github.com/ledgerone/fabric-ledgerone/common/policies"
+	"github.com/ledgerone/fabric-ledgerone/core/common/sysccprovider"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger"
+	"github.com/ledgerone/fabric-ledgerone/core/peer"
 )
 
 // sccProviderFactory implements the sysccprovider.SystemChaincodeProviderFactory

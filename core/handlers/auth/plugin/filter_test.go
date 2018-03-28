@@ -9,7 +9,7 @@ package main
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/net/context"
 )

@@ -18,10 +18,10 @@ import (
 	"path/filepath"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/tools/idemixgen/idemixca"
-	"github.com/hyperledger/fabric/idemix"
-	"github.com/hyperledger/fabric/msp"
-	"github.com/hyperledger/fabric/orderer/common/metadata"
+	"github.com/ledgerone/fabric-ledgerone/common/tools/idemixgen/idemixca"
+	"github.com/ledgerone/fabric-ledgerone/idemix"
+	"github.com/ledgerone/fabric-ledgerone/msp"
+	"github.com/ledgerone/fabric-ledgerone/orderer/common/metadata"
 	"github.com/pkg/errors"
 	"gopkg.in/alecthomas/kingpin.v2"
 )

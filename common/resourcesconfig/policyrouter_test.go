@@ -10,9 +10,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/channelconfig"
-	mockpolicies "github.com/hyperledger/fabric/common/mocks/policies"
-	"github.com/hyperledger/fabric/common/policies"
+	"github.com/ledgerone/fabric-ledgerone/common/channelconfig"
+	mockpolicies "github.com/ledgerone/fabric-ledgerone/common/mocks/policies"
+	"github.com/ledgerone/fabric-ledgerone/common/policies"
 
 	"github.com/stretchr/testify/assert"
 )

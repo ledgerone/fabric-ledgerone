@@ -25,8 +25,8 @@ import (
 	"crypto/x509"
 	"reflect"
 
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/bccsp/utils"
+	"github.com/ledgerone/fabric-ledgerone/bccsp"
+	"github.com/ledgerone/fabric-ledgerone/bccsp/utils"
 )
 
 type aes256ImportKeyOptsKeyImporter struct{}

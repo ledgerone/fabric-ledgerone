@@ -17,13 +17,13 @@ limitations under the License.
 package support
 
 import (
-	"github.com/hyperledger/fabric/common/channelconfig"
-	mockpolicies "github.com/hyperledger/fabric/common/mocks/policies"
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/common/resourcesconfig"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/msp"
-	"github.com/hyperledger/fabric/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/common/channelconfig"
+	mockpolicies "github.com/ledgerone/fabric-ledgerone/common/mocks/policies"
+	"github.com/ledgerone/fabric-ledgerone/common/policies"
+	"github.com/ledgerone/fabric-ledgerone/common/resourcesconfig"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger"
+	"github.com/ledgerone/fabric-ledgerone/msp"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
 )
 
 type Support struct {

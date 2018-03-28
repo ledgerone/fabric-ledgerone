@@ -19,11 +19,11 @@ package blockcutter
 import (
 	"testing"
 
-	mockconfig "github.com/hyperledger/fabric/common/mocks/config"
-	cb "github.com/hyperledger/fabric/protos/common"
-	ab "github.com/hyperledger/fabric/protos/orderer"
+	mockconfig "github.com/ledgerone/fabric-ledgerone/common/mocks/config"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	ab "github.com/ledgerone/fabric-ledgerone/protos/orderer"
 
-	"github.com/hyperledger/fabric/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
 	"github.com/stretchr/testify/assert"
 )
 

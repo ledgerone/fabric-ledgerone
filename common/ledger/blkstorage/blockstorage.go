@@ -19,9 +19,9 @@ package blkstorage
 import (
 	"errors"
 
-	"github.com/hyperledger/fabric/common/ledger"
-	"github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/peer"
 )
 
 // IndexableAttr represents an indexable attribute

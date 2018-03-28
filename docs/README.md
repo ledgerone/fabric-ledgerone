@@ -26,7 +26,7 @@ doc.
   <br/>Do not put the .rst suffix at the end of the filepath.
 * For non RST files, such as text files, MD or YAML files, link to the
   file on github, like this one for instance:
-  https://github.com/hyperledger/fabric/blob/master/docs/README.md
+  https://github.com/ledgerone/fabric-ledgerone/blob/master/docs/README.md
 
 Notes: The above means we have a dependency on the github mirror
 repository. Relative links are unfortunately not working on github

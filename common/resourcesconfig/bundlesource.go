@@ -9,9 +9,9 @@ package resourcesconfig
 import (
 	"sync/atomic"
 
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/common/configtx"
-	"github.com/hyperledger/fabric/common/policies"
+	"github.com/ledgerone/fabric-ledgerone/common/channelconfig"
+	"github.com/ledgerone/fabric-ledgerone/common/configtx"
+	"github.com/ledgerone/fabric-ledgerone/common/policies"
 )
 
 // BundleSource stores a reference to the current peer resource configuration bundle

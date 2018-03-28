@@ -15,13 +15,13 @@ import (
 	"sync"
 	"unicode/utf8"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/core/common/ccprovider"
-	"github.com/hyperledger/fabric/core/ledger/cceventmgmt"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/statedb"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/version"
-	"github.com/hyperledger/fabric/core/ledger/ledgerconfig"
-	"github.com/hyperledger/fabric/core/ledger/util/couchdb"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/core/common/ccprovider"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/cceventmgmt"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/statedb"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/version"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/ledgerconfig"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/util/couchdb"
 	logging "github.com/op/go-logging"
 )
 

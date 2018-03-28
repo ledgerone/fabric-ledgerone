@@ -19,13 +19,13 @@ package validation
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/common/mocks/config"
-	"github.com/hyperledger/fabric/common/tools/configtxgen/encoder"
-	genesisconfig "github.com/hyperledger/fabric/common/tools/configtxgen/localconfig"
-	"github.com/hyperledger/fabric/common/util"
-	cb "github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/peer"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/common/mocks/config"
+	"github.com/ledgerone/fabric-ledgerone/common/tools/configtxgen/encoder"
+	genesisconfig "github.com/ledgerone/fabric-ledgerone/common/tools/configtxgen/localconfig"
+	"github.com/ledgerone/fabric-ledgerone/common/util"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 )
 
 func TestValidateConfigTx(t *testing.T) {

@@ -9,7 +9,7 @@
 # Development on Z is done on the native OS, not in Vagrant. This script can be
 # used to set things up in RHEL on Z, similar to devenv/setup.sh which does the
 # same for Vagrant.
-# See https://github.com/hyperledger/fabric/blob/master/docs/dev-setup/install.md
+# See https://github.com/ledgerone/fabric-ledgerone/blob/master/docs/dev-setup/install.md
 #
 # To get started:
 #       sudo su

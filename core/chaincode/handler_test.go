@@ -11,8 +11,8 @@ import (
 	"math"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/ledger"
-	"github.com/hyperledger/fabric/protos/ledger/queryresult"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger"
+	"github.com/ledgerone/fabric-ledgerone/protos/ledger/queryresult"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )

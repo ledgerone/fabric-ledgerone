@@ -7,8 +7,8 @@ SPDX-License-Identifier: Apache-2.0
 package ledgermgmt
 
 import (
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/cceventmgmt"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/cceventmgmt"
 )
 
 // kvLedgerStateListeners contains the state listeners for kv ledger implementation

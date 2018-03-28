@@ -21,10 +21,10 @@ import (
 	"testing"
 
 	"github.com/golang/protobuf/proto"
-	configtxtest "github.com/hyperledger/fabric/common/configtx/test"
-	"github.com/hyperledger/fabric/protos/common"
-	cb "github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/utils"
+	configtxtest "github.com/ledgerone/fabric-ledgerone/common/configtx/test"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 	"github.com/stretchr/testify/assert"
 )
 

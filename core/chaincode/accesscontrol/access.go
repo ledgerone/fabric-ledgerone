@@ -11,8 +11,8 @@ import (
 	"fmt"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/flogging"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"google.golang.org/grpc"
 )
 

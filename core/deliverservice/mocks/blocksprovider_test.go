@@ -23,10 +23,10 @@ import (
 	"time"
 
 	pb "github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/core/deliverservice/blocksprovider"
-	"github.com/hyperledger/fabric/protos/common"
-	proto "github.com/hyperledger/fabric/protos/gossip"
-	"github.com/hyperledger/fabric/protos/orderer"
+	"github.com/ledgerone/fabric-ledgerone/core/deliverservice/blocksprovider"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
+	proto "github.com/ledgerone/fabric-ledgerone/protos/gossip"
+	"github.com/ledgerone/fabric-ledgerone/protos/orderer"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/net/context"
 )

@@ -5,10 +5,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DAILYDIR="$GOPATH/src/github.com/hyperledger/fabric/test/regression/daily"
-RELEASEDIR="$GOPATH/src/github.com/hyperledger/fabric/test/regression/release"
+DAILYDIR="$GOPATH/src/github.com/ledgerone/fabric-ledgerone/test/regression/daily"
+RELEASEDIR="$GOPATH/src/github.com/ledgerone/fabric-ledgerone/test/regression/release"
 
-export FABRIC_ROOT_DIR=$GOPATH/src/github.com/hyperledger/fabric
+export FABRIC_ROOT_DIR=$GOPATH/src/github.com/ledgerone/fabric-ledgerone
 
 cd $FABRIC_ROOT_DIR || exit
 

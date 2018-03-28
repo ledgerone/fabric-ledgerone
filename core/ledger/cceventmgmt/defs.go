@@ -9,7 +9,7 @@ package cceventmgmt
 import (
 	"fmt"
 
-	"github.com/hyperledger/fabric/core/common/ccprovider"
+	"github.com/ledgerone/fabric-ledgerone/core/common/ccprovider"
 )
 
 // ChaincodeDefinition captures the info about chaincode

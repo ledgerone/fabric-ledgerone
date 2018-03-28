@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/hyperledger/fabric/examples/chaincode/go/utxo/consensus"
+	"github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/utxo/consensus"
 )
 
 // UTXO includes the storage for the chaincode API or an in memory

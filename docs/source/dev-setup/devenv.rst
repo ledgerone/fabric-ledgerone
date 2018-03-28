@@ -139,7 +139,7 @@ are not supported by Docker for Mac or Windows.**
 
 ::
 
-    cd $GOPATH/src/github.com/hyperledger/fabric/devenv
+    cd $GOPATH/src/github.com/ledgerone/fabric-ledgerone/devenv
     vagrant up
 
 Go get coffee... this will take a few minutes. Once complete, you should

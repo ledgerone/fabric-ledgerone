@@ -12,17 +12,17 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/policies"
-	"github.com/hyperledger/fabric/common/viperutil"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/common/policies"
+	"github.com/ledgerone/fabric-ledgerone/common/viperutil"
 	logging "github.com/op/go-logging"
 
 	"github.com/spf13/viper"
 
 	"path/filepath"
 
-	cf "github.com/hyperledger/fabric/core/config"
-	"github.com/hyperledger/fabric/msp"
+	cf "github.com/ledgerone/fabric-ledgerone/core/config"
+	"github.com/ledgerone/fabric-ledgerone/msp"
 )
 
 const (

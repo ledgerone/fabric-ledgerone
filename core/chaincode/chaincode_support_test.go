@@ -20,30 +20,30 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/flogging"
-	commonledger "github.com/hyperledger/fabric/common/ledger"
-	mc "github.com/hyperledger/fabric/common/mocks/config"
-	mocklgr "github.com/hyperledger/fabric/common/mocks/ledger"
-	mockpeer "github.com/hyperledger/fabric/common/mocks/peer"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/aclmgmt"
-	"github.com/hyperledger/fabric/core/aclmgmt/mocks"
-	"github.com/hyperledger/fabric/core/aclmgmt/resources"
-	"github.com/hyperledger/fabric/core/chaincode/accesscontrol"
-	"github.com/hyperledger/fabric/core/chaincode/shim"
-	"github.com/hyperledger/fabric/core/common/ccprovider"
-	"github.com/hyperledger/fabric/core/config"
-	"github.com/hyperledger/fabric/core/container"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/ledgermgmt"
-	cmp "github.com/hyperledger/fabric/core/mocks/peer"
-	"github.com/hyperledger/fabric/core/peer"
-	"github.com/hyperledger/fabric/core/policy"
-	"github.com/hyperledger/fabric/core/scc"
-	mspmgmt "github.com/hyperledger/fabric/msp/mgmt"
-	plgr "github.com/hyperledger/fabric/protos/ledger/queryresult"
-	pb "github.com/hyperledger/fabric/protos/peer"
-	putils "github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	commonledger "github.com/ledgerone/fabric-ledgerone/common/ledger"
+	mc "github.com/ledgerone/fabric-ledgerone/common/mocks/config"
+	mocklgr "github.com/ledgerone/fabric-ledgerone/common/mocks/ledger"
+	mockpeer "github.com/ledgerone/fabric-ledgerone/common/mocks/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/util"
+	"github.com/ledgerone/fabric-ledgerone/core/aclmgmt"
+	"github.com/ledgerone/fabric-ledgerone/core/aclmgmt/mocks"
+	"github.com/ledgerone/fabric-ledgerone/core/aclmgmt/resources"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/accesscontrol"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/shim"
+	"github.com/ledgerone/fabric-ledgerone/core/common/ccprovider"
+	"github.com/ledgerone/fabric-ledgerone/core/config"
+	"github.com/ledgerone/fabric-ledgerone/core/container"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/ledgermgmt"
+	cmp "github.com/ledgerone/fabric-ledgerone/core/mocks/peer"
+	"github.com/ledgerone/fabric-ledgerone/core/peer"
+	"github.com/ledgerone/fabric-ledgerone/core/policy"
+	"github.com/ledgerone/fabric-ledgerone/core/scc"
+	mspmgmt "github.com/ledgerone/fabric-ledgerone/msp/mgmt"
+	plgr "github.com/ledgerone/fabric-ledgerone/protos/ledger/queryresult"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
+	putils "github.com/ledgerone/fabric-ledgerone/protos/utils"
 	"golang.org/x/net/context"
 )
 
@@ -834,8 +834,8 @@ func getLaunchConfigs(t *testing.T, auth accesscontrol.Authenticator) {
 		t.Fatalf("calling getLaunchConfigs() with TLS enabled should have returned an array of 7 elements for Envs, but got %v", envs)
 	}
 	if envs[0] != "CORE_CHAINCODE_ID_NAME=mycc:v0" || envs[1] != "CORE_PEER_TLS_ENABLED=true" ||
-		envs[2] != "CORE_TLS_CLIENT_KEY_PATH=/etc/hyperledger/fabric/client.key" || envs[3] != "CORE_TLS_CLIENT_CERT_PATH=/etc/hyperledger/fabric/client.crt" ||
-		envs[4] != "CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/peer.crt" ||
+		envs[2] != "CORE_TLS_CLIENT_KEY_PATH=/etc/ledgerone/fabric-ledgerone/client.key" || envs[3] != "CORE_TLS_CLIENT_CERT_PATH=/etc/ledgerone/fabric-ledgerone/client.crt" ||
+		envs[4] != "CORE_PEER_TLS_ROOTCERT_FILE=/etc/ledgerone/fabric-ledgerone/peer.crt" ||
 		envs[5] != "CORE_CHAINCODE_LOGGING_LEVEL=debug" || envs[6] != "CORE_CHAINCODE_LOGGING_SHIM=info" {
 		t.Fatalf("calling getLaunchConfigs() with TLS enabled should have returned the proper environment variables, but got %v", envs)
 	}

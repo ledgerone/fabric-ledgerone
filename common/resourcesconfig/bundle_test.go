@@ -9,9 +9,9 @@ package resourcesconfig
 import (
 	"testing"
 
-	mockchannelconfig "github.com/hyperledger/fabric/common/mocks/config"
-	cb "github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/utils"
+	mockchannelconfig "github.com/ledgerone/fabric-ledgerone/common/mocks/config"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 
 	logging "github.com/op/go-logging"
 	"github.com/stretchr/testify/assert"

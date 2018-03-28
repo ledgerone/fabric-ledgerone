@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='orderer/configuration.proto',
   package='orderer',
   syntax='proto3',
-  serialized_pb=_b('\n\x1borderer/configuration.proto\x12\x07orderer\"\x1d\n\rConsensusType\x12\x0c\n\x04type\x18\x01 \x01(\t\"Y\n\tBatchSize\x12\x17\n\x0fmaxMessageCount\x18\x01 \x01(\r\x12\x18\n\x10\x61\x62soluteMaxBytes\x18\x02 \x01(\r\x12\x19\n\x11preferredMaxBytes\x18\x03 \x01(\r\"\x1f\n\x0c\x42\x61tchTimeout\x12\x0f\n\x07timeout\x18\x01 \x01(\t\"\x1f\n\x0cKafkaBrokers\x12\x0f\n\x07\x62rokers\x18\x01 \x03(\t\"(\n\x13\x43hannelRestrictions\x12\x11\n\tmax_count\x18\x01 \x01(\x04\x42U\n%org.hyperledger.fabric.protos.ordererZ,github.com/hyperledger/fabric/protos/ordererb\x06proto3')
+  serialized_pb=_b('\n\x1borderer/configuration.proto\x12\x07orderer\"\x1d\n\rConsensusType\x12\x0c\n\x04type\x18\x01 \x01(\t\"Y\n\tBatchSize\x12\x17\n\x0fmaxMessageCount\x18\x01 \x01(\r\x12\x18\n\x10\x61\x62soluteMaxBytes\x18\x02 \x01(\r\x12\x19\n\x11preferredMaxBytes\x18\x03 \x01(\r\"\x1f\n\x0c\x42\x61tchTimeout\x12\x0f\n\x07timeout\x18\x01 \x01(\t\"\x1f\n\x0cKafkaBrokers\x12\x0f\n\x07\x62rokers\x18\x01 \x03(\t\"(\n\x13\x43hannelRestrictions\x12\x11\n\tmax_count\x18\x01 \x01(\x04\x42U\n%org.hyperledger.fabric.protos.ordererZ,github.com/ledgerone/fabric-ledgerone/protos/ordererb\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -237,7 +237,7 @@ _sym_db.RegisterMessage(ChannelRestrictions)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n%org.hyperledger.fabric.protos.ordererZ,github.com/hyperledger/fabric/protos/orderer'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n%org.hyperledger.fabric.protos.ordererZ,github.com/ledgerone/fabric-ledgerone/protos/orderer'))
 try:
   # THESE ELEMENTS WILL BE DEPRECATED.
   # Please use the generated *_pb2_grpc.py files instead.

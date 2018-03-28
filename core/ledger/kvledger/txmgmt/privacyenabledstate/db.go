@@ -7,9 +7,9 @@ SPDX-License-Identifier: Apache-2.0
 package privacyenabledstate
 
 import (
-	"github.com/hyperledger/fabric/core/ledger/cceventmgmt"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/statedb"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/version"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/cceventmgmt"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/statedb"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/version"
 )
 
 // DBProvider provides handle to a PvtVersionedDB

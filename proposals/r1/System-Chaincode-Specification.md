@@ -73,7 +73,7 @@ environments.
 ### Execution mechanism
 
 The fabric provides a basic interface for a “vm”. The Docker container
-is implemented on top of this abstraction. The “vm” ([vm interface](https://github.com/hyperledger/fabric/blob/master/core/container/controller.go))
+is implemented on top of this abstraction. The “vm” ([vm interface](https://github.com/ledgerone/fabric-ledgerone/blob/master/core/container/controller.go))
 can be used to provide an execution environment for the in-process
 runtime as well. This has the obvious benefit of encapsulating all
 execution access (deploy, launch, stop, etc) transparent to the

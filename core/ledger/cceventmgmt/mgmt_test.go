@@ -11,9 +11,9 @@ import (
 	"testing"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/core/common/ccprovider"
-	"github.com/hyperledger/fabric/protos/ledger/rwset/kvrwset"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/core/common/ccprovider"
+	"github.com/ledgerone/fabric-ledgerone/protos/ledger/rwset/kvrwset"
 	"github.com/stretchr/testify/assert"
 )
 

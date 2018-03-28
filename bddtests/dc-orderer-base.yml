@@ -21,7 +21,7 @@ services:
     volumes:
       - ./volumes/orderer:/var/hyperledger/bddtests/volumes/orderer
       - /etc/hyperledger/msp:/etc/hyperledger/msp
-    working_dir: /opt/gopath/src/github.com/hyperledger/fabric/orderer
+    working_dir: /opt/gopath/src/github.com/ledgerone/fabric-ledgerone/orderer
     command: orderer
     ports:
       - '7050'

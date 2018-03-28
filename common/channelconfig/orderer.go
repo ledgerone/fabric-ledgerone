@@ -13,9 +13,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hyperledger/fabric/common/capabilities"
-	cb "github.com/hyperledger/fabric/protos/common"
-	ab "github.com/hyperledger/fabric/protos/orderer"
+	"github.com/ledgerone/fabric-ledgerone/common/capabilities"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	ab "github.com/ledgerone/fabric-ledgerone/protos/orderer"
 
 	"github.com/pkg/errors"
 )

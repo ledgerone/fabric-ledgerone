@@ -84,7 +84,7 @@ mode.
 
 ::
 
-    peer chaincode install -n mycc -v 0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02
+    peer chaincode install -n mycc -v 0 -p github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/chaincode_example02
 
 Once installed, the chaincode is ready to be instantiated.
 

@@ -21,14 +21,14 @@ import (
 	"strconv"
 	"testing"
 
-	configtxtest "github.com/hyperledger/fabric/common/configtx/test"
-	"github.com/hyperledger/fabric/common/ledger/testutil"
-	util2 "github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/util"
-	"github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/ledger/queryresult"
-	"github.com/hyperledger/fabric/protos/peer"
+	configtxtest "github.com/ledgerone/fabric-ledgerone/common/configtx/test"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/testutil"
+	util2 "github.com/ledgerone/fabric-ledgerone/common/util"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/util"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/ledger/queryresult"
+	"github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"github.com/spf13/viper"
 )
 

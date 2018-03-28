@@ -31,11 +31,11 @@ import (
 
 	"sort"
 
-	"github.com/hyperledger/fabric/common/metadata"
-	"github.com/hyperledger/fabric/core/chaincode/platforms/util"
-	ccmetadata "github.com/hyperledger/fabric/core/common/ccprovider/metadata"
-	cutil "github.com/hyperledger/fabric/core/container/util"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/metadata"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/platforms/util"
+	ccmetadata "github.com/ledgerone/fabric-ledgerone/core/common/ccprovider/metadata"
+	cutil "github.com/ledgerone/fabric-ledgerone/core/container/util"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"github.com/spf13/viper"
 )
 
@@ -290,8 +290,8 @@ func (goPlatform *Platform) GetDeploymentPayload(spec *pb.ChaincodeSpec) ([]byte
 	// Remove any imports that are provided by the ccenv or system
 	// --------------------------------------------------------------------------------------
 	var provided = map[string]bool{
-		"github.com/hyperledger/fabric/core/chaincode/shim": true,
-		"github.com/hyperledger/fabric/protos/peer":         true,
+		"github.com/ledgerone/fabric-ledgerone/core/chaincode/shim": true,
+		"github.com/ledgerone/fabric-ledgerone/protos/peer":         true,
 	}
 
 	// Golang "pseudo-packages" - packages which don't actually exist
@@ -433,7 +433,7 @@ func (goPlatform *Platform) GetDeploymentPayload(spec *pb.ChaincodeSpec) ([]byte
 		// file.Name represents tar packagepath
 
 		// If the file is metadata rather than golang code, remove the leading go code path, for example:
-		// original file.Name:  src/github.com/hyperledger/fabric/examples/chaincode/go/marbles02/META-INF/statedb/couchdb/indexes/indexOwner.json
+		// original file.Name:  src/github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/marbles02/META-INF/statedb/couchdb/indexes/indexOwner.json
 		// updated file.Name:   META-INF/statedb/couchdb/indexes/indexOwner.json
 		if file.IsMetadata {
 

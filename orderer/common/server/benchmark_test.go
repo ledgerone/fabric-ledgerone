@@ -16,10 +16,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/common/tools/configtxgen/localconfig"
-	"github.com/hyperledger/fabric/orderer/common/localconfig"
-	perf "github.com/hyperledger/fabric/orderer/common/performance"
-	cb "github.com/hyperledger/fabric/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/common/tools/configtxgen/localconfig"
+	"github.com/ledgerone/fabric-ledgerone/orderer/common/localconfig"
+	perf "github.com/ledgerone/fabric-ledgerone/orderer/common/performance"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
 	"github.com/stretchr/testify/assert"
 )
 

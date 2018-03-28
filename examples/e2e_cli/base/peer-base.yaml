@@ -19,8 +19,8 @@ services:
       - CORE_PEER_GOSSIP_USELEADERELECTION=true
       - CORE_PEER_GOSSIP_ORGLEADER=false
       - CORE_PEER_PROFILE_ENABLED=true
-      - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/fabric/tls/server.crt
-      - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/fabric/tls/server.key
-      - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
-    working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
+      - CORE_PEER_TLS_CERT_FILE=/etc/ledgerone/fabric-ledgerone/tls/server.crt
+      - CORE_PEER_TLS_KEY_FILE=/etc/ledgerone/fabric-ledgerone/tls/server.key
+      - CORE_PEER_TLS_ROOTCERT_FILE=/etc/ledgerone/fabric-ledgerone/tls/ca.crt
+    working_dir: /opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer
     command: peer node start

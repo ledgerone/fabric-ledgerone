@@ -11,12 +11,12 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/hyperledger/fabric/gossip/api"
-	"github.com/hyperledger/fabric/gossip/comm"
-	"github.com/hyperledger/fabric/gossip/common"
-	"github.com/hyperledger/fabric/gossip/discovery"
-	"github.com/hyperledger/fabric/gossip/gossip/channel"
-	proto "github.com/hyperledger/fabric/protos/gossip"
+	"github.com/ledgerone/fabric-ledgerone/gossip/api"
+	"github.com/ledgerone/fabric-ledgerone/gossip/comm"
+	"github.com/ledgerone/fabric-ledgerone/gossip/common"
+	"github.com/ledgerone/fabric-ledgerone/gossip/discovery"
+	"github.com/ledgerone/fabric-ledgerone/gossip/gossip/channel"
+	proto "github.com/ledgerone/fabric-ledgerone/protos/gossip"
 )
 
 type channelState struct {

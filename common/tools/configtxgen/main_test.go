@@ -22,8 +22,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hyperledger/fabric/bccsp/factory"
-	genesisconfig "github.com/hyperledger/fabric/common/tools/configtxgen/localconfig"
+	"github.com/ledgerone/fabric-ledgerone/bccsp/factory"
+	genesisconfig "github.com/ledgerone/fabric-ledgerone/common/tools/configtxgen/localconfig"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -16,7 +16,7 @@
     "TLS": "disabled",
     "channelOpt": {
         "name": "testOrgsChannel2",
-        "channelTX": "/root/gopath/src/github.com/hyperledger/fabric/common/tools/cryptogen/crypto-config/ordererOrganizations/testOrgsChannel2.tx",
+        "channelTX": "/root/gopath/src/github.com/ledgerone/fabric-ledgerone/common/tools/cryptogen/crypto-config/ordererOrganizations/testOrgsChannel2.tx",
         "action":  "create",
         "orgName": [
             "org1"

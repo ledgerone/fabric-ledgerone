@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/hyperledger/fabric/common/channelconfig"
-	"github.com/hyperledger/fabric/common/policies"
+	"github.com/ledgerone/fabric-ledgerone/common/channelconfig"
+	"github.com/ledgerone/fabric-ledgerone/common/policies"
 )
 
 type policyRouter struct {

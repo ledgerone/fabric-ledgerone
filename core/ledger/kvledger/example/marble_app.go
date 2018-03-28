@@ -22,10 +22,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/hyperledger/fabric/common/util"
-	ledger "github.com/hyperledger/fabric/core/ledger"
+	"github.com/ledgerone/fabric-ledgerone/common/util"
+	ledger "github.com/ledgerone/fabric-ledgerone/core/ledger"
 
-	"github.com/hyperledger/fabric/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
 	logging "github.com/op/go-logging"
 )
 

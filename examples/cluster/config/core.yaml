@@ -224,7 +224,7 @@ peer:
         serverhostoverride:
 
     # Path on the file system where peer will store data (eg ledger)
-    fileSystemPath: /var/hyperledger/fabric/peer
+    fileSystemPath: /var/ledgerone/fabric-ledgerone/peer
 
     # BCCSP (Blockchain crypto provider): Select which crypto implementation or
     # library to use

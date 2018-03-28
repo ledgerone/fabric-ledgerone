@@ -10,11 +10,11 @@ import (
 	"testing"
 
 	"github.com/docker/docker/pkg/testutil/assert"
-	"github.com/hyperledger/fabric/common/mocks/config"
-	"github.com/hyperledger/fabric/common/util"
-	cb "github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/peer"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/common/mocks/config"
+	"github.com/ledgerone/fabric-ledgerone/common/util"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 )
 
 func TestValidateResourceUpdateTx(t *testing.T) {

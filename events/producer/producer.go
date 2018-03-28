@@ -21,9 +21,9 @@ import (
 	"io"
 	"time"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/core/comm"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/core/comm"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 )
 
 var logger = flogging.MustGetLogger("eventhub_producer")

@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/policies"
-	cb "github.com/hyperledger/fabric/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/common/policies"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/stretchr/testify/assert"

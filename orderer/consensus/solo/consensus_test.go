@@ -21,12 +21,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	mockconfig "github.com/hyperledger/fabric/common/mocks/config"
-	mockblockcutter "github.com/hyperledger/fabric/orderer/mocks/common/blockcutter"
-	mockmultichannel "github.com/hyperledger/fabric/orderer/mocks/common/multichannel"
-	cb "github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	mockconfig "github.com/ledgerone/fabric-ledgerone/common/mocks/config"
+	mockblockcutter "github.com/ledgerone/fabric-ledgerone/orderer/mocks/common/blockcutter"
+	mockmultichannel "github.com/ledgerone/fabric-ledgerone/orderer/mocks/common/multichannel"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 
 	"github.com/stretchr/testify/assert"
 )

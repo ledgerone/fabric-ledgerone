@@ -6,7 +6,7 @@ SPDX-License-Identifier: Apache-2.0
 package common
 
 import (
-	"github.com/hyperledger/fabric/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

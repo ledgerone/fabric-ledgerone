@@ -25,13 +25,13 @@ import (
 	"github.com/davecgh/go-spew/spew"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/ledger/blkstorage"
-	"github.com/hyperledger/fabric/common/ledger/util"
-	"github.com/hyperledger/fabric/common/ledger/util/leveldbhelper"
-	"github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/peer"
-	putil "github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/blkstorage"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/util"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/util/leveldbhelper"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/peer"
+	putil "github.com/ledgerone/fabric-ledgerone/protos/utils"
 )
 
 var logger = flogging.MustGetLogger("fsblkstorage")

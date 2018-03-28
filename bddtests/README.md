@@ -56,7 +56,7 @@ make peer
 The peer executable will be located in the build/bin folder. Make sure that your PATH enviroment variable contains the location.
 Execute the following command if necessary.
 ```
-    export PATH=$PATH:$GOPATH/src/github.com/hyperledger/fabric/build/bin
+    export PATH=$PATH:$GOPATH/src/github.com/ledgerone/fabric-ledgerone/build/bin
 ```
 
 The behave system also uses several docker containers.  Execute the following commands to create the required docker containers.

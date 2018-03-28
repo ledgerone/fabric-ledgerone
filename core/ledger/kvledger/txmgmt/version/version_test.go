@@ -19,7 +19,7 @@ package version
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/common/ledger/testutil"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/testutil"
 )
 
 func TestVersionSerialization(t *testing.T) {

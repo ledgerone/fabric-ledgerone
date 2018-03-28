@@ -7,8 +7,8 @@ SPDX-License-Identifier: Apache-2.0
 package main
 
 import (
-	"github.com/hyperledger/fabric/core/chaincode/shim"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/shim"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 )
 
 // New returns an implementation of the chaincode interface

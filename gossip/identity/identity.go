@@ -12,8 +12,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/hyperledger/fabric/gossip/api"
-	"github.com/hyperledger/fabric/gossip/common"
+	"github.com/ledgerone/fabric-ledgerone/gossip/api"
+	"github.com/ledgerone/fabric-ledgerone/gossip/common"
 	errors "github.com/pkg/errors"
 )
 

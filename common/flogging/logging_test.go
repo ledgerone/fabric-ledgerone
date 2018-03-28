@@ -20,7 +20,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
 	"github.com/op/go-logging"
 	"github.com/stretchr/testify/assert"
 )

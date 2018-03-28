@@ -17,8 +17,8 @@ limitations under the License.
 package validator
 
 import (
-	"github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"github.com/stretchr/testify/mock"
 )
 

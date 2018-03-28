@@ -10,7 +10,7 @@ import (
 	"bytes"
 	"fmt"
 
-	cb "github.com/hyperledger/fabric/protos/common"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/op/go-logging"

@@ -20,14 +20,14 @@ import (
 	"fmt"
 	"os"
 
-	configtxtest "github.com/hyperledger/fabric/common/configtx/test"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/example"
-	"github.com/hyperledger/fabric/core/ledger/ledgerconfig"
-	"github.com/hyperledger/fabric/core/ledger/ledgermgmt"
-	"github.com/hyperledger/fabric/core/ledger/testutil"
-	"github.com/hyperledger/fabric/core/ledger/util"
-	"github.com/hyperledger/fabric/protos/common"
+	configtxtest "github.com/ledgerone/fabric-ledgerone/common/configtx/test"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/example"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/ledgerconfig"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/ledgermgmt"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/testutil"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/util"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
 	logging "github.com/op/go-logging"
 )
 

@@ -7,9 +7,9 @@ SPDX-License-Identifier: Apache-2.0
 package example
 
 import (
-	"github.com/hyperledger/fabric/core/ledger"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger"
 
-	"github.com/hyperledger/fabric/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
 )
 
 // Committer a toy committer

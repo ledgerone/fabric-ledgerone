@@ -24,11 +24,11 @@ import (
 
 	"google.golang.org/grpc"
 
-	genesisconfig "github.com/hyperledger/fabric/common/tools/configtxgen/localconfig"
-	mspmgmt "github.com/hyperledger/fabric/msp/mgmt"
-	"github.com/hyperledger/fabric/orderer/common/localconfig"
-	cb "github.com/hyperledger/fabric/protos/common"
-	ab "github.com/hyperledger/fabric/protos/orderer"
+	genesisconfig "github.com/ledgerone/fabric-ledgerone/common/tools/configtxgen/localconfig"
+	mspmgmt "github.com/ledgerone/fabric-ledgerone/msp/mgmt"
+	"github.com/ledgerone/fabric-ledgerone/orderer/common/localconfig"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	ab "github.com/ledgerone/fabric-ledgerone/protos/orderer"
 )
 
 var conf *config.TopLevel

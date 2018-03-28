@@ -7,8 +7,8 @@ SPDX-License-Identifier: Apache-2.0
 package resourcesconfig
 
 import (
-	cb "github.com/hyperledger/fabric/protos/common"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/pkg/errors"

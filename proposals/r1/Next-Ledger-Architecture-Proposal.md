@@ -19,7 +19,7 @@ The motivation for exploring a new ledger architecture is based on community fee
 5. Support for consensus algorithms that provides immediate finality like PBFT
 6. Support consensus algorithms that require stochastic convergence like PoW, PoET
 7. Pruning - Ability to remove old transaction data as needed.
-8. Support separation of endorsement from consensus as described in the [Next Consensus Architecture Proposal](https://github.com/hyperledger/fabric/wiki/Next-Consensus-Architecture-Proposal). This implies that some peers may apply endorsed results to their ledger **without** executing transactions or viewing chaincode logic.
+8. Support separation of endorsement from consensus as described in the [Next Consensus Architecture Proposal](https://github.com/ledgerone/fabric-ledgerone/wiki/Next-Consensus-Architecture-Proposal). This implies that some peers may apply endorsed results to their ledger **without** executing transactions or viewing chaincode logic.
 9. API / Enginer separation. The ability to plug in different storage engines as needed.
 
 <a name="api"></a>
@@ -30,7 +30,7 @@ Proposed API in Go pseudocode
 ```
 package ledger
 
-import "github.com/hyperledger/fabric/protos/peer"
+import "github.com/ledgerone/fabric-ledgerone/protos/peer"
 
 // Encryptor is an interface that a ledger implementation can use for Encrypt/Decrypt the chaincode state
 type Encryptor interface {

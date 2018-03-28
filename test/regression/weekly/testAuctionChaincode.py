@@ -41,7 +41,7 @@ class ChaincodeAPI(unittest.TestCase):
 
     def runIt(self, command, scriptName):
         cmd = \
-            '/opt/gopath/src/github.com/hyperledger/fabric/test/tools/AuctionApp/%s %s %s %s %s %s %s' \
+            '/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/test/tools/AuctionApp/%s %s %s %s %s %s %s' \
             % (
             scriptName,
             self.CHANNEL_NAME,

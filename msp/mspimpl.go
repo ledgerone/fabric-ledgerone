@@ -15,10 +15,10 @@ import (
 	"fmt"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/bccsp/factory"
-	"github.com/hyperledger/fabric/bccsp/signer"
-	m "github.com/hyperledger/fabric/protos/msp"
+	"github.com/ledgerone/fabric-ledgerone/bccsp"
+	"github.com/ledgerone/fabric-ledgerone/bccsp/factory"
+	"github.com/ledgerone/fabric-ledgerone/bccsp/signer"
+	m "github.com/ledgerone/fabric-ledgerone/protos/msp"
 	"github.com/pkg/errors"
 )
 

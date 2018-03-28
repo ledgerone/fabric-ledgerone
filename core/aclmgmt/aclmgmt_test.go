@@ -11,9 +11,9 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/hyperledger/fabric/core/aclmgmt/mocks"
-	"github.com/hyperledger/fabric/core/aclmgmt/resources"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/core/aclmgmt/mocks"
+	"github.com/ledgerone/fabric-ledgerone/core/aclmgmt/resources"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"github.com/stretchr/testify/assert"
 
 	"github.com/pkg/errors"

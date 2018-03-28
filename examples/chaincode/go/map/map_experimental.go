@@ -14,8 +14,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/hyperledger/fabric/core/chaincode/shim"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/shim"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 )
 
 // This chaincode implements a simple map that is stored in the state.

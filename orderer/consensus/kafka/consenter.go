@@ -8,9 +8,9 @@ package kafka
 
 import (
 	"github.com/Shopify/sarama"
-	localconfig "github.com/hyperledger/fabric/orderer/common/localconfig"
-	"github.com/hyperledger/fabric/orderer/consensus"
-	cb "github.com/hyperledger/fabric/protos/common"
+	localconfig "github.com/ledgerone/fabric-ledgerone/orderer/common/localconfig"
+	"github.com/ledgerone/fabric-ledgerone/orderer/consensus"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
 	logging "github.com/op/go-logging"
 )
 

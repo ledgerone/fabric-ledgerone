@@ -24,9 +24,9 @@ import (
 	"reflect"
 	"testing"
 
-	mocks2 "github.com/hyperledger/fabric/bccsp/mocks"
-	"github.com/hyperledger/fabric/bccsp/sw/mocks"
-	"github.com/hyperledger/fabric/bccsp/utils"
+	mocks2 "github.com/ledgerone/fabric-ledgerone/bccsp/mocks"
+	"github.com/ledgerone/fabric-ledgerone/bccsp/sw/mocks"
+	"github.com/ledgerone/fabric-ledgerone/bccsp/utils"
 	"github.com/stretchr/testify/assert"
 )
 

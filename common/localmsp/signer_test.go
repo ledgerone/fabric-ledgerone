@@ -20,8 +20,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/crypto"
-	mspmgmt "github.com/hyperledger/fabric/msp/mgmt"
+	"github.com/ledgerone/fabric-ledgerone/common/crypto"
+	mspmgmt "github.com/ledgerone/fabric-ledgerone/msp/mgmt"
 	"github.com/stretchr/testify/assert"
 )
 

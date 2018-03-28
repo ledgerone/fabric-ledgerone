@@ -24,12 +24,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/common/ledger/testutil"
-	"github.com/hyperledger/fabric/core/ledger/cceventmgmt"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/statedb"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/statedb/commontests"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/version"
-	ledgertestutil "github.com/hyperledger/fabric/core/ledger/testutil"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/testutil"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/cceventmgmt"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/statedb"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/statedb/commontests"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/version"
+	ledgertestutil "github.com/ledgerone/fabric-ledgerone/core/ledger/testutil"
 	"github.com/spf13/viper"
 )
 

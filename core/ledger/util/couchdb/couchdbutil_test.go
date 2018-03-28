@@ -21,9 +21,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/ledger/testutil"
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/ledger/ledgerconfig"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/testutil"
+	"github.com/ledgerone/fabric-ledgerone/common/util"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/ledgerconfig"
 )
 
 //Unit test of couch db util functionality

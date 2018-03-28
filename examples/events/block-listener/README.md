@@ -43,7 +43,7 @@ CORE_PEER_TLS_ENABLED=***false*** in ``docker-compose-cli.yaml`` and
 ``base/peer-base.yaml`` as well as
 ORDERER_GENERAL_TLS_ENABLED=***false*** in``base/docker-compose-base.yaml``.
 
-Next, run the [e2e_cli example](https://github.com/hyperledger/fabric/tree/master/examples/e2e_cli).
+Next, run the [e2e_cli example](https://github.com/ledgerone/fabric-ledgerone/tree/master/examples/e2e_cli).
 
 Once the "All in one" command:
 ```sh
@@ -53,12 +53,12 @@ has completed, attach the event client to peer peer0.org1.example.com by doing
 the following (assuming you are running block-listener in the host environment)
 if TLS is enabled:
 ```sh
-CORE_PEER_TLS_ENABLED=true CORE_PEER_TLS_ROOTCERT_FILE=$GOPATH/src/github.com/hyperledger/fabric/examples/e2e_cli/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt ./block-listener -events-address=peer0.org1.example.com:7053 -events-mspdir=$GOPATH/src/github.com/hyperledger/fabric/examples/e2e_cli/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp -events-mspid=Org1MSP
+CORE_PEER_TLS_ENABLED=true CORE_PEER_TLS_ROOTCERT_FILE=$GOPATH/src/github.com/ledgerone/fabric-ledgerone/examples/e2e_cli/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt ./block-listener -events-address=peer0.org1.example.com:7053 -events-mspdir=$GOPATH/src/github.com/ledgerone/fabric-ledgerone/examples/e2e_cli/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp -events-mspid=Org1MSP
 ```
 
 If TLS is disabled, you can simply run:
 ```sh
-./block-listener -events-address=peer0.org1.example.com:7053 -events-mspdir=$GOPATH/src/github.com/hyperledger/fabric/examples/e2e_cli/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp -events-mspid=Org1MSP
+./block-listener -events-address=peer0.org1.example.com:7053 -events-mspdir=$GOPATH/src/github.com/ledgerone/fabric-ledgerone/examples/e2e_cli/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp -events-mspid=Org1MSP
 ```
 
 The event client should output "Event Address: peer0.org1.example.com:7053"
@@ -73,14 +73,14 @@ docker exec -it cli bash
 Next, setup the environment variables for peer0.org1.example.com.
 If TLS is enabled:
 ```sh
-CORE_PEER_MSPCONFIGPATH=$GOPATH/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+CORE_PEER_MSPCONFIGPATH=$GOPATH/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
 CORE_PEER_ADDRESS=peer0.org1.example.com:7051
 CORE_PEER_LOCALMSPID="Org1MSP"
-ORDERER_CA=$GOPATH/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
+ORDERER_CA=$GOPATH/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
 ```
 If TLS is disabled:
 ```sh
-CORE_PEER_MSPCONFIGPATH=$GOPATH/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+CORE_PEER_MSPCONFIGPATH=$GOPATH/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
 CORE_PEER_ADDRESS=peer0.org1.example.com:7051
 CORE_PEER_LOCALMSPID="Org1MSP"
 ```

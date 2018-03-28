@@ -63,7 +63,7 @@ If planning to run your Fabric network locally, you'll need docker and a bit mor
 ## Setup
 1. Download fabric sources and checkout appropriate commit levels (v1.0.0-alpha2 shown here):
     - `go get -d github.com/hyperledger/fabric`
-    - `cd $GOPATH/src/github.com/hyperledger/fabric/`
+    - `cd $GOPATH/src/github.com/ledgerone/fabric-ledgerone/`
     - `git checkout v1.0.0-alpha2`
     - Optional: `make docker`
     - `go get -d github.com/hyperledger/fabric-ca`
@@ -89,7 +89,7 @@ If planning to run your Fabric network locally, you'll need docker and a bit mor
         - `cd v1performance`
         - If testing v1.0.0-alpha: `git reset --hard aa73747ccf5f511fbcd10a962dd1e588bde1a8b0`
     - If testing against latest Fabric commit, copy from Fabric repo:
-        - `cp -r $GOPATH/src/github.com/hyperledger/fabric/test/tools/PTE .`
+        - `cp -r $GOPATH/src/github.com/ledgerone/fabric-ledgerone/test/tools/PTE .`
         - `cd PTE`
 
 4. Create Service Credentials file(s) for your Fabric network:
@@ -320,7 +320,7 @@ The output includes network id, thread id, transaction type, total transactions,
     "TLS": "enabled",
     "channelOpt": {
         "name": "testOrg1",
-        "channelTX": "/root/gopath/src/github.com/hyperledger/fabric/common/tools/cryptogen/crypto-config/ordererOrganizations/testOrgsChannel1.tx",
+        "channelTX": "/root/gopath/src/github.com/ledgerone/fabric-ledgerone/common/tools/cryptogen/crypto-config/ordererOrganizations/testOrgsChannel1.tx",
         "action":  "create",
         "orgName": [
             "testOrg1"
@@ -512,10 +512,10 @@ PTE supports multi orderers by specifying an orderer to each organization using 
 
 ## Creating a local Fabric network
 - If you do not yet have the Fabric docker images in your local docker registry, please either build them from Fabric source or download them from dockerhub.
-    - `cd $GOPATH/src/github.com/hyperledger/fabric/examples/e2e_cli/`
+    - `cd $GOPATH/src/github.com/ledgerone/fabric-ledgerone/examples/e2e_cli/`
     - `sh ./download-dockerimages.sh -c x86_64-1.0.0-alpha2 -f x86_64-1.0.0-alpha2`
 - If you do not have an existing network already, you can start a network using the Fabric e2e example:
-    - `cd $GOPATH/src/github.com/hyperledger/fabric/examples/e2e_cli/`
+    - `cd $GOPATH/src/github.com/ledgerone/fabric-ledgerone/examples/e2e_cli/`
     - Edit `network_setup.sh` and change **COMPOSE_FILE**:
         ```
         #COMPOSE_FILE=docker-compose-cli.yaml

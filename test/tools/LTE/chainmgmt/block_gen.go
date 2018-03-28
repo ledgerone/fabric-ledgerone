@@ -20,8 +20,8 @@ import (
 	"sync"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/protos/common"
-	benchcommon "github.com/hyperledger/fabric/test/tools/LTE/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
+	benchcommon "github.com/ledgerone/fabric-ledgerone/test/tools/LTE/common"
 )
 
 const (

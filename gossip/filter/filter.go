@@ -7,9 +7,9 @@ SPDX-License-Identifier: Apache-2.0
 package filter
 
 import (
-	"github.com/hyperledger/fabric/gossip/comm"
-	"github.com/hyperledger/fabric/gossip/discovery"
-	"github.com/hyperledger/fabric/gossip/util"
+	"github.com/ledgerone/fabric-ledgerone/gossip/comm"
+	"github.com/ledgerone/fabric-ledgerone/gossip/discovery"
+	"github.com/ledgerone/fabric-ledgerone/gossip/util"
 )
 
 // RoutingFilter defines a predicate on a NetworkMember

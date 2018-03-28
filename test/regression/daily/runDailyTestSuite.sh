@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DAILYDIR="$GOPATH/src/github.com/hyperledger/fabric/test/regression/daily"
+DAILYDIR="$GOPATH/src/github.com/ledgerone/fabric-ledgerone/test/regression/daily"
 
 #echo "========== Sample Tests..."
 #py.test -v --junitxml results_sample.xml Example.py

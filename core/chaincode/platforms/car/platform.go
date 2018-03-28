@@ -25,9 +25,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/hyperledger/fabric/core/chaincode/platforms/util"
-	cutil "github.com/hyperledger/fabric/core/container/util"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/platforms/util"
+	cutil "github.com/ledgerone/fabric-ledgerone/core/container/util"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 )
 
 // Platform for the CAR type

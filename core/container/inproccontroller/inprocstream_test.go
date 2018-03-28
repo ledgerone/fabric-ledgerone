@@ -9,7 +9,7 @@ package inproccontroller
 import (
 	"testing"
 
-	pb "github.com/hyperledger/fabric/protos/peer"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"github.com/stretchr/testify/assert"
 )
 

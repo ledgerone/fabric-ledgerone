@@ -23,13 +23,13 @@ import (
 	"net/http"
 	"reflect"
 
-	"github.com/hyperledger/fabric/common/tools/protolator"
+	"github.com/ledgerone/fabric-ledgerone/common/tools/protolator"
 
 	// Import these to register the proto types
-	_ "github.com/hyperledger/fabric/protos/common"
-	_ "github.com/hyperledger/fabric/protos/msp"
-	_ "github.com/hyperledger/fabric/protos/orderer"
-	_ "github.com/hyperledger/fabric/protos/peer"
+	_ "github.com/ledgerone/fabric-ledgerone/protos/common"
+	_ "github.com/ledgerone/fabric-ledgerone/protos/msp"
+	_ "github.com/ledgerone/fabric-ledgerone/protos/orderer"
+	_ "github.com/ledgerone/fabric-ledgerone/protos/peer"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/gorilla/mux"

@@ -14,12 +14,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/bccsp/factory"
-	"github.com/hyperledger/fabric/gossip/api"
-	"github.com/hyperledger/fabric/gossip/common"
-	"github.com/hyperledger/fabric/gossip/discovery"
-	"github.com/hyperledger/fabric/gossip/util"
-	proto "github.com/hyperledger/fabric/protos/gossip"
+	"github.com/ledgerone/fabric-ledgerone/bccsp/factory"
+	"github.com/ledgerone/fabric-ledgerone/gossip/api"
+	"github.com/ledgerone/fabric-ledgerone/gossip/common"
+	"github.com/ledgerone/fabric-ledgerone/gossip/discovery"
+	"github.com/ledgerone/fabric-ledgerone/gossip/util"
+	proto "github.com/ledgerone/fabric-ledgerone/protos/gossip"
 	"github.com/stretchr/testify/assert"
 )
 

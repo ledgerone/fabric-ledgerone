@@ -66,7 +66,7 @@ public abstract class ChaincodeBase implements Chaincode {
 	private int port = DEFAULT_PORT;
 	private String hostOverrideAuthority = "";
 	private boolean tlsEnabled = false;
-	private String rootCertFile = "/etc/hyperledger/fabric/peer.crt";
+	private String rootCertFile = "/etc/ledgerone/fabric-ledgerone/peer.crt";
 
 	private Handler handler;
 	private String id;

@@ -9,7 +9,7 @@ package aclmgmt
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
 )
 
 var aclLogger = flogging.MustGetLogger("aclmgmt")

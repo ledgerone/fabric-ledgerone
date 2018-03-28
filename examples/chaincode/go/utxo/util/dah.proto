@@ -16,7 +16,7 @@ limitations under the License.
 
 syntax = "proto3";
 
-option go_package = "github.com/hyperledger/fabric/examples/chaincode/go/utxo/util" ;
+option go_package = "github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/utxo/util" ;
 
 package util;
 

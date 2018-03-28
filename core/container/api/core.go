@@ -21,7 +21,7 @@ import (
 
 	"golang.org/x/net/context"
 
-	"github.com/hyperledger/fabric/core/container/ccintf"
+	"github.com/ledgerone/fabric-ledgerone/core/container/ccintf"
 )
 
 type BuildSpecFactory func() (io.Reader, error)

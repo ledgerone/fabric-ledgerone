@@ -2,7 +2,7 @@
   [
        {"Name": "mycc",
 	"InitArgs":[""],
-        "Path": "github.com/hyperledger/fabric/examples/ccchecker/chaincodes/newkeyperinvoke",
+        "Path": "github.com/ledgerone/fabric-ledgerone/examples/ccchecker/chaincodes/newkeyperinvoke",
 	"NumFinalQueryAttempts": 10,
 	"NumberOfInvokes": 10,
 	"DelayBetweenInvokeMs": 1,

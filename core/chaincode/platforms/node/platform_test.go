@@ -19,8 +19,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hyperledger/fabric/core/config"
-	"github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/core/config"
+	"github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"github.com/spf13/viper"
 )
 

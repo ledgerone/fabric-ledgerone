@@ -9,7 +9,7 @@ package policies
 import (
 	"testing"
 
-	cb "github.com/hyperledger/fabric/protos/common"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
 
 	"github.com/golang/protobuf/proto"
 	logging "github.com/op/go-logging"

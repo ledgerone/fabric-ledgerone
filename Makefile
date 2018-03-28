@@ -49,9 +49,9 @@ BASEIMAGE_RELEASE=0.4.6
 # the PROJECT_NAME env variable, for example,
 # export PROJECT_NAME=hyperledger/fabric-test
 ifeq ($(PROJECT_NAME),true)
-PROJECT_NAME = $(PROJECT_NAME)/fabric
+PROJECT_NAME = $(PROJECT_NAME)/fabric-ledgerone
 else
-PROJECT_NAME = hyperledger/fabric
+PROJECT_NAME = ledgerone/fabric-ledgerone
 endif
 IS_RELEASE = false
 EXPERIMENTAL ?= true

@@ -9,12 +9,12 @@ package gossip
 import (
 	"bytes"
 
-	"github.com/hyperledger/fabric/gossip/api"
-	"github.com/hyperledger/fabric/gossip/common"
-	"github.com/hyperledger/fabric/gossip/gossip/pull"
-	"github.com/hyperledger/fabric/gossip/identity"
-	"github.com/hyperledger/fabric/gossip/util"
-	proto "github.com/hyperledger/fabric/protos/gossip"
+	"github.com/ledgerone/fabric-ledgerone/gossip/api"
+	"github.com/ledgerone/fabric-ledgerone/gossip/common"
+	"github.com/ledgerone/fabric-ledgerone/gossip/gossip/pull"
+	"github.com/ledgerone/fabric-ledgerone/gossip/identity"
+	"github.com/ledgerone/fabric-ledgerone/gossip/util"
+	proto "github.com/ledgerone/fabric-ledgerone/protos/gossip"
 	"github.com/op/go-logging"
 	"github.com/pkg/errors"
 )

@@ -23,10 +23,10 @@ import (
 	"golang.org/x/net/context"
 
 	"github.com/fsouza/go-dockerclient"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/core/chaincode/platforms"
-	cutil "github.com/hyperledger/fabric/core/container/util"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/platforms"
+	cutil "github.com/ledgerone/fabric-ledgerone/core/container/util"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 )
 
 // VM implementation of VM management functionality.

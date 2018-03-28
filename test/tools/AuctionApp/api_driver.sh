@@ -27,12 +27,12 @@ SLEEP_TIME=10
 COUNTER=1
 MAX_RETRY=5
 CHAINCODE_NAME="auctioncc"
-LOG_FILE="$GOPATH/src/github.com/hyperledger/fabric/test/envsetup/logs/auction_logs.log"
+LOG_FILE="$GOPATH/src/github.com/ledgerone/fabric-ledgerone/test/envsetup/logs/auction_logs.log"
 TEMP_LOG_FILE="temp_auction_logs.log"
 ORDERER_IP=orderer.example.com:7050
 LOG_LEVEL="error"
 
-ORDERER_CA=$GOPATH/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+ORDERER_CA=$GOPATH/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
 
 function wait() {
 	printf "\nWait for $1 secs\n"
@@ -53,18 +53,18 @@ function setGlobals() {
 
 	if [ $1 -eq 0 -o $1 -eq 1 ]; then
 		CORE_PEER_LOCALMSPID="Org1MSP"
-		CORE_PEER_TLS_ROOTCERT_FILE=$GOPATH/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
-		CORE_PEER_MSPCONFIGPATH=$GOPATH/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+		CORE_PEER_TLS_ROOTCERT_FILE=$GOPATH/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+		CORE_PEER_MSPCONFIGPATH=$GOPATH/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
 		if [ $1 -eq 0 ]; then
 			CORE_PEER_ADDRESS=peer0.org1.example.com:7051
 		else
 			CORE_PEER_ADDRESS=peer1.org1.example.com:7051
-			CORE_PEER_MSPCONFIGPATH=$GOPATH/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+			CORE_PEER_MSPCONFIGPATH=$GOPATH/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
 		fi
 	else
 		CORE_PEER_LOCALMSPID="Org2MSP"
-		CORE_PEER_TLS_ROOTCERT_FILE=$GOPATH/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
-		CORE_PEER_MSPCONFIGPATH=$GOPATH/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
+		CORE_PEER_TLS_ROOTCERT_FILE=$GOPATH/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
+		CORE_PEER_MSPCONFIGPATH=$GOPATH/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
 		if [ $1 -eq 2 ]; then
 			CORE_PEER_ADDRESS=peer0.org2.example.com:7051
 		else
@@ -78,10 +78,10 @@ createChannel() {
 	CH_NUM=$1
 
 	if [ -z "$CORE_PEER_TLS_ENABLED" -o "$CORE_PEER_TLS_ENABLED" = "false" ]; then
-		peer channel create -o $ORDERER_IP -c $CHANNEL_NAME$CH_NUM -f $GOPATH/src/github.com/hyperledger/fabric/peer/channel-artifacts/channel$CH_NUM.tx -t 10 >&$LOG_FILE
+		peer channel create -o $ORDERER_IP -c $CHANNEL_NAME$CH_NUM -f $GOPATH/src/github.com/ledgerone/fabric-ledgerone/peer/channel-artifacts/channel$CH_NUM.tx -t 10 >&$LOG_FILE
 		wait 5
 	else
-		peer channel create -o $ORDERER_IP -c $CHANNEL_NAME$CH_NUM -f $GOPATH/src/github.com/hyperledger/fabric/peer/channel-artifacts/channel$CH_NUM.tx --tls --cafile $ORDERER_CA -t 10 >&$LOG_FILE
+		peer channel create -o $ORDERER_IP -c $CHANNEL_NAME$CH_NUM -f $GOPATH/src/github.com/ledgerone/fabric-ledgerone/peer/channel-artifacts/channel$CH_NUM.tx --tls --cafile $ORDERER_CA -t 10 >&$LOG_FILE
 		wait 5
 	fi
 
@@ -97,9 +97,9 @@ updateAnchorPeers() {
 	setGlobals $PEER
 
 	if [ -z "$CORE_PEER_TLS_ENABLED" -o "$CORE_PEER_TLS_ENABLED" = "false" ]; then
-		peer channel create -o $ORDERER_IP -c $CHANNEL_NAME$CH_NUM -f $GOPATH/src/github.com/hyperledger/fabric/peer/channel-artifacts/${CORE_PEER_LOCALMSPID}anchors$CH_NUM.tx >>$LOG_FILE
+		peer channel create -o $ORDERER_IP -c $CHANNEL_NAME$CH_NUM -f $GOPATH/src/github.com/ledgerone/fabric-ledgerone/peer/channel-artifacts/${CORE_PEER_LOCALMSPID}anchors$CH_NUM.tx >>$LOG_FILE
 	else
-		peer channel create -o $ORDERER_IP -c $CHANNEL_NAME$CH_NUM -f $GOPATH/src/github.com/hyperledger/fabric/peer/channel-artifacts/${CORE_PEER_LOCALMSPID}anchors$CH_NUM.tx --tls --cafile $ORDERER_CA >>$LOG_FILE
+		peer channel create -o $ORDERER_IP -c $CHANNEL_NAME$CH_NUM -f $GOPATH/src/github.com/ledgerone/fabric-ledgerone/peer/channel-artifacts/${CORE_PEER_LOCALMSPID}anchors$CH_NUM.tx --tls --cafile $ORDERER_CA >>$LOG_FILE
 	fi
 
 	res=$?
@@ -142,7 +142,7 @@ installChaincode() {
 		for ((ch = 0; $ch < $CHAINCODES; ch++)); do
 			PEER=$i
 			setGlobals $PEER
-			peer chaincode install -n $CHAINCODE_NAME$ch -v 1 -p github.com/hyperledger/fabric/test/chaincodes/AuctionApp >>$LOG_FILE
+			peer chaincode install -n $CHAINCODE_NAME$ch -v 1 -p github.com/ledgerone/fabric-ledgerone/test/chaincodes/AuctionApp >>$LOG_FILE
 
 			res=$?
 			verifyResult $res "Chaincode '$CHAINCODE_NAME$ch' installation on remote peer PEER$PEER has Failed"

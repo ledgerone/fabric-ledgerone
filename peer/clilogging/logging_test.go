@@ -19,7 +19,7 @@ package clilogging
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/peer/common"
+	"github.com/ledgerone/fabric-ledgerone/peer/common"
 	"github.com/spf13/cobra"
 	"github.com/stretchr/testify/assert"
 )

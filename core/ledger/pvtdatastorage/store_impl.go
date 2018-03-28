@@ -9,11 +9,11 @@ package pvtdatastorage
 import (
 	"fmt"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/ledger/util/leveldbhelper"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/ledgerconfig"
-	"github.com/hyperledger/fabric/protos/ledger/rwset"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/util/leveldbhelper"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/ledgerconfig"
+	"github.com/ledgerone/fabric-ledgerone/protos/ledger/rwset"
 )
 
 var logger = flogging.MustGetLogger("pvtdatastorage")

@@ -11,10 +11,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/hyperledger/fabric/gossip/common"
-	"github.com/hyperledger/fabric/gossip/discovery"
-	"github.com/hyperledger/fabric/gossip/util"
-	proto "github.com/hyperledger/fabric/protos/gossip"
+	"github.com/ledgerone/fabric-ledgerone/gossip/common"
+	"github.com/ledgerone/fabric-ledgerone/gossip/discovery"
+	"github.com/ledgerone/fabric-ledgerone/gossip/util"
+	proto "github.com/ledgerone/fabric-ledgerone/protos/gossip"
 	"github.com/op/go-logging"
 )
 

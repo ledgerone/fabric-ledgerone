@@ -23,10 +23,10 @@ import (
 
 	"golang.org/x/net/context"
 
-	"github.com/hyperledger/fabric/core/container/api"
-	"github.com/hyperledger/fabric/core/container/ccintf"
-	"github.com/hyperledger/fabric/core/container/dockercontroller"
-	"github.com/hyperledger/fabric/core/container/inproccontroller"
+	"github.com/ledgerone/fabric-ledgerone/core/container/api"
+	"github.com/ledgerone/fabric-ledgerone/core/container/ccintf"
+	"github.com/ledgerone/fabric-ledgerone/core/container/dockercontroller"
+	"github.com/ledgerone/fabric-ledgerone/core/container/inproccontroller"
 )
 
 type refCountedLock struct {

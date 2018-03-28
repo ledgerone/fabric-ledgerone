@@ -22,8 +22,8 @@ import (
 
 	"errors"
 
-	"github.com/hyperledger/fabric/peer/common"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/peer/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 
 	"github.com/spf13/cobra"
 )

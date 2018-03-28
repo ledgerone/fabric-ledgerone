@@ -25,8 +25,8 @@ import (
 	"net/url"
 	"strings"
 
-	cutil "github.com/hyperledger/fabric/core/container/util"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	cutil "github.com/ledgerone/fabric-ledgerone/core/container/util"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 	//	"path/filepath"
 )
 

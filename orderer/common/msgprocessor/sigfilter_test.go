@@ -10,11 +10,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	mockchannelconfig "github.com/hyperledger/fabric/common/mocks/config"
-	mockpolicies "github.com/hyperledger/fabric/common/mocks/policies"
-	cb "github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	mockchannelconfig "github.com/ledgerone/fabric-ledgerone/common/mocks/config"
+	mockpolicies "github.com/ledgerone/fabric-ledgerone/common/mocks/policies"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"

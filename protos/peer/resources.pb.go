@@ -6,7 +6,7 @@ package peer
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import common3 "github.com/hyperledger/fabric/protos/common"
+import common3 "github.com/ledgerone/fabric-ledgerone/protos/common"
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal

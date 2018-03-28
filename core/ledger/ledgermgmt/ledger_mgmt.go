@@ -20,16 +20,16 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/hyperledger/fabric/core/ledger/cceventmgmt"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/cceventmgmt"
 
 	"fmt"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/customtx"
-	"github.com/hyperledger/fabric/core/ledger/kvledger"
-	"github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/customtx"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 )
 
 var logger = flogging.MustGetLogger("ledgermgmt")

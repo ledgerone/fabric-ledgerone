@@ -39,7 +39,7 @@ install: $(GOTOOLS_BIN)
 gotool.protoc-gen-go:
 	@echo "Building github.com/golang/protobuf/protoc-gen-go -> protoc-gen-go"
 	@mkdir -p $(TMP_GOPATH)/src/github.com/golang/protobuf/
-	@cp -R $(GOPATH)/src/github.com/hyperledger/fabric/vendor/github.com/golang/protobuf/* $(TMP_GOPATH)/src/github.com/golang/protobuf
+	@cp -R $(GOPATH)/src/github.com/ledgerone/fabric-ledgerone/vendor/github.com/golang/protobuf/* $(TMP_GOPATH)/src/github.com/golang/protobuf
 	@GOPATH=$(abspath $(TMP_GOPATH)) go install github.com/golang/protobuf/protoc-gen-go
 
 # Default rule for gotools uses the name->path map for a generic 'go get' style build

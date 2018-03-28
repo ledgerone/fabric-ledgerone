@@ -9,8 +9,8 @@ package msgprocessor
 import (
 	"fmt"
 
-	cb "github.com/hyperledger/fabric/protos/common"
-	ab "github.com/hyperledger/fabric/protos/orderer"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	ab "github.com/ledgerone/fabric-ledgerone/protos/orderer"
 )
 
 // Support defines the subset of the channel support required to create this filter

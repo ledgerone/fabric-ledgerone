@@ -17,11 +17,11 @@ limitations under the License.
 package chainmgmt
 
 import (
-	mockmsp "github.com/hyperledger/fabric/common/mocks/msp"
-	"github.com/hyperledger/fabric/msp"
-	"github.com/hyperledger/fabric/protos/common"
-	pb "github.com/hyperledger/fabric/protos/peer"
-	putils "github.com/hyperledger/fabric/protos/utils"
+	mockmsp "github.com/ledgerone/fabric-ledgerone/common/mocks/msp"
+	"github.com/ledgerone/fabric-ledgerone/msp"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
+	putils "github.com/ledgerone/fabric-ledgerone/protos/utils"
 )
 
 const (

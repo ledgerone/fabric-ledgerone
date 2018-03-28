@@ -279,12 +279,12 @@ Legal stuff
 
 **Note:** Each source file must include a license header for the Apache
 Software License 2.0. See the template of the `license header
-<https://github.com/hyperledger/fabric/blob/master/docs/source/dev-setup/headers.txt>`__.
+<https://github.com/ledgerone/fabric-ledgerone/blob/master/docs/source/dev-setup/headers.txt>`__.
 
 We have tried to make it as easy as possible to make contributions. This
 applies to how we handle the legal aspects of contribution. We use the
 same approach—the `Developer's Certificate of Origin 1.1
-(DCO) <https://github.com/hyperledger/fabric/blob/master/docs/source/DCO1.1.txt>`__—that the Linux® Kernel
+(DCO) <https://github.com/ledgerone/fabric-ledgerone/blob/master/docs/source/DCO1.1.txt>`__—that the Linux® Kernel
 `community <http://elinux.org/Developer_Certificate_Of_Origin>`__ uses
 to manage code contributions.
 

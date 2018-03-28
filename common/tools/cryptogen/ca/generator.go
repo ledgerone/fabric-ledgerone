@@ -20,8 +20,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hyperledger/fabric/bccsp/utils"
-	"github.com/hyperledger/fabric/common/tools/cryptogen/csp"
+	"github.com/ledgerone/fabric-ledgerone/bccsp/utils"
+	"github.com/ledgerone/fabric-ledgerone/common/tools/cryptogen/csp"
 )
 
 type CA struct {

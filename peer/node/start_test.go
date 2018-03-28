@@ -25,9 +25,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/common/viperutil"
-	"github.com/hyperledger/fabric/core/handlers/library"
-	"github.com/hyperledger/fabric/msp/mgmt/testtools"
+	"github.com/ledgerone/fabric-ledgerone/common/viperutil"
+	"github.com/ledgerone/fabric-ledgerone/core/handlers/library"
+	"github.com/ledgerone/fabric-ledgerone/msp/mgmt/testtools"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/assert"
 )

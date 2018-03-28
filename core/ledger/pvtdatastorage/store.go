@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 package pvtdatastorage
 
 import (
-	"github.com/hyperledger/fabric/core/ledger"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger"
 )
 
 // Provider provides handle to specific 'Store' that in turn manages

@@ -64,7 +64,7 @@ First build and start the `configtxlator`.
 ```
 $ make configtxlator
 build/bin/configtxlator
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/hyperledger/fabric/build/bin go install -tags "" -ldflags "-X github.com/hyperledger/fabric/common/metadata.Version=1.0.0-alpha3-snapshot-42434e60f -X github.com/hyperledger/fabric/common/metadata.BaseVersion=0.3.1 -X github.com/hyperledger/fabric/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/hyperledger/fabric/common/metadata.DockerNamespace=hyperledger -X github.com/hyperledger/fabric/common/metadata.BaseDockerNamespace=hyperledger" github.com/hyperledger/fabric/common/tools/configtxlator
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-42434e60f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/common/tools/configtxlator
 Binary available as build/bin/configtxlator
 ```
 ```
@@ -77,7 +77,7 @@ Then, in another window, build the `configtxgen` tool.
 ```
 $ make configtxgen
 build/bin/configtxgen
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/hyperledger/fabric/build/bin go install -tags "nopkcs11" -ldflags "-X github.com/hyperledger/fabric/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/hyperledger/fabric/common/metadata.BaseVersion=0.3.1 -X github.com/hyperledger/fabric/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/hyperledger/fabric/common/metadata.DockerNamespace=hyperledger -X github.com/hyperledger/fabric/common/metadata.BaseDockerNamespace=hyperledger" github.com/hyperledger/fabric/common/configtx/tool/configtxgen
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "nopkcs11" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/common/configtx/tool/configtxgen
 Binary available as build/bin/configtxgen
 ```
 
@@ -129,7 +129,7 @@ First build and start the `configtxlator`.
 ```
 $ make configtxlator
 build/bin/configtxlator
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/hyperledger/fabric/build/bin go install -tags "" -ldflags "-X github.com/hyperledger/fabric/common/metadata.Version=1.0.0-alpha3-snapshot-42434e60f -X github.com/hyperledger/fabric/common/metadata.BaseVersion=0.3.1 -X github.com/hyperledger/fabric/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/hyperledger/fabric/common/metadata.DockerNamespace=hyperledger -X github.com/hyperledger/fabric/common/metadata.BaseDockerNamespace=hyperledger" github.com/hyperledger/fabric/common/tools/configtxlator
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-42434e60f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/common/tools/configtxlator
 Binary available as build/bin/configtxlator
 ```
 ```
@@ -144,12 +144,12 @@ $ make peer
 Installing chaintool
 curl -L https://github.com/hyperledger/fabric-chaintool/releases/download/v0.10.3/chaintool > build/bin/chaintool
 ...
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/hyperledger/fabric/build/bin go install -tags "" -ldflags "-X github.com/hyperledger/fabric/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/hyperledger/fabric/common/metadata.BaseVersion=0.3.1 -X github.com/hyperledger/fabric/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/hyperledger/fabric/common/metadata.DockerNamespace=hyperledger -X github.com/hyperledger/fabric/common/metadata.BaseDockerNamespace=hyperledger" github.com/hyperledger/fabric/peer
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/peer
 Binary available as build/bin/peer
 
 $ make orderer
 build/bin/orderer
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/hyperledger/fabric/build/bin go install -tags "" -ldflags "-X github.com/hyperledger/fabric/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/hyperledger/fabric/common/metadata.BaseVersion=0.3.1 -X github.com/hyperledger/fabric/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/hyperledger/fabric/common/metadata.DockerNamespace=hyperledger -X github.com/hyperledger/fabric/common/metadata.BaseDockerNamespace=hyperledger" github.com/hyperledger/fabric/orderer
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/orderer
 Binary available as build/bin/orderer
 ```
 Start the orderer using the default options, including the provisional bootstrapper which will create a `testchainid` ordering system channel.
@@ -174,8 +174,8 @@ At this point, executing `examples/reconfig/script.sh` in another window will in
 
 ```
 $ peer channel fetch config config_block.pb -o 127.0.0.1:7050 -c testchainid
-2017-05-31 15:11:37.617 EDT [msp] getMspConfig -> INFO 001 intermediate certs folder not found at [/home/yellickj/go/src/github.com/hyperledger/fabric/sampleconfig/msp/intermediatecerts]. Skipping.: [stat /home/yellickj/go/src/github.com/hyperledger/fabric/sampleconfig/msp/intermediatecerts: no such file or directory]
-2017-05-31 15:11:37.617 EDT [msp] getMspConfig -> INFO 002 crls folder not found at [/home/yellickj/go/src/github.com/hyperledger/fabric/sampleconfig/msp/intermediatecerts]. Skipping.: [stat /home/yellickj/go/src/github.com/hyperledger/fabric/sampleconfig/msp/crls: no such file or directory]
+2017-05-31 15:11:37.617 EDT [msp] getMspConfig -> INFO 001 intermediate certs folder not found at [/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/sampleconfig/msp/intermediatecerts]. Skipping.: [stat /home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/sampleconfig/msp/intermediatecerts: no such file or directory]
+2017-05-31 15:11:37.617 EDT [msp] getMspConfig -> INFO 002 crls folder not found at [/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/sampleconfig/msp/intermediatecerts]. Skipping.: [stat /home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/sampleconfig/msp/crls: no such file or directory]
 Received block:  1
 Received block:  1
 2017-05-31 15:11:37.635 EDT [main] main -> INFO 003 Exiting.....
@@ -248,7 +248,7 @@ First build and start the `configtxlator`.
 ```
 $ make configtxlator
 build/bin/configtxlator
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/hyperledger/fabric/build/bin go install -tags "" -ldflags "-X github.com/hyperledger/fabric/common/metadata.Version=1.0.0-alpha3-snapshot-42434e60f -X github.com/hyperledger/fabric/common/metadata.BaseVersion=0.3.1 -X github.com/hyperledger/fabric/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/hyperledger/fabric/common/metadata.DockerNamespace=hyperledger -X github.com/hyperledger/fabric/common/metadata.BaseDockerNamespace=hyperledger" github.com/hyperledger/fabric/common/tools/configtxlator
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-42434e60f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/common/tools/configtxlator
 Binary available as build/bin/configtxlator
 ```
 ```
@@ -261,7 +261,7 @@ Then, in another window, build the `configtxgen` tool.
 ```
 $ make configtxgen
 build/bin/configtxgen
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/hyperledger/fabric/build/bin go install -tags "nopkcs11" -ldflags "-X github.com/hyperledger/fabric/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/hyperledger/fabric/common/metadata.BaseVersion=0.3.1 -X github.com/hyperledger/fabric/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/hyperledger/fabric/common/metadata.DockerNamespace=hyperledger -X github.com/hyperledger/fabric/common/metadata.BaseDockerNamespace=hyperledger" github.com/hyperledger/fabric/common/configtx/tool/configtxgen
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "nopkcs11" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/common/configtx/tool/configtxgen
 Binary available as build/bin/configtxgen
 ```
 
@@ -272,12 +272,12 @@ $ make peer
 Installing chaintool
 curl -L https://github.com/hyperledger/fabric-chaintool/releases/download/v0.10.3/chaintool > build/bin/chaintool
 ...
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/hyperledger/fabric/build/bin go install -tags "" -ldflags "-X github.com/hyperledger/fabric/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/hyperledger/fabric/common/metadata.BaseVersion=0.3.1 -X github.com/hyperledger/fabric/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/hyperledger/fabric/common/metadata.DockerNamespace=hyperledger -X github.com/hyperledger/fabric/common/metadata.BaseDockerNamespace=hyperledger" github.com/hyperledger/fabric/peer
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/peer
 Binary available as build/bin/peer
 
 $ make orderer
 build/bin/orderer
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/hyperledger/fabric/build/bin go install -tags "" -ldflags "-X github.com/hyperledger/fabric/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/hyperledger/fabric/common/metadata.BaseVersion=0.3.1 -X github.com/hyperledger/fabric/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/hyperledger/fabric/common/metadata.DockerNamespace=hyperledger -X github.com/hyperledger/fabric/common/metadata.BaseDockerNamespace=hyperledger" github.com/hyperledger/fabric/orderer
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/orderer
 Binary available as build/bin/orderer
 ```
 

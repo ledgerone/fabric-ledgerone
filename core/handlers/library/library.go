@@ -7,10 +7,10 @@ SPDX-License-Identifier: Apache-2.0
 package library
 
 import (
-	"github.com/hyperledger/fabric/core/handlers/auth"
-	"github.com/hyperledger/fabric/core/handlers/auth/filter"
-	"github.com/hyperledger/fabric/core/handlers/decoration"
-	"github.com/hyperledger/fabric/core/handlers/decoration/decorator"
+	"github.com/ledgerone/fabric-ledgerone/core/handlers/auth"
+	"github.com/ledgerone/fabric-ledgerone/core/handlers/auth/filter"
+	"github.com/ledgerone/fabric-ledgerone/core/handlers/decoration"
+	"github.com/ledgerone/fabric-ledgerone/core/handlers/decoration/decorator"
 )
 
 // HandlerLibrary is used to assert

@@ -20,10 +20,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/core/container"
-	"github.com/hyperledger/fabric/core/testutil"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/util"
+	"github.com/ledgerone/fabric-ledgerone/core/container"
+	"github.com/ledgerone/fabric-ledgerone/core/testutil"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 )
 
 func TestMain(m *testing.M) {

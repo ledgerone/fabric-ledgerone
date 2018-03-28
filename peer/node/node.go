@@ -19,7 +19,7 @@ package node
 import (
 	"fmt"
 
-	"github.com/hyperledger/fabric/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
 	"github.com/spf13/cobra"
 )
 

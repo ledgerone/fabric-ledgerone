@@ -27,17 +27,17 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/core/chaincode/accesscontrol"
-	"github.com/hyperledger/fabric/core/chaincode/platforms"
-	"github.com/hyperledger/fabric/core/chaincode/shim"
-	"github.com/hyperledger/fabric/core/common/ccprovider"
-	"github.com/hyperledger/fabric/core/config"
-	"github.com/hyperledger/fabric/core/container"
-	"github.com/hyperledger/fabric/core/container/api"
-	"github.com/hyperledger/fabric/core/container/ccintf"
-	"github.com/hyperledger/fabric/core/ledger"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/accesscontrol"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/platforms"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/shim"
+	"github.com/ledgerone/fabric-ledgerone/core/common/ccprovider"
+	"github.com/ledgerone/fabric-ledgerone/core/config"
+	"github.com/ledgerone/fabric-ledgerone/core/container"
+	"github.com/ledgerone/fabric-ledgerone/core/container/api"
+	"github.com/ledgerone/fabric-ledgerone/core/container/ccintf"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 	logging "github.com/op/go-logging"
 	"github.com/pkg/errors"
 	"github.com/spf13/viper"
@@ -59,9 +59,9 @@ const (
 	HistoryQueryExecutorKey key = "historyqueryexecutorkey"
 
 	// Mutual TLS auth client key and cert paths in the chaincode container
-	TLSClientKeyPath      string = "/etc/hyperledger/fabric/client.key"
-	TLSClientCertPath     string = "/etc/hyperledger/fabric/client.crt"
-	TLSClientRootCertPath string = "/etc/hyperledger/fabric/peer.crt"
+	TLSClientKeyPath      string = "/etc/ledgerone/fabric-ledgerone/client.key"
+	TLSClientCertPath     string = "/etc/ledgerone/fabric-ledgerone/client.crt"
+	TLSClientRootCertPath string = "/etc/ledgerone/fabric-ledgerone/peer.crt"
 )
 
 //this is basically the singleton that supports the

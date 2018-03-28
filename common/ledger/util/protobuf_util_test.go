@@ -20,7 +20,7 @@ import (
 	"testing"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/common/ledger/testutil"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/testutil"
 )
 
 func TestBuffer(t *testing.T) {

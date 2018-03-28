@@ -9,9 +9,9 @@ package service
 import (
 	"reflect"
 
-	"github.com/hyperledger/fabric/common/channelconfig"
+	"github.com/ledgerone/fabric-ledgerone/common/channelconfig"
 
-	"github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/protos/peer"
 )
 
 // Config enumerates the configuration methods required by gossip

@@ -10,12 +10,12 @@ import (
 	"sync/atomic"
 
 	"github.com/golang/protobuf/proto"
-	gossip_common "github.com/hyperledger/fabric/gossip/common"
-	"github.com/hyperledger/fabric/gossip/discovery"
-	"github.com/hyperledger/fabric/protos/common"
-	gossip_proto "github.com/hyperledger/fabric/protos/gossip"
-	"github.com/hyperledger/fabric/protos/orderer"
-	"github.com/hyperledger/fabric/protos/utils"
+	gossip_common "github.com/ledgerone/fabric-ledgerone/gossip/common"
+	"github.com/ledgerone/fabric-ledgerone/gossip/discovery"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
+	gossip_proto "github.com/ledgerone/fabric-ledgerone/protos/gossip"
+	"github.com/ledgerone/fabric-ledgerone/protos/orderer"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )

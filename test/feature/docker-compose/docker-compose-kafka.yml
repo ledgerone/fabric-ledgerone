@@ -192,7 +192,7 @@ services:
             - ../configs/${CORE_PEER_NETWORKID}:/var/hyperledger/configs
             - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer0.example.com/msp:/var/hyperledger/msp
             - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer0.example.com/tls:/var/hyperledger/tls
-        working_dir: /opt/gopath/src/github.com/hyperledger/fabric/orderer
+        working_dir: /opt/gopath/src/github.com/ledgerone/fabric-ledgerone/orderer
         command: orderer
         ports:
           - '7050'
@@ -240,7 +240,7 @@ services:
             - ../configs/${CORE_PEER_NETWORKID}:/var/hyperledger/configs
             - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer1.example.com/msp:/var/hyperledger/msp
             - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer1.example.com/tls:/var/hyperledger/tls
-        working_dir: /opt/gopath/src/github.com/hyperledger/fabric/orderer
+        working_dir: /opt/gopath/src/github.com/ledgerone/fabric-ledgerone/orderer
         command: orderer
         ports:
           - '7050'
@@ -288,7 +288,7 @@ services:
             - ../configs/${CORE_PEER_NETWORKID}:/var/hyperledger/configs
             - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer2.example.com/msp:/var/hyperledger/msp
             - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer2.example.com/tls:/var/hyperledger/tls
-        working_dir: /opt/gopath/src/github.com/hyperledger/fabric/orderer
+        working_dir: /opt/gopath/src/github.com/ledgerone/fabric-ledgerone/orderer
         command: orderer
         ports:
           - '7050'
@@ -502,11 +502,11 @@ services:
             - CORE_PEER_TLS_CERT_FILE=/var/hyperledger/tls/server.crt
             - CORE_PEER_TLS_KEY_FILE=/var/hyperledger/tls/server.key
             - CORE_PEER_TLS_ROOTCERT_FILE=/var/hyperledger/tls/ca.crt
-        working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
+        working_dir: /opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer
         command: /bin/bash -c 'sleep 6000000000000000000'
         volumes:
             - /var/run/:/host/var/run/
-            - ../../../examples/chaincode:/opt/gopath/src/github.com/hyperledger/fabric/examples/chaincode
+            - ../../../examples/chaincode:/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/examples/chaincode
             - ../configs:/var/hyperledger/configs
             - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls:/var/hyperledger/tls
         ports:

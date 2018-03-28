@@ -20,8 +20,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/core/comm"
-	testpb "github.com/hyperledger/fabric/core/comm/testdata/grpc"
+	"github.com/ledgerone/fabric-ledgerone/core/comm"
+	testpb "github.com/ledgerone/fabric-ledgerone/core/comm/testdata/grpc"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"

@@ -12,7 +12,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/gossip/util"
+	"github.com/ledgerone/fabric-ledgerone/gossip/util"
 	"github.com/stretchr/testify/assert"
 )
 

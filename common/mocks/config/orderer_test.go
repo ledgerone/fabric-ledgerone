@@ -9,7 +9,7 @@ package config
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/common/channelconfig"
+	"github.com/ledgerone/fabric-ledgerone/common/channelconfig"
 )
 
 func TestOrdererConfigInterface(t *testing.T) {

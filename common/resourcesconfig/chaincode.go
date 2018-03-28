@@ -7,9 +7,9 @@ SPDX-License-Identifier: Apache-2.0
 package resourcesconfig
 
 import (
-	"github.com/hyperledger/fabric/common/channelconfig"
-	cb "github.com/hyperledger/fabric/protos/common"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/channelconfig"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 
 	"github.com/pkg/errors"
 )

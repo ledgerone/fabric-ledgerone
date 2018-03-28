@@ -19,7 +19,7 @@ package ledgerconfig
 import (
 	"path/filepath"
 
-	"github.com/hyperledger/fabric/core/config"
+	"github.com/ledgerone/fabric-ledgerone/core/config"
 	"github.com/spf13/viper"
 )
 

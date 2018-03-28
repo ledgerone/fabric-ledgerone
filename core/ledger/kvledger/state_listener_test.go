@@ -9,10 +9,10 @@ package kvledger
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/protos/ledger/rwset/kvrwset"
+	"github.com/ledgerone/fabric-ledgerone/protos/ledger/rwset/kvrwset"
 
-	"github.com/hyperledger/fabric/common/ledger/testutil"
-	"github.com/hyperledger/fabric/core/ledger"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/testutil"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger"
 	"github.com/stretchr/testify/assert"
 )
 

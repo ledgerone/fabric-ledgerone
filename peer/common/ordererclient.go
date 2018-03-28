@@ -11,8 +11,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/hyperledger/fabric/core/comm"
-	ab "github.com/hyperledger/fabric/protos/orderer"
+	"github.com/ledgerone/fabric-ledgerone/core/comm"
+	ab "github.com/ledgerone/fabric-ledgerone/protos/orderer"
 	"github.com/pkg/errors"
 )
 

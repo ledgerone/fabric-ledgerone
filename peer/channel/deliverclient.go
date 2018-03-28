@@ -20,12 +20,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/hyperledger/fabric/common/localmsp"
-	"github.com/hyperledger/fabric/common/util"
-	pcommon "github.com/hyperledger/fabric/peer/common"
-	"github.com/hyperledger/fabric/protos/common"
-	ab "github.com/hyperledger/fabric/protos/orderer"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/common/localmsp"
+	"github.com/ledgerone/fabric-ledgerone/common/util"
+	pcommon "github.com/ledgerone/fabric-ledgerone/peer/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
+	ab "github.com/ledgerone/fabric-ledgerone/protos/orderer"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 	"github.com/pkg/errors"
 )
 

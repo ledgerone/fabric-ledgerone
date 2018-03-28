@@ -23,11 +23,11 @@ import (
 	"os"
 	"reflect"
 
-	"github.com/hyperledger/fabric/common/tools/configtxlator/metadata"
-	"github.com/hyperledger/fabric/common/tools/configtxlator/rest"
-	"github.com/hyperledger/fabric/common/tools/configtxlator/update"
-	"github.com/hyperledger/fabric/common/tools/protolator"
-	cb "github.com/hyperledger/fabric/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/common/tools/configtxlator/metadata"
+	"github.com/ledgerone/fabric-ledgerone/common/tools/configtxlator/rest"
+	"github.com/ledgerone/fabric-ledgerone/common/tools/configtxlator/update"
+	"github.com/ledgerone/fabric-ledgerone/common/tools/protolator"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/op/go-logging"

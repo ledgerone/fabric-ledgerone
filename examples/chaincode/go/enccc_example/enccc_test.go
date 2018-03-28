@@ -1,3 +1,8 @@
+/*
+Copyright IBM Corp. All Rights Reserved.
+
+SPDX-License-Identifier: Apache-2.0
+*/
 package main
 
 import (
@@ -5,8 +10,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/hyperledger/fabric/bccsp/factory"
-	"github.com/hyperledger/fabric/core/chaincode/shim"
+	"github.com/ledgerone/fabric-ledgerone/bccsp/factory"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/shim"
 	"github.com/stretchr/testify/assert"
 )
 

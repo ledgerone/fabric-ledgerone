@@ -36,7 +36,7 @@ do
     fi
 
     echo "Checking with goimports"
-    OUTPUT="$(goimports -srcdir $GOPATH/src/github.com/hyperledger/fabric -l $i)"
+    OUTPUT="$(goimports -srcdir $GOPATH/src/github.com/ledgerone/fabric-ledgerone -l $i)"
     if [[ $OUTPUT ]]; then
         echo "The following files contain goimports errors"
         echo $OUTPUT

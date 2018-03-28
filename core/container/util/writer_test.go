@@ -134,7 +134,7 @@ func Test_WriteFolderToTarPackage1(t *testing.T) {
 	gopath = filepath.SplitList(gopath)[0]
 
 	srcPath := filepath.Join(gopath, "src",
-		"github.com/hyperledger/fabric/examples/chaincode/java/SimpleSample")
+		"github.com/ledgerone/fabric-ledgerone/examples/chaincode/java/SimpleSample")
 	filePath := "src/src/main/java/example/SimpleSample.java"
 	includeFileTypes := map[string]bool{
 		".java": true,
@@ -164,7 +164,7 @@ func Test_WriteFolderToTarPackage2(t *testing.T) {
 	gopath = filepath.SplitList(gopath)[0]
 
 	srcPath := filepath.Join(gopath, "src",
-		"github.com/hyperledger/fabric/examples/chaincode/java")
+		"github.com/ledgerone/fabric-ledgerone/examples/chaincode/java")
 	excludeFileTypes := map[string]bool{
 		".xml": true,
 	}
@@ -182,7 +182,7 @@ func Test_WriteFolderToTarPackage3(t *testing.T) {
 	// but we can still use the go example for unit test,
 	// since there are no node chaincode examples in fabric repos
 	srcPath := filepath.Join(gopath, "src",
-		"github.com/hyperledger/fabric/examples/chaincode/go/marbles02")
+		"github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/marbles02")
 	filePath := "META-INF/statedb/couchdb/indexes/indexOwner.json"
 
 	tarBytes := createTestTar(t, srcPath, "", nil, nil)
@@ -219,7 +219,7 @@ func Test_WriteFolderToTarPackage4(t *testing.T) {
 	// but we can still use the go example for unit test,
 	// since there are no node chaincode examples in fabric repos
 	srcPath := filepath.Join(gopath, "src",
-		"github.com/hyperledger/fabric/examples/chaincode/go/marbles02")
+		"github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/marbles02")
 	srcPath = srcPath + "/"
 	filePath := "META-INF/statedb/couchdb/indexes/indexOwner.json"
 
@@ -254,7 +254,7 @@ func Test_WriteFolderToTarPackage5(t *testing.T) {
 	gopath = filepath.SplitList(gopath)[0]
 
 	srcPath := filepath.Join(gopath, "src",
-		"github.com/hyperledger/fabric/test/chaincodes/BadMetadataIgnoreHiddenFile")
+		"github.com/ledgerone/fabric-ledgerone/test/chaincodes/BadMetadataIgnoreHiddenFile")
 
 	filePath := "META-INF/.hiddenfile"
 
@@ -296,7 +296,7 @@ func Test_WriteFolderToTarPackageFailure1(t *testing.T) {
 	gopath = filepath.SplitList(gopath)[0]
 
 	srcPath := filepath.Join(gopath, "src",
-		"github.com/hyperledger/fabric/core/container/util",
+		"github.com/ledgerone/fabric-ledgerone/core/container/util",
 		fmt.Sprintf("%d", os.Getpid()))
 	os.Mkdir(srcPath, os.ModePerm)
 	defer os.Remove(srcPath)
@@ -317,7 +317,7 @@ func Test_WriteFolderToTarPackageFailure2(t *testing.T) {
 	// but we can still use the go example for unit test,
 	// since there are no node chaincode examples in fabric repos
 	srcPath := filepath.Join(gopath, "src",
-		"github.com/hyperledger/fabric/test/chaincodes/BadMetadataInvalidIndex")
+		"github.com/ledgerone/fabric-ledgerone/test/chaincodes/BadMetadataInvalidIndex")
 
 	buf := bytes.NewBuffer(nil)
 	gw := gzip.NewWriter(buf)
@@ -340,7 +340,7 @@ func Test_WriteFolderToTarPackageFailure3(t *testing.T) {
 	// but we can still use the go example for unit test,
 	// since there are no node chaincode examples in fabric repos
 	srcPath := filepath.Join(gopath, "src",
-		"github.com/hyperledger/fabric/test/chaincodes/BadMetadataUnexpectedFolderContent")
+		"github.com/ledgerone/fabric-ledgerone/test/chaincodes/BadMetadataUnexpectedFolderContent")
 
 	buf := bytes.NewBuffer(nil)
 	gw := gzip.NewWriter(buf)
@@ -361,7 +361,7 @@ func Test_WriteJavaProjectToPackage(t *testing.T) {
 	gopath := os.Getenv("GOPATH")
 	gopath = filepath.SplitList(gopath)[0]
 	pkgDir := filepath.Join(gopath, "src",
-		"github.com/hyperledger/fabric/examples/chaincode/java")
+		"github.com/ledgerone/fabric-ledgerone/examples/chaincode/java")
 	err := WriteJavaProjectToPackage(tw, pkgDir)
 	assert.NoError(t, err, "Error writing java project to package")
 

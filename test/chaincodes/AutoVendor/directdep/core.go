@@ -3,12 +3,12 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  *
- * See github.com/hyperledger/fabric/test/chaincodes/AutoVendor/chaincode/main.go for details
+ * See github.com/ledgerone/fabric-ledgerone/test/chaincodes/AutoVendor/chaincode/main.go for details
  */
 package directdep
 
 import (
-	"github.com/hyperledger/fabric/test/chaincodes/AutoVendor/indirectdep"
+	"github.com/ledgerone/fabric-ledgerone/test/chaincodes/AutoVendor/indirectdep"
 )
 
 func PointlessFunction() {

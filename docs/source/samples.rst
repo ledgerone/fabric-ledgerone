@@ -59,7 +59,7 @@ you will extract the platform-specific binaries:
 	  information on where to find the latest version of curl and
 	  get the right environment. Alternately, you can substitute
 	  the un-shortened URL:
-	  https://github.com/hyperledger/fabric/blob/master/scripts/bootstrap.sh
+	  https://github.com/ledgerone/fabric-ledgerone/blob/master/scripts/bootstrap.sh
 
 .. note:: You can use the command above for any published version of Hyperledger
           Fabric. Simply replace '1.1.0' with the version identifier

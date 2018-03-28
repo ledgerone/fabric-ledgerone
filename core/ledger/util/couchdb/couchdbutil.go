@@ -25,7 +25,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hyperledger/fabric/common/util"
+	"github.com/ledgerone/fabric-ledgerone/common/util"
 )
 
 var expectedDatabaseNamePattern = `[a-z][a-z0-9.$_()-]*`

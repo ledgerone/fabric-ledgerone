@@ -24,7 +24,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hyperledger/fabric/core/config"
+	"github.com/ledgerone/fabric-ledgerone/core/config"
 	"github.com/op/go-logging"
 	"github.com/spf13/viper"
 )

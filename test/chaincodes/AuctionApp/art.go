@@ -26,8 +26,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/hyperledger/fabric/core/chaincode/shim"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/shim"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 )
 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -239,7 +239,7 @@ func main() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	fmt.Println("Starting Item Auction Application chaincode BlueMix ver 21 Dated 2016-07-02 09.45.00: ")
 
-	//ccPath = fmt.Sprintf("%s/src/github.com/hyperledger/fabric/auction/art/artchaincode/", gopath)
+	//ccPath = fmt.Sprintf("%s/src/github.com/ledgerone/fabric-ledgerone/auction/art/artchaincode/", gopath)
 	// Start the shim -- running the fabric
 	err := shim.Start(new(SimpleChaincode))
 	if err != nil {

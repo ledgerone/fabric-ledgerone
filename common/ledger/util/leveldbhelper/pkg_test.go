@@ -20,7 +20,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hyperledger/fabric/common/ledger/testutil"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/testutil"
 )
 
 const testDBPath = "/tmp/fabric/ledgertests/util/leveldbhelper"

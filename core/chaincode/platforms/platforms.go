@@ -27,15 +27,15 @@ import (
 
 	"io/ioutil"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/metadata"
-	"github.com/hyperledger/fabric/core/chaincode/platforms/car"
-	"github.com/hyperledger/fabric/core/chaincode/platforms/golang"
-	"github.com/hyperledger/fabric/core/chaincode/platforms/java"
-	"github.com/hyperledger/fabric/core/chaincode/platforms/node"
-	"github.com/hyperledger/fabric/core/config"
-	cutil "github.com/hyperledger/fabric/core/container/util"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/common/metadata"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/platforms/car"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/platforms/golang"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/platforms/java"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/platforms/node"
+	"github.com/ledgerone/fabric-ledgerone/core/config"
+	cutil "github.com/ledgerone/fabric-ledgerone/core/container/util"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"github.com/spf13/viper"
 )
 

@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/hyperledger/fabric/core/comm"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/core/comm"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"github.com/pkg/errors"
 )
 

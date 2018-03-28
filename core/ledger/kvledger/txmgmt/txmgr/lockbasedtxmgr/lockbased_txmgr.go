@@ -8,15 +8,15 @@ package lockbasedtxmgr
 import (
 	"sync"
 
-	"github.com/hyperledger/fabric/protos/ledger/rwset/kvrwset"
+	"github.com/ledgerone/fabric-ledgerone/protos/ledger/rwset/kvrwset"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/core/ledger"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/privacyenabledstate"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/validator"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/validator/valimpl"
-	"github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/version"
-	"github.com/hyperledger/fabric/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/privacyenabledstate"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/validator"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/validator/valimpl"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/kvledger/txmgmt/version"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
 )
 
 var logger = flogging.MustGetLogger("lockbasedtxmgr")

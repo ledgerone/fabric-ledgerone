@@ -20,12 +20,12 @@ import (
 	"fmt"
 
 	//shadow chaincodes to be registered
-	nkpi "github.com/hyperledger/fabric/examples/ccchecker/chaincodes/newkeyperinvoke/shadow"
+	nkpi "github.com/ledgerone/fabric-ledgerone/examples/ccchecker/chaincodes/newkeyperinvoke/shadow"
 )
 
 //all the statically registered shadow chaincodes that can be used
 var shadowCCs = map[string]ShadowCCIntf{
-	"github.com/hyperledger/fabric/examples/ccchecker/chaincodes/newkeyperinvoke": &nkpi.NewKeyPerInvoke{},
+	"github.com/ledgerone/fabric-ledgerone/examples/ccchecker/chaincodes/newkeyperinvoke": &nkpi.NewKeyPerInvoke{},
 }
 
 type shadowCCArgs struct {

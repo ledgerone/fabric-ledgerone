@@ -9,9 +9,9 @@ package capabilities
 import (
 	"testing"
 
-	cb "github.com/hyperledger/fabric/protos/common"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
 
-	"github.com/hyperledger/fabric/msp"
+	"github.com/ledgerone/fabric-ledgerone/msp"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -36,11 +36,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/bccsp/signer"
-	"github.com/hyperledger/fabric/bccsp/sw"
-	"github.com/hyperledger/fabric/bccsp/utils"
-	"github.com/op/go-logging"
+	"github.com/ledgerone/fabric-ledgerone/bccsp"
+	"github.com/ledgerone/fabric-ledgerone/bccsp/signer"
+	"github.com/ledgerone/fabric-ledgerone/bccsp/sw"
+	"github.com/ledgerone/fabric-ledgerone/bccsp/utils"
+	logging "github.com/op/go-logging"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/crypto/sha3"
 )

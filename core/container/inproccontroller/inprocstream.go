@@ -19,7 +19,7 @@ package inproccontroller
 import (
 	"fmt"
 
-	pb "github.com/hyperledger/fabric/protos/peer"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 )
 
 //SendPanicFailure

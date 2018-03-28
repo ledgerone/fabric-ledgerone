@@ -10,11 +10,11 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/core/chaincode/shim"
-	container "github.com/hyperledger/fabric/core/container/api"
-	"github.com/hyperledger/fabric/core/container/ccintf"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/core/chaincode/shim"
+	container "github.com/ledgerone/fabric-ledgerone/core/container/api"
+	"github.com/ledgerone/fabric-ledgerone/core/container/ccintf"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 
 	"golang.org/x/net/context"
 )

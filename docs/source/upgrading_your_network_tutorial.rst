@@ -302,7 +302,7 @@ move ``10`` from ``a`` to ``b`` using these commands:
 
   docker exec -it cli bash
 
-  peer chaincode invoke -o orderer.example.com:7050  --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem  -C mychannel -n mycc -c '{"Args":["invoke","a","b","10"]}'
+  peer chaincode invoke -o orderer.example.com:7050  --tls --cafile /opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem  -C mychannel -n mycc -c '{"Args":["invoke","a","b","10"]}'
 
 Our query earlier revealed a to have a value of ``90`` and we have just removed
 ``10`` with our invoke. Therefore, a query against ``a`` should reveal ``80``.
@@ -432,11 +432,11 @@ these commands:
 
   CORE_PEER_LOCALMSPID="OrdererMSP"
 
-  CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+  CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
 
-  CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/users/Admin@example.com/msp
+  CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/ordererOrganizations/example.com/users/Admin@example.com/msp
 
-  ORDERER_CA=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+  ORDERER_CA=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
 
 And let’s set our channel name to ``testchainid``:
 
@@ -691,9 +691,9 @@ First, switch into Org1 and sign the update:
 
   CORE_PEER_LOCALMSPID="Org1MSP"
 
-  CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+  CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
 
-  CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+  CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
 
   CORE_PEER_ADDRESS=peer0.org1.example.com:7051
 
@@ -705,9 +705,9 @@ And do the same as Org2:
 
   CORE_PEER_LOCALMSPID="Org2MSP"
 
-  CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
+  CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
 
-  CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
+  CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
 
   CORE_PEER_ADDRESS=peer0.org1.example.com:7051
 
@@ -719,9 +719,9 @@ And as the OrdererOrg:
 
   CORE_PEER_LOCALMSPID="OrdererMSP"
 
-  CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+  CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
 
-  CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/users/Admin@example.com/msp
+  CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/ordererOrganizations/example.com/users/Admin@example.com/msp
 
   peer channel update -f config_update_in_envelope.pb -c $CH_NAME -o orderer.example.com:7050 --tls true --cafile $ORDERER_CA
 
@@ -735,9 +735,9 @@ one organization:
 
   CORE_PEER_LOCALMSPID="Org1MSP"
 
-  CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+  CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
 
-  CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+  CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
 
   CORE_PEER_ADDRESS=peer0.org1.example.com:7051
 
@@ -792,9 +792,9 @@ Set the environment variables as Org2:
 
   export CORE_PEER_LOCALMSPID="Org2MSP"
 
-  export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
+  export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
 
-  export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
+  export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
 
   export CORE_PEER_ADDRESS=peer0.org2.example.com:7051
 
@@ -813,7 +813,7 @@ But let's test just to make sure by moving ``10`` from ``a`` to ``b``, as before
 
 .. code:: bash
 
-  peer chaincode invoke -o orderer.example.com:7050  --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem  -C mychannel -n mycc -c '{"Args":["invoke","a","b","10"]}'
+  peer chaincode invoke -o orderer.example.com:7050  --tls --cafile /opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem  -C mychannel -n mycc -c '{"Args":["invoke","a","b","10"]}'
 
 And then querying the value of ``a``, which should reveal a value of ``70``.
 Let’s see:

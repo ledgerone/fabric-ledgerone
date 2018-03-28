@@ -13,8 +13,8 @@ import (
 	"reflect"
 	"sync"
 
-	"github.com/hyperledger/fabric/core/handlers/auth"
-	"github.com/hyperledger/fabric/core/handlers/decoration"
+	"github.com/ledgerone/fabric-ledgerone/core/handlers/auth"
+	"github.com/ledgerone/fabric-ledgerone/core/handlers/decoration"
 )
 
 // Registry defines an object that looks up

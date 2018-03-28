@@ -22,9 +22,9 @@ import (
 
 	"fmt"
 
-	"github.com/hyperledger/fabric/common/util"
-	"github.com/hyperledger/fabric/test/tools/LTE/chainmgmt"
-	"github.com/hyperledger/fabric/test/tools/LTE/common"
+	"github.com/ledgerone/fabric-ledgerone/common/util"
+	"github.com/ledgerone/fabric-ledgerone/test/tools/LTE/chainmgmt"
+	"github.com/ledgerone/fabric-ledgerone/test/tools/LTE/common"
 )
 
 // BenchmarkInsertTxs starts fresh chains and inserts the Key-values by simulating writes-only transactions

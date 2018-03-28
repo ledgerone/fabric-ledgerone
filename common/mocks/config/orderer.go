@@ -9,8 +9,8 @@ package config
 import (
 	"time"
 
-	"github.com/hyperledger/fabric/common/channelconfig"
-	ab "github.com/hyperledger/fabric/protos/orderer"
+	"github.com/ledgerone/fabric-ledgerone/common/channelconfig"
+	ab "github.com/ledgerone/fabric-ledgerone/protos/orderer"
 )
 
 // Orderer is a mock implementation of channelconfig.Orderer

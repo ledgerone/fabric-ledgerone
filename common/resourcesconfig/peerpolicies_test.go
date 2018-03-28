@@ -9,9 +9,9 @@ package resourcesconfig
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/common/cauthdsl"
-	cb "github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric/protos/utils"
+	"github.com/ledgerone/fabric-ledgerone/common/cauthdsl"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/utils"
 
 	"github.com/stretchr/testify/assert"
 )

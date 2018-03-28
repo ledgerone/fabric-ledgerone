@@ -23,7 +23,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/hyperledger/fabric/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
 )
 
 var logger = flogging.MustGetLogger("kvledger.util")

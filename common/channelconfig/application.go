@@ -7,8 +7,8 @@ SPDX-License-Identifier: Apache-2.0
 package channelconfig
 
 import (
-	"github.com/hyperledger/fabric/common/capabilities"
-	cb "github.com/hyperledger/fabric/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/common/capabilities"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
 
 	"github.com/pkg/errors"
 )

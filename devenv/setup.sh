@@ -9,7 +9,7 @@
 set -e
 set -x
 
-DEVENV_REVISION=`(cd /hyperledger/fabric/devenv; git rev-parse --short HEAD)`
+DEVENV_REVISION=`(cd /ledgerone/fabric-ledgerone/devenv; git rev-parse --short HEAD)`
 
 # Install WARNING before we start provisioning so that it
 # will remain active.  We will remove the warning after
@@ -81,12 +81,12 @@ curl -sL $GO_URL | (cd $GOROOT && tar --strip-components 1 -xz)
 # ----------------------------------------------------------------
 # Install nvm and Node.js
 # ----------------------------------------------------------------
-runuser -l ubuntu -c '/hyperledger/fabric/devenv/install_nvm.sh'
+runuser -l ubuntu -c '/ledgerone/fabric-ledgerone/devenv/install_nvm.sh'
 
 # ----------------------------------------------------------------
 # Install Behave
 # ----------------------------------------------------------------
-/hyperledger/fabric/scripts/install_behave.sh
+/ledgerone/fabric-ledgerone/scripts/install_behave.sh
 
 # ----------------------------------------------------------------
 # Install Java
@@ -116,12 +116,12 @@ make clean gotools
 sudo chown -R ubuntu:ubuntu $GOPATH
 
 # Update limits.conf to increase nofiles for LevelDB and network connections
-sudo cp /hyperledger/fabric/devenv/limits.conf /etc/security/limits.conf
+sudo cp /ledgerone/fabric-ledgerone/devenv/limits.conf /etc/security/limits.conf
 
 # Configure vagrant specific environment
 cat <<EOF >/etc/profile.d/vagrant-devenv.sh
 # Expose the devenv/tools in the $PATH
-export PATH=\$PATH:/hyperledger/fabric/devenv/tools:/hyperledger/fabric/build/bin
+export PATH=\$PATH:/ledgerone/fabric-ledgerone/devenv/tools:/ledgerone/fabric-ledgerone/build/bin
 export VAGRANT=1
 export CGO_CFLAGS=" "
 EOF
@@ -130,7 +130,7 @@ EOF
 # Also make it so that it cd's the user to the fabric dir upon logging in
 cat <<EOF >> /home/ubuntu/.bashrc
 PS1="\u@hyperledger-devenv:$DEVENV_REVISION:\w$ "
-cd $GOPATH/src/github.com/hyperledger/fabric/
+cd $GOPATH/src/github.com/ledgerone/fabric-ledgerone/
 EOF
 
 # finally, remove our warning so the user knows this was successful

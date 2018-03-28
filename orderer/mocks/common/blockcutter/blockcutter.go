@@ -17,8 +17,8 @@ limitations under the License.
 package blockcutter
 
 import (
-	"github.com/hyperledger/fabric/common/flogging"
-	cb "github.com/hyperledger/fabric/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
 	"github.com/op/go-logging"
 )
 

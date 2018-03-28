@@ -63,10 +63,10 @@ General
   cues for your own implementation. The ordering service code can be found under
   the `orderer package`_.
 
-.. _consensus package: https://github.com/hyperledger/fabric/blob/master/orderer/consensus/consensus.go
-.. _solo: https://github.com/hyperledger/fabric/tree/master/orderer/consensus/solo
-.. _kafka: https://github.com/hyperledger/fabric/tree/master/orderer/consensus/kafka
-.. _orderer package: https://github.com/hyperledger/fabric/tree/master/orderer
+.. _consensus package: https://github.com/ledgerone/fabric-ledgerone/blob/master/orderer/consensus/consensus.go
+.. _solo: https://github.com/ledgerone/fabric-ledgerone/tree/master/orderer/consensus/solo
+.. _kafka: https://github.com/ledgerone/fabric-ledgerone/tree/master/orderer/consensus/kafka
+.. _orderer package: https://github.com/ledgerone/fabric-ledgerone/tree/master/orderer
 
 ..
 
@@ -125,7 +125,7 @@ Kafka
 :Answer:
   Consult `the end-to-end CLI example`_.
 
-.. _the end-to-end CLI example: https://github.com/hyperledger/fabric/blob/master/examples/e2e_cli/docker-compose-e2e.yaml
+.. _the end-to-end CLI example: https://github.com/ledgerone/fabric-ledgerone/blob/master/examples/e2e_cli/docker-compose-e2e.yaml
 
 ..
 

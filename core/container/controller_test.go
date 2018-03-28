@@ -26,10 +26,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/fabric/core/container/ccintf"
-	"github.com/hyperledger/fabric/core/container/dockercontroller"
-	"github.com/hyperledger/fabric/core/container/inproccontroller"
-	pb "github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/core/container/ccintf"
+	"github.com/ledgerone/fabric-ledgerone/core/container/dockercontroller"
+	"github.com/ledgerone/fabric-ledgerone/core/container/inproccontroller"
+	pb "github.com/ledgerone/fabric-ledgerone/protos/peer"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/net/context"
 )

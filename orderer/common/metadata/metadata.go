@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"runtime"
 
-	common "github.com/hyperledger/fabric/common/metadata"
+	common "github.com/ledgerone/fabric-ledgerone/common/metadata"
 )
 
 // package-scoped variables

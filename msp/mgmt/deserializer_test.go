@@ -21,8 +21,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hyperledger/fabric/core/config"
-	"github.com/hyperledger/fabric/msp"
+	"github.com/ledgerone/fabric-ledgerone/core/config"
+	"github.com/ledgerone/fabric-ledgerone/msp"
 	"github.com/stretchr/testify/assert"
 )
 

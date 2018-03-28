@@ -10,7 +10,7 @@ import (
 	"testing"
 
 	"github.com/docker/docker/pkg/testutil/assert"
-	"github.com/hyperledger/fabric/protos/peer"
+	"github.com/ledgerone/fabric-ledgerone/protos/peer"
 )
 
 func TestDecorator(t *testing.T) {

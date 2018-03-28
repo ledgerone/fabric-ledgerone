@@ -17,7 +17,8 @@ unit-tests:
     - JOB_TYPE=${JOB_TYPE}
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
-    - ${GOPATH}/src/github.com/hyperledger/fabric:/opt/gopath/src/github.com/hyperledger/fabric
+    - ${GOPATH}/src/github.com/ledgerone/fabric-ledgerone:/opt/gopath/src/github.com/ledgerone/fabric-ledgerone
+  working_dir: /opt/gopath/src/github.com/ledgerone/fabric-ledgerone
   command: ./unit-test/run.sh
 
 couchdb:

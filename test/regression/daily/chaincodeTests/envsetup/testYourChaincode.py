@@ -26,7 +26,7 @@ class ChaincodeAPI(unittest.TestCase):
 #################################################################################
 
     def runIt(self, command, scriptName):
-        cmd = "/opt/gopath/src/github.com/hyperledger/fabric/test/regression/daily/chaincodeTests/%s %s %s %s %s %s"% (scriptName, self.CHANNEL_NAME, self.CHANNELS, self.CHAINCODES, self.ENDORSERS, command)
+        cmd = "/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/test/regression/daily/chaincodeTests/%s %s %s %s %s %s"% (scriptName, self.CHANNEL_NAME, self.CHANNELS, self.CHAINCODES, self.ENDORSERS, command)
         output = check_output(["docker exec cli {0}".format(cmd)], shell=True)
         return output
 

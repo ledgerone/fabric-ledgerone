@@ -88,7 +88,7 @@ To create a signed chaincode package, use the following command:
 
 .. code:: bash
 
-    peer chaincode package -n mycc -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02 -v 0 -s -S -i "AND('OrgA.admin')" ccpack.out
+    peer chaincode package -n mycc -p github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/chaincode_example02 -v 0 -s -S -i "AND('OrgA.admin')" ccpack.out
 
 The ``-s`` option creates a package that can be signed by multiple owners as
 opposed to simply creating a raw CDS. When ``-s`` is specified, the ``-S``
@@ -120,15 +120,15 @@ owners for inspection and signing. The workflow supports out-of-band signing
 of chaincode package.
 
 The
-`ChaincodeDeploymentSpec <https://github.com/hyperledger/fabric/blob/master/protos/peer/chaincode.proto#L78>`_
+`ChaincodeDeploymentSpec <https://github.com/ledgerone/fabric-ledgerone/blob/master/protos/peer/chaincode.proto#L78>`_
 may be optionally be signed by the collective owners to create a
-`SignedChaincodeDeploymentSpec <https://github.com/hyperledger/fabric/blob/master/protos/peer/signed_cc_dep_spec.proto#L26>`_
+`SignedChaincodeDeploymentSpec <https://github.com/ledgerone/fabric-ledgerone/blob/master/protos/peer/signed_cc_dep_spec.proto#L26>`_
 (or SignedCDS). The SignedCDS contains 3 elements:
 
   1. The CDS contains the source code, the name, and version of the chaincode.
   2. An instantiation policy of the chaincode, expressed as endorsement policies.
   3. The list of chaincode owners, defined by means of
-     `Endorsement <https://github.com/hyperledger/fabric/blob/master/protos/peer/proposal_response.proto#L111>`_.
+     `Endorsement <https://github.com/ledgerone/fabric-ledgerone/blob/master/protos/peer/proposal_response.proto#L111>`_.
 
 .. note:: Note that this endorsement policy is determined out-of-band to
           provide proper MSP principals when the chaincode is instantiated
@@ -173,7 +173,7 @@ it will default the instantiation policy and include an empty owner list.
           they can still validate and commit the transactions to the ledger.
 
 To install a chaincode, send a `SignedProposal
-<https://github.com/hyperledger/fabric/blob/master/protos/peer/proposal.proto#L104>`_
+<https://github.com/ledgerone/fabric-ledgerone/blob/master/protos/peer/proposal.proto#L104>`_
 to the ``lifecycle system chaincode`` (LSCC) described in the `System Chaincode`_
 section. For example, to install the **sacc** sample chaincode described
 in section :ref:`simple asset chaincode`
@@ -239,7 +239,7 @@ the state with ``john`` and ``0``, the command would look like the following:
 
 After being successfully instantiated, the chaincode enters the active state on
 the channel and is ready to process any transaction proposals of type
-`ENDORSER_TRANSACTION <https://github.com/hyperledger/fabric/blob/master/protos/common/common.proto#L42>`_.
+`ENDORSER_TRANSACTION <https://github.com/ledgerone/fabric-ledgerone/blob/master/protos/common/common.proto#L42>`_.
 The transactions are processed concurrently as they arrive at the endorsing
 peer.
 
@@ -373,7 +373,7 @@ The purpose of system chaincode is to shortcut gRPC communication cost between
 peer and chaincode, and tradeoff the flexibility in management. For example, a
 system chaincode can only be upgraded with the peer binary. It must also
 register with a `fixed set of parameters
-<https://github.com/hyperledger/fabric/blob/master/core/scc/importsysccs.go>`_
+<https://github.com/ledgerone/fabric-ledgerone/blob/master/core/scc/importsysccs.go>`_
 compiled in and doesn't have endorsement policies or endorsement policy
 functionality.
 
@@ -383,17 +383,17 @@ by a system integrator.
 
 The current list of system chaincodes:
 
-1. `LSCC <https://github.com/hyperledger/fabric/tree/master/core/scc/lscc>`_
+1. `LSCC <https://github.com/ledgerone/fabric-ledgerone/tree/master/core/scc/lscc>`_
    Lifecycle system chaincode handles lifecycle requests described above.
-2. `CSCC <https://github.com/hyperledger/fabric/tree/master/core/scc/cscc>`_
+2. `CSCC <https://github.com/ledgerone/fabric-ledgerone/tree/master/core/scc/cscc>`_
    Configuration system chaincode handles channel configuration on the peer side.
-3. `QSCC <https://github.com/hyperledger/fabric/tree/master/core/scc/qscc>`_
+3. `QSCC <https://github.com/ledgerone/fabric-ledgerone/tree/master/core/scc/qscc>`_
    Query system chaincode provides ledger query APIs such as getting blocks and
    transactions.
-4. `ESCC <https://github.com/hyperledger/fabric/tree/master/core/scc/escc>`_
+4. `ESCC <https://github.com/ledgerone/fabric-ledgerone/tree/master/core/scc/escc>`_
    Endorsement system chaincode handles endorsement by signing the transaction
    proposal response.
-5. `VSCC <https://github.com/hyperledger/fabric/tree/master/core/scc/vscc>`_
+5. `VSCC <https://github.com/ledgerone/fabric-ledgerone/tree/master/core/scc/vscc>`_
    Validation system chaincode handles the transaction validation, including
    checking endorsement policy and multiversioning concurrency control.
 

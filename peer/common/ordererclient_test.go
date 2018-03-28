@@ -11,7 +11,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/hyperledger/fabric/peer/common"
+	"github.com/ledgerone/fabric-ledgerone/peer/common"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/assert"
 )

@@ -50,7 +50,7 @@ def saveCoverageFiles(folderName, rootName, containerNames, extension):
         if exception.errno != errno.EEXIST:
             raise
     for containerName in containerNames:
-        srcPath = "{0}:/opt/gopath/src/github.com/hyperledger/fabric/coverage.cov".format(containerName)
+        srcPath = "{0}:/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/coverage.cov".format(containerName)
         print("sourcepath = {0}".format(srcPath))
         destPath = os.path.join(folderName, "{0}-{1}.{2}".format(rootName, containerName, extension))
         output, error, returncode = \
@@ -60,7 +60,7 @@ def testCreateSystemCoverageFile(folderName, rootName, containerNames, extension
     'Will create a single aggregate coverage file fromsave the converage files to folderName'
     files = glob.glob(os.path.join('coverage','*.cov'))
     for containerName in containerNames:
-        srcPath = "{0}:/opt/gopath/src/github.com/hyperledger/fabric/peer/coverage.cov".format(containerName)
+        srcPath = "{0}:/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/coverage.cov".format(containerName)
         destPath = os.path.join(folderName, "{0}-{1}.{2}".format(rootName, containerName, extension))
         output, error, returncode = \
             bdd_test_util.cli_call(["docker", "cp", srcPath, destPath], expect_success=False)

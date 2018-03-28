@@ -11,7 +11,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	config "github.com/hyperledger/fabric/orderer/common/localconfig"
+	config "github.com/ledgerone/fabric-ledgerone/orderer/common/localconfig"
 	"github.com/stretchr/testify/assert"
 )
 

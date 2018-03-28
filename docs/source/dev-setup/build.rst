@@ -26,7 +26,7 @@ Specify a list of packages (separated by space), for example:
 
 ::
 
-    export TEST_PKGS="github.com/hyperledger/fabric/core/ledger/..."
+    export TEST_PKGS="github.com/ledgerone/fabric-ledgerone/core/ledger/..."
     make unit-test
 
 To run a specific test use the ``-run RE`` flag where RE is a regular
@@ -71,7 +71,7 @@ with this option:
 
 ::
 
-    cd $GOPATH/src/github.com/hyperledger/fabric/bddtests
+    cd $GOPATH/src/github.com/ledgerone/fabric-ledgerone/bddtests
     behave -D logs=Y
 
 Building outside of Vagrant
@@ -79,16 +79,16 @@ Building outside of Vagrant
 
 It is possible to build the project and run peers outside of Vagrant.
 Generally speaking, one has to 'translate' the vagrant `setup
-file <https://github.com/hyperledger/fabric/blob/master/devenv/setup.sh>`__
+file <https://github.com/ledgerone/fabric-ledgerone/blob/master/devenv/setup.sh>`__
 to the platform of your choice.
 
 Building on Z
 ~~~~~~~~~~~~~
 
 To make building on Z easier and faster, `this
-script <https://github.com/hyperledger/fabric/tree/master/devenv/setupRHELonZ.sh>`__
+script <https://github.com/ledgerone/fabric-ledgerone/tree/master/devenv/setupRHELonZ.sh>`__
 is provided (which is similar to the `setup
-file <https://github.com/hyperledger/fabric/blob/master/devenv/setup.sh>`__
+file <https://github.com/ledgerone/fabric-ledgerone/blob/master/devenv/setup.sh>`__
 provided for vagrant). This script has been tested only on RHEL 7.2 and
 has some assumptions one might want to re-visit (firewall settings,
 development as root user, etc.). It is however sufficient for
@@ -119,7 +119,7 @@ Building on Power Platform
 Development and build on Power (ppc64le) systems is done outside of
 vagrant as outlined `here <#building-outside-of-vagrant>`__. For ease
 of setting up the dev environment on Ubuntu, invoke `this
-script <https://github.com/hyperledger/fabric/tree/master/devenv/setupUbuntuOnPPC64le.sh>`__
+script <https://github.com/ledgerone/fabric-ledgerone/tree/master/devenv/setupUbuntuOnPPC64le.sh>`__
 as root. This script has been validated on Ubuntu 16.04 and assumes
 certain things (like, development system has OS repositories in place,
 firewall setting etc) and in general can be improvised further.

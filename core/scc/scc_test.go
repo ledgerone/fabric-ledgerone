@@ -21,10 +21,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hyperledger/fabric/core/common/ccprovider"
-	"github.com/hyperledger/fabric/core/ledger/ledgermgmt"
-	ccprovider2 "github.com/hyperledger/fabric/core/mocks/ccprovider"
-	"github.com/hyperledger/fabric/core/peer"
+	"github.com/ledgerone/fabric-ledgerone/core/common/ccprovider"
+	"github.com/ledgerone/fabric-ledgerone/core/ledger/ledgermgmt"
+	ccprovider2 "github.com/ledgerone/fabric-ledgerone/core/mocks/ccprovider"
+	"github.com/ledgerone/fabric-ledgerone/core/peer"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/assert"
 )

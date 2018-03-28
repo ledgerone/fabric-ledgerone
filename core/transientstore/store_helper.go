@@ -10,8 +10,8 @@ import (
 	"bytes"
 	"path/filepath"
 
-	"github.com/hyperledger/fabric/common/ledger/util"
-	"github.com/hyperledger/fabric/core/config"
+	"github.com/ledgerone/fabric-ledgerone/common/ledger/util"
+	"github.com/ledgerone/fabric-ledgerone/core/config"
 )
 
 var (

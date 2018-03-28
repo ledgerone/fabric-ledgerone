@@ -26,7 +26,7 @@ MAX_RETRY=5
 CHAINCODE_NAME="myccex02"
 LOG_FILE="scripts1/logs.txt"
 TEMP_LOG_FILE="scripts1/temp_logs.txt"
-ORDERER_CA=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+ORDERER_CA=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
 
 verifyResult () {
 	if [ $1 -ne 0 ] ; then
@@ -42,18 +42,18 @@ verifyResult () {
 setGlobals () {
 	if [ $1 -eq 0 -o $1 -eq 1 ] ; then
 		export CORE_PEER_LOCALMSPID="Org1MSP"
-		export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
-		export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+		export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+		export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
 		if [ $1 -eq 0 ]; then
 			export CORE_PEER_ADDRESS=peer0.org1.example.com:7051
 		else
 			export CORE_PEER_ADDRESS=peer1.org1.example.com:7051
-			export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+			export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
 		fi
 	else
 		export CORE_PEER_LOCALMSPID="Org2MSP"
-		export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
-		export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
+		export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
+		export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
 		if [ $1 -eq 2 ]; then
 			export CORE_PEER_ADDRESS=peer0.org2.example.com:7051
 		else
@@ -69,7 +69,7 @@ installChaincode () {
                 do
                         PEER=$i
                         setGlobals $PEER
-                        peer chaincode install -n $CHAINCODE_NAME$ch -v 1 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02 >>$LOG_FILE
+                        peer chaincode install -n $CHAINCODE_NAME$ch -v 1 -p github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/chaincode_example02 >>$LOG_FILE
                         res=$?
                         verifyResult $res "Chaincode '$CHAINCODE_NAME$ch' installation on remote peer PEER$PEER has Failed"
                         echo "===================== Chaincode '$CHAINCODE_NAME$ch' is installed on PEER$PEER successfully===================== " >>$LOG_FILE

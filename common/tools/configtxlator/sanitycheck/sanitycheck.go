@@ -9,9 +9,9 @@ package sanitycheck
 import (
 	"fmt"
 
-	newchannelconfig "github.com/hyperledger/fabric/common/channelconfig"
-	cb "github.com/hyperledger/fabric/protos/common"
-	mspprotos "github.com/hyperledger/fabric/protos/msp"
+	newchannelconfig "github.com/ledgerone/fabric-ledgerone/common/channelconfig"
+	cb "github.com/ledgerone/fabric-ledgerone/protos/common"
+	mspprotos "github.com/ledgerone/fabric-ledgerone/protos/msp"
 
 	"github.com/golang/protobuf/proto"
 )

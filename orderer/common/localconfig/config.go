@@ -21,19 +21,19 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hyperledger/fabric/common/flogging"
-	"github.com/hyperledger/fabric/common/viperutil"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/common/viperutil"
 
 	"github.com/Shopify/sarama"
 	"github.com/op/go-logging"
 	"github.com/spf13/viper"
 
-	cf "github.com/hyperledger/fabric/core/config"
+	cf "github.com/ledgerone/fabric-ledgerone/core/config"
 
 	"path/filepath"
 
-	bccsp "github.com/hyperledger/fabric/bccsp/factory"
-	genesisconfig "github.com/hyperledger/fabric/common/tools/configtxgen/localconfig"
+	bccsp "github.com/ledgerone/fabric-ledgerone/bccsp/factory"
+	genesisconfig "github.com/ledgerone/fabric-ledgerone/common/tools/configtxgen/localconfig"
 )
 
 const (

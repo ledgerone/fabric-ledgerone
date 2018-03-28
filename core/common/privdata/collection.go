@@ -9,7 +9,7 @@ package privdata
 import (
 	"strings"
 
-	"github.com/hyperledger/fabric/protos/common"
+	"github.com/ledgerone/fabric-ledgerone/protos/common"
 )
 
 // Collection defines a common interface for collections

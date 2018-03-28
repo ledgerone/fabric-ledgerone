@@ -9,7 +9,7 @@ package localconfig
 import (
 	"testing"
 
-	"github.com/hyperledger/fabric/common/flogging"
+	"github.com/ledgerone/fabric-ledgerone/common/flogging"
 	"github.com/stretchr/testify/assert"
 )
 

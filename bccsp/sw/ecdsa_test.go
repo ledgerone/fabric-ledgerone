@@ -25,7 +25,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/hyperledger/fabric/bccsp/utils"
+	"github.com/ledgerone/fabric-ledgerone/bccsp/utils"
 	"github.com/stretchr/testify/assert"
 )
 

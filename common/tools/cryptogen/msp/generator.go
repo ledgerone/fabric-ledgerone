@@ -14,11 +14,11 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/hyperledger/fabric/bccsp"
-	"github.com/hyperledger/fabric/bccsp/factory"
-	"github.com/hyperledger/fabric/common/tools/cryptogen/ca"
-	"github.com/hyperledger/fabric/common/tools/cryptogen/csp"
-	fabricmsp "github.com/hyperledger/fabric/msp"
+	"github.com/ledgerone/fabric-ledgerone/bccsp"
+	"github.com/ledgerone/fabric-ledgerone/bccsp/factory"
+	"github.com/ledgerone/fabric-ledgerone/common/tools/cryptogen/ca"
+	"github.com/ledgerone/fabric-ledgerone/common/tools/cryptogen/csp"
+	fabricmsp "github.com/ledgerone/fabric-ledgerone/msp"
 )
 
 const (

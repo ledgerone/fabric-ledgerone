@@ -17,7 +17,7 @@ How to Plug In *YourChaincode*
 * Write a CLI bash script such as *e2e_test_<YourChaincode>.sh* to execute invokes and queries using your chaincode API, and place it under *fabric/test/regression/daily/chaincodeTests/fabricFeatureChaincodes/*
 
   * Simply model it after others, such as *e2e_test_example02.sh*
-  * During the install step, give the path to chaincode as *github.com/hyperledger/fabric/test/regression/daily/chaincodeTests/fabricFeatureChaincodes/go/<YourChaincodeDir>*
+  * During the install step, give the path to chaincode as *github.com/ledgerone/fabric-ledgerone/test/regression/daily/chaincodeTests/fabricFeatureChaincodes/go/<YourChaincodeDir>*
   * Note: **test_AFAB3843_Create_Join_Channel** must be run as first test step
 
 * Add a few lines to define your new test inside *test/regression/daily/chaincodeTests/envsetup/testYourChaincode.py*
@@ -46,7 +46,7 @@ How to Run the Chaincode Tests
     =========================
     platform linux2 -- Python 2.7.12, pytest-2.8.7, py-1.4.31, pluggy-0.3.1 -- /usr/bin/python
     cachedir: .cache
-    rootdir: /opt/gopath/src/github.com/hyperledger/fabric/test/regression/daily/chaincodeTests/envsetup, inifile:
+    rootdir: /opt/gopath/src/github.com/ledgerone/fabric-ledgerone/test/regression/daily/chaincodeTests/envsetup, inifile:
     collected 3 items
     testYourChaincode.py::ChaincodeAPI::test_AFAB3843_Create_Join_Channel PASSED
     testYourChaincode.py::ChaincodeAPI::test_FAB3791_example03 PASSED
