@@ -37,7 +37,7 @@ func TestMain(m *testing.M) {
 
 	// Read the core.yaml file for default config.
 	ledgertestutil.SetupCoreYAMLConfig()
-	viper.Set("peer.fileSystemPath", "/tmp/fabric/ledgertests/kvledger/txmgmt/statedb/statecouchdb")
+	viper.Set("peer.fileSystemPath", "/tmp/fabric-ledgerone/ledgertests/kvledger/txmgmt/statedb/statecouchdb")
 
 	// Switch to CouchDB
 	viper.Set("ledger.state.stateDatabase", "CouchDB")

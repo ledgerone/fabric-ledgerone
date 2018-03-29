@@ -2,8 +2,8 @@ Install and Instantiate
 =======================
 
 This tutorial requires the latest builds for
-``hyperledger/fabric-baseimage``, ``hyperledger/fabric-peer`` and
-``hyperledger/fabric-orderer``. Rather than pull from Docker Hub, you
+``ledgerone/fabric-baseimage``, ``ledgerone/fabric-ledgerone-peer`` and
+``ledgerone/fabric-ledgerone-orderer``. Rather than pull from Docker Hub, you
 can compile these images locally to ensure they are up to date. It is up
 to the user how to build the images, although a typical approach is
 through vagrant. If you do choose to build through vagrant, make sure
@@ -15,7 +15,7 @@ within your vagrant environment, execute the ``make peer-docker`` and
 Start the network of 2 peers, an orderer, and a CLI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Navigate to the fabric/docs directory in your vagrant environment and
+Navigate to the fabric-ledgerone/docs directory in your vagrant environment and
 start your network:
 
 .. code:: bash

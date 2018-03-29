@@ -56,11 +56,13 @@ DBUILD = docker build $(DOCKER_BUILD_FLAGS)
 BASE_DOCKER_NS ?= hyperledger
 BASE_DOCKER_TAG=$(ARCH)-$(BASEIMAGE_RELEASE)
 
-DOCKER_NS ?= hyperledger
+DOCKER_NS ?= ledgerone
 DOCKER_TAG=$(ARCH)-$(PROJECT_VERSION)
 PREV_TAG=$(ARCH)-$(PREV_VERSION)
 
-BASE_DOCKER_LABEL=org.ledgerone.fabric-ledgerone
+HYPERLEDGER_NS ?= hyperledger
+
+BASE_DOCKER_LABEL=org.ledgerone.fabric_ledgerone
 
 DOCKER_DYNAMIC_LINK ?= false
 DOCKER_GO_LDFLAGS += $(GO_LDFLAGS)

@@ -291,7 +291,7 @@ the SignedCDS from each of the endorsing peer nodes:
 .. code:: bash
 
     docker rm -f <container id>
-    rm /var/hyperledger/production/chaincodes/<ccname>:<ccversion>
+    rm /var/ledgerone/production/chaincodes/<ccname>:<ccversion>
 
 Stop would be useful in the workflow for doing upgrade in controlled manner,
 where a chaincode can be stopped on a channel on all peers before issuing an
@@ -307,11 +307,11 @@ CLI
           can simply invoke the commands from within a running docker container.
 
 To view the currently available CLI commands, execute the following command from
-within a running ``fabric-peer`` Docker container:
+within a running ``fabric-ledgerone-peer`` Docker container:
 
 .. code:: bash
 
-    docker run -it hyperledger/fabric-peer bash
+    docker run -it ledgerone/fabric-ledgerone-peer bash
     # peer chaincode --help
 
 Which shows output similar to the example below:

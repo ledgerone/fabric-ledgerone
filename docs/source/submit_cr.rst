@@ -2,7 +2,7 @@ Submitting your first change request (CR)
 -----------------------------------------
 
 We are using
-`Gerrit <https://gerrit.hyperledger.org/r/#/admin/projects/fabric>`__ to
+`Gerrit <https://gerrit.ledgerone.org/r/#/admin/projects/fabric>`__ to
 manage code contributions and reviews. If you are unfamiliar with Gerrit,
 please review this :doc:`document <Gerrit/gerrit>` before proceeding.
 
@@ -19,7 +19,7 @@ Setting up your SSH key
 
 Before you can submit a change set for review, you will need to register your
 public SSH key. Login to
-`Gerrit <https://gerrit.hyperledger.org>`__ with your
+`Gerrit <https://gerrit.ledgerone.org>`__ with your
 :doc:`LFID <Gerrit/lf-account>`, and click on your name in the upper
 right-hand corner of your browser window and then click 'Settings'.
 
@@ -46,7 +46,7 @@ Sandbox
 ~~~~~~~
 
 We have created the
-`lf-sandbox project <https://gerrit.hyperledger.org/r/#/admin/projects/lf-sandbox,branches>`__,
+`lf-sandbox project <https://gerrit.ledgerone.org/r/#/admin/projects/lf-sandbox,branches>`__,
 to allow you to familiarize yourself with using Gerrit. We'll use that project
 in our tutorial for submitting your first CR.
 
@@ -54,7 +54,7 @@ Clone your project
 ~~~~~~~~~~~~~~~~~~
 
 First step is to clone your project to your laptop or development server.
-Navigate your browser to the Gerrit `Projects <https://gerrit.hyperledger.org/r/#/admin/projects/>`__
+Navigate your browser to the Gerrit `Projects <https://gerrit.ledgerone.org/r/#/admin/projects/>`__
 page and scroll down to the ``lf-sandbox`` project.
 
 .. image:: images/lf-sandbox.png
@@ -71,7 +71,7 @@ Now, in a terminal window on your laptop, paste and run the command. e.g.
 
 .. code::
 
-   git clone ssh://foobar@gerrit.hyperledger.org:29418/lf-sandbox && scp -p -P 29418 foobar@gerrit.hyperledger.org:hooks/commit-msg lf-sandbox/.git/hooks/
+   git clone ssh://foobar@gerrit.ledgerone.org:29418/lf-sandbox && scp -p -P 29418 foobar@gerrit.ledgerone.org:hooks/commit-msg lf-sandbox/.git/hooks/
 
 Checkout a development branch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -170,9 +170,9 @@ This will yield results something like the following:
    remote:       and are pointing to existing tickets on its-jira Issue-Tracker
    remote:
    remote: New Changes:
-   remote:   https://gerrit.hyperledger.org/r/16157 I made a change
+   remote:   https://gerrit.ledgerone.org/r/16157 I made a change
    remote:
-   To ssh://gerrit.hyperledger.org:29418/lf-sandbox
+   To ssh://gerrit.ledgerone.org:29418/lf-sandbox
     * [new branch]      HEAD -> refs/for/master
 
 The second option,
@@ -215,7 +215,7 @@ If you see nothing wrong with your CR it might be that the CI process
 simply failed for some reason unrelated to your change. In that case
 you may want to restart the CI process by posting a reply to your CR
 with the simple content "reverify".  Check the `CI management page
-<https://github.com/hyperledger/ci-management/blob/master/docs/fabric_ci_process.md>`__
+<https://github.com/ledgerone/ci-management/blob/master/docs/fabric_ci_process.md>`__
 for additional information and options on this.
 
 Modifying your change request

@@ -23,7 +23,7 @@ considered to constitute a single test-run.
 
 To run all the available tests, run:
 ```
-cd fabric/test/tools/LTE/scripts
+cd fabric-ledgerone/test/tools/LTE/scripts
 ./runbenchmarks.sh -f parameters_daily_CI.sh all
 ```
 where the file `parameters_daily_CI.sh` has all the necessary test parameters.

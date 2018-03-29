@@ -253,7 +253,7 @@ and requirements to build a fully-functional Hyperledger Fabric network.
 
             cli:
               container_name: cli
-              image: hyperledger/fabric-tools:$IMAGE_TAG
+              image: ledgerone/fabric-ledgerone-tools:$IMAGE_TAG
               tty: true
               stdin_open: true
               environment:
@@ -700,7 +700,7 @@ If we changed the syntax to ``AND`` then we would need two endorsements.
     peer chaincode instantiate -o orderer.example.com:7050 --tls --cafile /opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc -l node -v 1.0 -c '{"Args":["init","a", "100", "b","200"]}' -P "OR ('Org1MSP.peer','Org2MSP.peer')"
 
 See the `endorsement
-policies <http://hyperledger-fabric.readthedocs.io/en/latest/endorsement-policies.html>`__
+policies <http://ledgerone-fabric-ledgerone.readthedocs.io/en/latest/endorsement-policies.html>`__
 documentation for more details on policy implementation.
 
 If you want additional peers to interact with ledger, then you will need to join
@@ -910,7 +910,7 @@ CLI container, along with an orderer, four peers.  We use this file
 for the entirety of the instructions on this page.
 
 .. note:: the remainder of this section covers a docker-compose file designed for the
-          SDK.  Refer to the `Node SDK <https://github.com/hyperledger/fabric-sdk-node>`__
+          SDK.  Refer to the `Node SDK <https://github.com/ledgerone/fabric-sdk-node>`__
           repo for details on running these tests.
 
 The second flavor, ``docker-compose-e2e.yaml``, is constructed to run end-to-end tests
@@ -961,7 +961,7 @@ You can use **chaincode_example02** chaincode against the CouchDB state database
 using the steps outlined above, however in order to exercise the CouchDB query
 capabilities you will need to use a chaincode that has data modeled as JSON,
 (e.g. **marbles02**). You can locate the **marbles02** chaincode in the
-``fabric/examples/chaincode/go`` directory.
+``fabric-ledgerone/examples/chaincode/go`` directory.
 
 We will follow the same process to create and join the channel as outlined in the
 :ref:`createandjoin` section above.  Once you have joined your peer(s) to the
@@ -1065,7 +1065,7 @@ the peer container specification in the ``docker-compose-base.yaml`` file:
 .. code:: bash
 
        volumes:
-        - /var/hyperledger/peer0:/var/hyperledger/production
+        - /var/ledgerone/peer0:/var/ledgerone/production
 
 For the CouchDB container, you may add the following two lines in the CouchDB
 container specification:
@@ -1073,7 +1073,7 @@ container specification:
 .. code:: bash
 
        volumes:
-        - /var/hyperledger/couchdb0:/opt/couchdb/data
+        - /var/ledgerone/couchdb0:/opt/couchdb/data
 
 .. _Troubleshoot:
 
@@ -1112,7 +1112,7 @@ Troubleshooting
 
    .. code:: bash
 
-       Error: Error endorsing chaincode: rpc error: code = 2 desc = Error installing chaincode code mycc:1.0(chaincode /var/hyperledger/production/chaincodes/mycc.1.0 exits)
+       Error: Error endorsing chaincode: rpc error: code = 2 desc = Error installing chaincode code mycc:1.0(chaincode /var/ledgerone/production/chaincodes/mycc.1.0 exits)
 
    You likely have chaincode images (e.g. ``dev-peer1.org2.example.com-mycc-1.0`` or
    ``dev-peer0.org1.example.com-mycc-1.0``) from prior runs. Remove them and try
@@ -1169,8 +1169,8 @@ Troubleshooting
 
 .. note:: If you continue to see errors, share your logs on the
           **fabric-questions** channel on
-          `Hyperledger Rocket Chat <https://chat.hyperledger.org/home>`__
-          or on `StackOverflow <https://stackoverflow.com/questions/tagged/hyperledger-fabric>`__.
+          `Hyperledger Rocket Chat <https://chat.ledgerone.org/home>`__
+          or on `StackOverflow <https://stackoverflow.com/questions/tagged/ledgerone-fabric>`__.
 
 .. Licensed under Creative Commons Attribution 4.0 International License
    https://creativecommons.org/licenses/by/4.0/

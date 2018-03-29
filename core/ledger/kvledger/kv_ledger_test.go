@@ -40,7 +40,7 @@ func TestMain(m *testing.M) {
 	flogging.SetModuleLevel("lockbasedtxmgr", "debug")
 	flogging.SetModuleLevel("statevalidator", "debug")
 	flogging.SetModuleLevel("valimpl", "debug")
-	viper.Set("peer.fileSystemPath", "/tmp/fabric/ledgertests/kvledger")
+	viper.Set("peer.fileSystemPath", "/tmp/fabric-ledgerone/ledgertests/kvledger")
 	viper.Set("ledger.history.enableHistoryDatabase", true)
 	os.Exit(m.Run())
 }

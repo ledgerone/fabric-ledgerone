@@ -17,7 +17,7 @@ none
 
 Known Issues & Workarounds
 --------------------------
-The fabric-ccenv image which is used to build chaincode, currently includes
+The fabric-ledgerone-ccenv image which is used to build chaincode, currently includes
 the github.com/ledgerone/fabric-ledgerone/core/chaincode/shim ("shim") package.
 This is convenient, as it provides the ability to package chaincode
 without the need to include the "shim". However, this may cause issues in future
@@ -27,9 +27,9 @@ In order to avoid any issues, users are advised to manually vendor the "shim"
 package with their chaincode prior to using the peer CLI for packaging and/or
 for installing chaincode.
 
-Please refer to https://jira.hyperledger.org/browse/FAB-5177 for more details,
+Please refer to https://jira.ledgerone.org/browse/FAB-5177 for more details,
 and kindly be aware that given the above, we may end up changing the
-fabric-ccenv in the future.
+fabric-ledgerone-ccenv in the future.
 
 Change Log
 ----------

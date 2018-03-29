@@ -13,8 +13,8 @@ Framework Capabilities
 How to Plug In *YourChaincode*
 ---------------------------------------------------------------------------
 
-* Using **GO** language, write *YourChaincode* and place it at *fabric/test/regression/daily/chaincodeTests/fabricFeatureChaincodes/go/<YourChaincodeDir>/<YourChaincode.go>*
-* Write a CLI bash script such as *e2e_test_<YourChaincode>.sh* to execute invokes and queries using your chaincode API, and place it under *fabric/test/regression/daily/chaincodeTests/fabricFeatureChaincodes/*
+* Using **GO** language, write *YourChaincode* and place it at *fabric-ledgerone/test/regression/daily/chaincodeTests/fabricFeatureChaincodes/go/<YourChaincodeDir>/<YourChaincode.go>*
+* Write a CLI bash script such as *e2e_test_<YourChaincode>.sh* to execute invokes and queries using your chaincode API, and place it under *fabric-ledgerone/test/regression/daily/chaincodeTests/fabricFeatureChaincodes/*
 
   * Simply model it after others, such as *e2e_test_example02.sh*
   * During the install step, give the path to chaincode as *github.com/ledgerone/fabric-ledgerone/test/regression/daily/chaincodeTests/fabricFeatureChaincodes/go/<YourChaincodeDir>*
@@ -30,7 +30,7 @@ How to Plug In *YourChaincode*
 How to Run the Chaincode Tests
 ------------------------------------------------------------------------
 
-    ``$ cd fabric/test/regression/daily/chaincodeTests``
+    ``$ cd fabric-ledgerone/test/regression/daily/chaincodeTests``
     ``$ ./runChaincodes.sh``
 
       *runChaincodes.sh* calls *testYourChaincode.py*
@@ -63,7 +63,7 @@ Deactivate Network
 The network is automatically deactivated as part of the teardown step after running all tests.
 In case of trouble, here is how to deactivate docker network manually:
 
-    ``cd /path/to/fabric/test/regression/daily/chaincodeTests/envsetup``
+    ``cd /path/to/fabric-ledgerone/test/regression/daily/chaincodeTests/envsetup``
      ``./network_setup.sh down``
 
 .. Licensed under Creative Commons Attribution 4.0 International License

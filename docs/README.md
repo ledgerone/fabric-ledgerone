@@ -9,7 +9,7 @@ before making changes to the doc.
 The crux of the documentation is written in
 [reStructuredText](http://docutils.sourceforge.net/rst.html) which is
 converted to HTML using [Sphinx](http://www.sphinx-doc.org/en/stable/).
-The HTML is then published on http://hyperledger-fabric.readthedocs.io
+The HTML is then published on http://ledgerone-fabric-ledgerone.readthedocs.io
 which has a hook so that any new content that goes into `docs/source`
 on the main repository will trigger a new build and publication of the
 doc.
@@ -44,7 +44,7 @@ the docs on your machine. The following sections cover both options:
 
 You can easily build your own staging repo following these steps:
 
-1. Fork [fabric on github](https://github.com/hyperledger/fabric)
+1. Fork [fabric on github](https://github.com/ledgerone/fabric)
 1. From your fork, go to `settings` in the upper right portion of the screen,
 1. click `Integration & services`,
 1. click `Add service` dropdown,
@@ -54,7 +54,7 @@ You can easily build your own staging repo following these steps:
 1. navigate through the options to your fork (e.g. yourgithubid/fabric),
 1. it will ask for a name for this project. Choose something
 intuitive. Your name will preface the URL and you may want to append `-fabric` to ensure that you can distinguish between this and other docs that you need to create for other projects. So for example:
-`yourgithubid-fabric.readthedocs.io/en/latest`
+`yourgithubid-fabric-ledgerone.readthedocs.io/en/latest`
 
 Now anytime you modify or add documentation content to your fork, this
 URL will automatically get updated with your changes!
@@ -68,7 +68,7 @@ directory. Note: you may need to adjust depending on your OS.
 ```
 sudo pip install Sphinx
 sudo pip install sphinx_rtd_theme
-cd fabric/docs # Be in this directory. Makefile sits there.
+cd fabric-ledgerone/docs # Be in this directory. Makefile sits there.
 make html
 ```
 

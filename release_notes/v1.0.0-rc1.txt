@@ -13,12 +13,12 @@ none
 
 Resolved Vulnerabilities
 ------------------------
-https://jira.hyperledger.org/browse/FAB-4856
-https://jira.hyperledger.org/browse/FAB-4848
-https://jira.hyperledger.org/browse/FAB-4751
-https://jira.hyperledger.org/browse/FAB-4626
-https://jira.hyperledger.org/browse/FAB-4567
-https://jira.hyperledger.org/browse/FAB-3715
+https://jira.ledgerone.org/browse/FAB-4856
+https://jira.ledgerone.org/browse/FAB-4848
+https://jira.ledgerone.org/browse/FAB-4751
+https://jira.ledgerone.org/browse/FAB-4626
+https://jira.ledgerone.org/browse/FAB-4567
+https://jira.ledgerone.org/browse/FAB-3715
 
 Known Issues & Workarounds
 --------------------------

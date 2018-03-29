@@ -30,7 +30,7 @@ install:
  - echo " INSTALLING DEPENDENCIES "
  - |
    cd $HOME/gopath/src/github.com/$USER_NAME/$REPO_NAME
-   git clone https://github.com/hyperledger/fabric-baseimage.git
+   git clone https://github.com/ledgerone/fabric-baseimage.git
    cd $HOME/gopath/src/github.com/$USER_NAME/$REPO_NAME/fabric-baseimage/scripts/devenv && chmod +x setup.sh && sudo ./setup.sh
    rm -rf ../../../fabric-baseimage
    echo " Compilers & Dependencies "
@@ -42,14 +42,14 @@ before_script:
 
  - echo " CREATING BASE IMAGE "
  - cd $HOME/gopath/src/github.com/$USER_NAME/$REPO_NAME/scripts && chmod +x foldercopy.sh && ./foldercopy.sh $TR_PULL_REQUEST $USER_NAME $REPO_NAME
- - sudo rm -rf /var/hyperledger/ && sudo mkdir /var/hyperledger/ && sudo chown $USER:$USER /var/hyperledger
- - cd /$HOME/gopath/src/github.com/hyperledger/fabric
+ - sudo rm -rf /var/ledgerone/ && sudo mkdir /var/ledgerone/ && sudo chown $USER:$USER /var/ledgerone
+ - cd /$HOME/gopath/src/github.com/ledgerone/fabric
  - make linter
 
 script:
 
  - echo "Executing Tests"
- - cd $HOME/gopath/src/github.com/hyperledger/fabric
+ - cd $HOME/gopath/src/github.com/ledgerone/fabric
  - sed -i -e 's/172.17.0.1:2375\b/'"$ip:$port"'/g' $HOME/gopath/src/github.com/ledgerone/fabric-ledgerone/bddtests/compose-defaults.yml
  - export BEHAVE_OPTS="-D logs=Y -o testsummary.log" #Defined to both jobs.
  - make $TEST_TARGET
@@ -58,7 +58,7 @@ after_failure:
 
  - |
    echo "Click below links to view behave container log files"
-   cd $HOME/gopath/src/github.com/hyperledger/fabric
+   cd $HOME/gopath/src/github.com/ledgerone/fabric
    chmod +x scripts/containerlogs.sh
    sudo ./scripts/containerlogs.sh
 

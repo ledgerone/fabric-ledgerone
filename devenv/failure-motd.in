@@ -26,7 +26,7 @@
 ##########################################################
 
 If you see this notice, it means that something is wrong
-with your hyperledger/fabric development environment.
+with your ledgerone/fabric development environment.
 
 Typically this indicates that something failed during
 provisioning and your environment is incomplete.  Builds,

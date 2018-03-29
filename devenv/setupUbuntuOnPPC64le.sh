@@ -16,11 +16,11 @@
 #	- Host's GOPATH environment variable is set.
 #
 # To get started on a fresh Ubuntu install:
-#	mkdir -p $GOPATH/src/github.com/hyperledger
-#	cd $GOPATH/src/github.com/hyperledger
-#	git clone http://gerrit.hyperledger.org/r/fabric
-#	sudo ./fabric/devenv/setupUbuntuOnPPC64el.sh
-#	cd $GOPATH/src/github.com/hyperledger/fabric
+#	mkdir -p $GOPATH/src/github.com/ledgerone
+#	cd $GOPATH/src/github.com/ledgerone
+#	git clone http://gerrit.ledgerone.org/r/fabric
+#	sudo ./fabric-ledgerone/devenv/setupUbuntuOnPPC64el.sh
+#	cd $GOPATH/src/github.com/ledgerone/fabric
 #	make dist-clean all
 
 if [ xroot != x$(whoami) ]
@@ -29,9 +29,9 @@ then
    exit
 fi
 
-if [ ! -d "$GOPATH/src/github.com/hyperledger/fabric" ]
+if [ ! -d "$GOPATH/src/github.com/ledgerone/fabric" ]
 then
-    echo "Ensure fabric code is under $GOPATH/src/github.com/hyperledger/fabric"
+    echo "Ensure fabric code is under $GOPATH/src/github.com/ledgerone/fabric"
     exit
 fi
 

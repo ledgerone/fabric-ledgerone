@@ -8,7 +8,7 @@ version: '2'
 services:
 
   peer:
-    image: hyperledger/fabric-peer
+    image: ledgerone/fabric-ledgerone-peer
     environment:
       - CORE_PEER_ADDRESSAUTODETECT=true
       #- CORE_VM_ENDPOINT=http://172.17.0.1:2375
@@ -23,7 +23,7 @@ services:
       - '7051'
       - '7053'
     volumes:
-      - ./volumes/peer:/var/hyperledger/bddtests/volumes/peer
+      - ./volumes/peer:/var/ledgerone/bddtests/volumes/peer
       - /var/run/docker.sock:/var/run/docker.sock
     # Script will wait until membersrvc is up (if it exists) before starting
     # $$GOPATH (double dollar) required to prevent docker-compose doing its own
@@ -32,5 +32,5 @@ services:
     command: peer node start
 
     # Use these options if coverage desired for peers
-    #image: hyperledger/fabric-peer-coverage
+    #image: ledgerone/fabric-ledgerone-peer-coverage
     #command: ./peer.test --test.coverprofile=coverage.cov node start

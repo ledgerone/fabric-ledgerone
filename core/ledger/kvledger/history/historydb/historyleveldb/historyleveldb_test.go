@@ -33,7 +33,7 @@ import (
 )
 
 func TestMain(m *testing.M) {
-	viper.Set("peer.fileSystemPath", "/tmp/fabric/ledgertests/kvledger/history/historydb/historyleveldb")
+	viper.Set("peer.fileSystemPath", "/tmp/fabric-ledgerone/ledgertests/kvledger/history/historydb/historyleveldb")
 	os.Exit(m.Run())
 }
 

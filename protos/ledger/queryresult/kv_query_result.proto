@@ -19,7 +19,7 @@ syntax = "proto3";
 package queryresult;
 
 option go_package = "github.com/ledgerone/fabric-ledgerone/protos/ledger/queryresult";
-option java_package = "org.hyperledger.fabric.protos.ledger.queryresult";
+option java_package = "org.ledgerone.fabric_ledgerone.protos.ledger.queryresult";
 
 import "google/protobuf/timestamp.proto";
 

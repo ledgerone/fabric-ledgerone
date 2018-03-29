@@ -13,7 +13,7 @@ CHANNEL_COUNT=$2
 : ${CHANNEL_NAME:="mychannel"}
 : ${CHANNEL_COUNT:="1"}
 
-export FABRIC_ROOT=$GOPATH/src/github.com/hyperledger/fabric
+export FABRIC_ROOT=$GOPATH/src/github.com/ledgerone/fabric
 export E2E_CLI_PATH=$FABRIC_ROOT/examples/e2e_cli/
 cp $E2E_CLI_PATH/configtx.yaml $PWD
 sed -i 's/kafka/solo/g' configtx.yaml

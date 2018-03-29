@@ -23,7 +23,7 @@ try:
     sys.path.insert(0, pbFilePath)
     from peer import chaincode_pb2
 except:
-    print("ERROR! Unable to import the protobuf libraries from the hyperledger/fabric/bddtests directory: {0}".format(sys.exc_info()[0]))
+    print("ERROR! Unable to import the protobuf libraries from the ledgerone/fabric-ledgerone/bddtests directory: {0}".format(sys.exc_info()[0]))
     sys.exit(1)
 
 # The default channel ID
@@ -44,7 +44,7 @@ def get_chaincode_deploy_spec(projectDir, ccType, path, name, args):
 
 
 def install_chaincode(context, chaincode, peers):
-    configDir = "/var/hyperledger/configs/{0}".format(context.composition.projectName)
+    configDir = "/var/ledgerone/configs/{0}".format(context.composition.projectName)
     output = {}
     for peer in peers:
         peerParts = peer.split('.')
@@ -75,7 +75,7 @@ def install_chaincode(context, chaincode, peers):
 
 
 def instantiate_chaincode(context, chaincode, containers):
-    configDir = "/var/hyperledger/configs/{0}".format(context.composition.projectName)
+    configDir = "/var/ledgerone/configs/{0}".format(context.composition.projectName)
     args = chaincode.get('args', '[]').replace('"', r'\"')
     command = ["/bin/bash", "-c",
                '"CORE_PEER_MSPCONFIGPATH={0}/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp'.format(configDir),
@@ -103,7 +103,7 @@ def instantiate_chaincode(context, chaincode, containers):
 
 
 def create_channel(context, containers, orderers, channelId=TEST_CHANNEL_ID):
-    configDir = "/var/hyperledger/configs/{0}".format(context.composition.projectName)
+    configDir = "/var/ledgerone/configs/{0}".format(context.composition.projectName)
     ret = context.composition.docker_exec(["ls", configDir], containers)
 
     command = ["/bin/bash", "-c",
@@ -112,7 +112,7 @@ def create_channel(context, containers, orderers, channelId=TEST_CHANNEL_ID):
                'CORE_PEER_ID=peer0.org1.example.com',
                'CORE_PEER_ADDRESS=peer0.org1.example.com:7051',
                "peer", "channel", "create",
-               "--file", "/var/hyperledger/configs/{0}/{1}.tx".format(context.composition.projectName, channelId),
+               "--file", "/var/ledgerone/configs/{0}/{1}.tx".format(context.composition.projectName, channelId),
                "--channelID", channelId,
                "--timeout", "120", # This sets the timeout for the channel creation instead of the default 5 seconds
                "--orderer", '{0}:7050"'.format(orderers[0])]
@@ -134,15 +134,15 @@ def create_channel(context, containers, orderers, channelId=TEST_CHANNEL_ID):
 
 
 def fetch_channel(context, peers, orderers, channelId=TEST_CHANNEL_ID):
-    configDir = "/var/hyperledger/configs/{0}".format(context.composition.projectName)
+    configDir = "/var/ledgerone/configs/{0}".format(context.composition.projectName)
     for peer in peers:
         peerParts = peer.split('.')
         org = '.'.join(peerParts[1:])
         command = ["/bin/bash", "-c",
                    '"CORE_PEER_MSPCONFIGPATH={0}/peerOrganizations/{1}/users/Admin@{1}/msp'.format(configDir, org),
                    "peer", "channel", "fetch", "config",
-                   "/var/hyperledger/configs/{0}/{1}.block".format(context.composition.projectName, channelId),
-                   "--file", "/var/hyperledger/configs/{0}/{1}.tx".format(context.composition.projectName, channelId),
+                   "/var/ledgerone/configs/{0}/{1}.block".format(context.composition.projectName, channelId),
+                   "--file", "/var/ledgerone/configs/{0}/{1}.tx".format(context.composition.projectName, channelId),
                    "--channelID", channelId,
                    "--orderer", '{0}:7050"'.format(orderers[0])]
         output = context.composition.docker_exec(command, [peer])
@@ -153,7 +153,7 @@ def fetch_channel(context, peers, orderers, channelId=TEST_CHANNEL_ID):
 
 
 def join_channel(context, peers, orderers, channelId=TEST_CHANNEL_ID):
-    configDir = "/var/hyperledger/configs/{0}".format(context.composition.projectName)
+    configDir = "/var/ledgerone/configs/{0}".format(context.composition.projectName)
 
     for peer in peers:
         peerParts = peer.split('.')
@@ -161,7 +161,7 @@ def join_channel(context, peers, orderers, channelId=TEST_CHANNEL_ID):
         command = ["/bin/bash", "-c",
                    '"CORE_PEER_MSPCONFIGPATH={0}/peerOrganizations/{1}/users/Admin@{1}/msp'.format(configDir, org),
                    "peer", "channel", "join",
-                   "--blockpath", '/var/hyperledger/configs/{0}/{1}.block"'.format(context.composition.projectName, channelId)]
+                   "--blockpath", '/var/ledgerone/configs/{0}/{1}.block"'.format(context.composition.projectName, channelId)]
         count = 0
         output = "Error"
         while count < 5 and "Error" in output:
@@ -179,7 +179,7 @@ def join_channel(context, peers, orderers, channelId=TEST_CHANNEL_ID):
 
 
 def invoke_chaincode(context, chaincode, orderers, peer, channelId=TEST_CHANNEL_ID):
-    configDir = "/var/hyperledger/configs/{0}".format(context.composition.projectName)
+    configDir = "/var/ledgerone/configs/{0}".format(context.composition.projectName)
     args = chaincode.get('args', '[]').replace('"', r'\"')
     peerParts = peer.split('.')
     org = '.'.join(peerParts[1:])
@@ -197,7 +197,7 @@ def invoke_chaincode(context, chaincode, orderers, peer, channelId=TEST_CHANNEL_
 
 
 def query_chaincode(context, chaincode, peer, channelId=TEST_CHANNEL_ID):
-    configDir = "/var/hyperledger/configs/{0}".format(context.composition.projectName)
+    configDir = "/var/ledgerone/configs/{0}".format(context.composition.projectName)
     peerParts = peer.split('.')
     org = '.'.join(peerParts[1:])
     args = chaincode.get('args', '[]').replace('"', r'\"')

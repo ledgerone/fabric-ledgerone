@@ -212,8 +212,8 @@ var defaults = TopLevel{
 		HistorySize: 10000,
 	},
 	FileLedger: FileLedger{
-		Location: "/var/hyperledger/production/orderer",
-		Prefix:   "hyperledger-fabric-ordererledger",
+		Location: "/var/ledgerone/production/orderer",
+		Prefix:   "ledgerone-fabric-ordererledger",
 	},
 	Kafka: Kafka{
 		Retry: Retry{

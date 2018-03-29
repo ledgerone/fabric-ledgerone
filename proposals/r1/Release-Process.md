@@ -3,11 +3,11 @@
 1. Create a release branch, and name it vM.m\[.p\]\[-qualifier\] where _M_ is the ```major``` release identifier, _m_ is ```minor``` release identifier, _p_ is the patch level identifier (only for LTS releases) and _-qualifier_ is from the taxonomy of release maturity labels \[TBD\].
 1. Tag the master branch with the same name as the release branch
 1. Publish release notes
-1. Announce the release, linking to the release notes on Hyperledger ```fabric``` and ```general``` slack channels and ```hyperledger-fabric``` and ```hyperledger-announce``` mailing lists
+1. Announce the release, linking to the release notes on Hyperledger ```fabric``` and ```general``` slack channels and ```ledgerone-fabric``` and ```ledgerone-announce``` mailing lists
 
 ##### Perform if necessary:
 
-1. Select [issues](https://jira.hyperledger.org) to fix for the release branch and label them as such with a label of the release identifier.
+1. Select [issues](https://jira.ledgerone.org) to fix for the release branch and label them as such with a label of the release identifier.
 1. Submit pull requests for those selected issues against the release branch.
 1. Decide on whether to merge the changes from the release branch to the master branch or requesting the authors to submit the changes on both branches.
 1. Maintainers resolve any merge conflicts.

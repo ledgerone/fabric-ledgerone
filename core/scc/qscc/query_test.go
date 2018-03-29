@@ -60,7 +60,7 @@ func resetProvider(res, chainid string, prop *peer2.SignedProposal, retErr error
 
 func TestQueryGetChainInfo(t *testing.T) {
 	chainid := "mytestchainid1"
-	path := "/var/hyperledger/test1/"
+	path := "/var/ledgerone/test1/"
 	stub, err := setupTestLedger(chainid, path)
 	defer os.RemoveAll(path)
 	if err != nil {
@@ -83,7 +83,7 @@ func TestQueryGetChainInfo(t *testing.T) {
 
 func TestQueryGetTransactionByID(t *testing.T) {
 	chainid := "mytestchainid2"
-	path := "/var/hyperledger/test2/"
+	path := "/var/ledgerone/test2/"
 	stub, err := setupTestLedger(chainid, path)
 	defer os.RemoveAll(path)
 	if err != nil {
@@ -107,7 +107,7 @@ func TestQueryGetTransactionByID(t *testing.T) {
 
 func TestQueryGetBlockByNumber(t *testing.T) {
 	chainid := "mytestchainid3"
-	path := "/var/hyperledger/test3/"
+	path := "/var/ledgerone/test3/"
 	stub, err := setupTestLedger(chainid, path)
 	defer os.RemoveAll(path)
 	if err != nil {
@@ -133,7 +133,7 @@ func TestQueryGetBlockByNumber(t *testing.T) {
 
 func TestQueryGetBlockByHash(t *testing.T) {
 	chainid := "mytestchainid4"
-	path := "/var/hyperledger/test4/"
+	path := "/var/ledgerone/test4/"
 	stub, err := setupTestLedger(chainid, path)
 	defer os.RemoveAll(path)
 	if err != nil {
@@ -152,7 +152,7 @@ func TestQueryGetBlockByHash(t *testing.T) {
 
 func TestQueryGetBlockByTxID(t *testing.T) {
 	chainid := "mytestchainid5"
-	path := "/var/hyperledger/test5/"
+	path := "/var/ledgerone/test5/"
 	stub, err := setupTestLedger(chainid, path)
 	defer os.RemoveAll(path)
 	if err != nil {
@@ -167,7 +167,7 @@ func TestQueryGetBlockByTxID(t *testing.T) {
 
 func TestFailingAccessControl(t *testing.T) {
 	chainid := "mytestchainid6"
-	path := "/var/hyperledger/test6/"
+	path := "/var/ledgerone/test6/"
 	_, err := setupTestLedger(chainid, path)
 	defer os.RemoveAll(path)
 	if err != nil {
@@ -239,7 +239,7 @@ func TestFailingAccessControl(t *testing.T) {
 
 func TestQueryNonexistentFunction(t *testing.T) {
 	chainid := "mytestchainid7"
-	path := "/var/hyperledger/test7/"
+	path := "/var/ledgerone/test7/"
 	stub, err := setupTestLedger(chainid, path)
 	defer os.RemoveAll(path)
 	if err != nil {
@@ -256,7 +256,7 @@ func TestQueryNonexistentFunction(t *testing.T) {
 // that contains two transactions
 func TestQueryGeneratedBlock(t *testing.T) {
 	chainid := "mytestchainid8"
-	path := "/var/hyperledger/test8/"
+	path := "/var/ledgerone/test8/"
 	stub, err := setupTestLedger(chainid, path)
 	defer os.RemoveAll(path)
 	if err != nil {

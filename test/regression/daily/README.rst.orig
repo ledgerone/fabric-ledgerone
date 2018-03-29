@@ -25,8 +25,8 @@ Some examples:
 2. To add a new test with a new tool, it involves a few more steps:
 
 ```
-   (A) Create and merge a new tool such as .../fabric/test/tools/NewTool/newTool.sh
-   (B) create a new file .../fabric/test/regression/daily/test_newTool.py
+   (A) Create and merge a new tool such as .../fabric-ledgerone/test/tools/NewTool/newTool.sh
+   (B) create a new file .../fabric-ledgerone/test/regression/daily/test_newTool.py
        and define a python wrapper to invoke the new tool.
        Model it after others like test_example.py; the file should
        contain a testcase that looks something like this:

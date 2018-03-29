@@ -398,7 +398,7 @@ func benchmarkOrderer(
 	// Spawn orderers
 	for i := 0; i < numOfOrderer; i++ {
 		// If we are using json or file ledger, we should use temp dir for ledger location
-		// because default location "/var/hyperledger/production/orderer" in sample config
+		// because default location "/var/ledgerone/production/orderer" in sample config
 		// isn't always writable. Also separate dirs are created for each orderer instance
 		// as leveldb cannot share the same dir. These temp dirs are cleaned up after each
 		// test run.

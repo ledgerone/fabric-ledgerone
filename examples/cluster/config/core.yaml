@@ -42,7 +42,7 @@ logging:
     #
     # 4. Otherwise, the specifications below apply.
     #
-    # Developers: Please see fabric/docs/Setup/logging-control.md for more
+    # Developers: Please see fabric-ledgerone/docs/Setup/logging-control.md for more
     # options.
     peer:       warning
     node:       warning
@@ -239,7 +239,7 @@ peer:
             # Location of Key Store
             FileKeyStore:
                 # If "", defaults to 'mspConfigPath'/keystore
-                # TODO: Ensure this is read with fabric/core/config.GetPath() once ready
+                # TODO: Ensure this is read with fabric-ledgerone/core/config.GetPath() once ready
                 KeyStore:
 
     # Path on the file system where peer will find MSP local configurations
@@ -324,7 +324,7 @@ chaincode:
         name:
 
     # Generic builder environment, suitable for most chaincode types
-    builder: $(DOCKER_NS)/fabric-ccenv:$(ARCH)-$(PROJECT_VERSION)
+    builder: $(DOCKER_NS)/fabric-ledgerone-ccenv:$(ARCH)-$(PROJECT_VERSION)
 
     golang:
         # golang will never need more than baseos
@@ -341,7 +341,7 @@ chaincode:
         # This image is packed with shim layer libraries that are necessary
         # for Java chaincode runtime.
         Dockerfile:  |
-            from $(DOCKER_NS)/fabric-javaenv:$(ARCH)-$(PROJECT_VERSION)
+            from $(DOCKER_NS)/fabric-ledgerone-javaenv:$(ARCH)-$(PROJECT_VERSION)
 
     # timeout in millisecs for starting up a container and waiting for Register
     # to come through. 1sec should be plenty for chaincode unit tests

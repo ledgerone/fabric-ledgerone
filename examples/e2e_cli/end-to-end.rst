@@ -51,20 +51,20 @@ Now create the following directory structure and ``cd`` into it:
 
 .. code:: bash
 
-      mkdir -p $GOPATH/src/github.com/hyperledger
-      cd $GOPATH/src/github.com/hyperledger
+      mkdir -p $GOPATH/src/github.com/ledgerone
+      cd $GOPATH/src/github.com/ledgerone
 
 -  Clone the Fabric code base into this path.
 
 .. code:: bash
 
-       git clone http://gerrit.hyperledger.org/r/fabric
+       git clone http://gerrit.ledgerone.org/r/fabric
 
 or though a mirrored repository in github:
 
 .. code:: bash
 
-       git clone https://github.com/hyperledger/fabric.git
+       git clone https://github.com/ledgerone/fabric-ledgerone.git
 
 - If you are running OSX, perform the following:
 
@@ -80,11 +80,11 @@ Build the binaries
 
 .. code:: bash
 
-       cd $GOPATH/src/github.com/hyperledger/fabric
+       cd $GOPATH/src/github.com/ledgerone/fabric
        # ensure sure you are in the /fabric directory where the Makefile resides
        make release
 
-This will output platform-specific binaries into the ``fabric/release`` folder.
+This will output platform-specific binaries into the ``fabric-ledgerone/release`` folder.
 
 -  Next, make the Fabric images.  This typically takes between five to ten minutes, so
    be patient:
@@ -106,22 +106,22 @@ successfully, you should see an output similar to the following:
   hyperledger/fabric-kafka       x86_64-1.0.0-beta     08af4d797266        40 minutes ago      1.3 GB
   hyperledger/fabric-zookeeper   latest                444e9e695367        40 minutes ago      1.31 GB
   hyperledger/fabric-zookeeper   x86_64-1.0.0-beta     444e9e695367        40 minutes ago      1.31 GB
-  hyperledger/fabric-testenv     latest                8678d3101930        41 minutes ago      1.41 GB
-  hyperledger/fabric-testenv     x86_64-1.0.0-beta     8678d3101930        41 minutes ago      1.41 GB
-  hyperledger/fabric-buildenv    latest                60911392c82e        41 minutes ago      1.33 GB
-  hyperledger/fabric-buildenv    x86_64-1.0.0-beta     60911392c82e        41 minutes ago      1.33 GB
-  hyperledger/fabric-orderer     latest                2afab937b9cc        41 minutes ago      182 MB
-  hyperledger/fabric-orderer     x86_64-1.0.0-beta     2afab937b9cc        41 minutes ago      182 MB
-  hyperledger/fabric-peer        latest                9560e58e8089        41 minutes ago      185 MB
-  hyperledger/fabric-peer        x86_64-1.0.0-beta     9560e58e8089        41 minutes ago      185 MB
-  hyperledger/fabric-javaenv     latest                881ca5219fad        42 minutes ago      1.43 GB
-  hyperledger/fabric-javaenv     x86_64-1.0.0-beta     881ca5219fad        42 minutes ago      1.43 GB
-  hyperledger/fabric-ccenv       latest                28af77ffe9e9        43 minutes ago      1.29 GB
-  hyperledger/fabric-ccenv       x86_64-1.0.0-beta     28af77ffe9e9        43 minutes ago      1.29 GB
+  ledgerone/fabric-ledgerone-testenv     latest                8678d3101930        41 minutes ago      1.41 GB
+  ledgerone/fabric-ledgerone-testenv     x86_64-1.0.0-beta     8678d3101930        41 minutes ago      1.41 GB
+  ledgerone/fabric-ledgerone-buildenv    latest                60911392c82e        41 minutes ago      1.33 GB
+  ledgerone/fabric-ledgerone-buildenv    x86_64-1.0.0-beta     60911392c82e        41 minutes ago      1.33 GB
+  ledgerone/fabric-ledgerone-orderer     latest                2afab937b9cc        41 minutes ago      182 MB
+  ledgerone/fabric-ledgerone-orderer     x86_64-1.0.0-beta     2afab937b9cc        41 minutes ago      182 MB
+  ledgerone/fabric-ledgerone-peer        latest                9560e58e8089        41 minutes ago      185 MB
+  ledgerone/fabric-ledgerone-peer        x86_64-1.0.0-beta     9560e58e8089        41 minutes ago      185 MB
+  ledgerone/fabric-ledgerone-javaenv     latest                881ca5219fad        42 minutes ago      1.43 GB
+  ledgerone/fabric-ledgerone-javaenv     x86_64-1.0.0-beta     881ca5219fad        42 minutes ago      1.43 GB
+  ledgerone/fabric-ledgerone-ccenv       latest                28af77ffe9e9        43 minutes ago      1.29 GB
+  ledgerone/fabric-ledgerone-ccenv       x86_64-1.0.0-beta     28af77ffe9e9        43 minutes ago      1.29 GB
   hyperledger/fabric-baseimage   x86_64-0.3.0          f4751a503f02        3 months ago        1.27 GB
   hyperledger/fabric-baseos      x86_64-0.3.0          c3a4cf3b3350        3 months ago        161 MB
 
-If you failed to compile the ``fabric-testenv`` image, then you can
+If you failed to compile the ``fabric-ledgerone-testenv`` image, then you can
 perform a ``make clean`` followed by another ``make docker``.
 
 Cryptogen Tool
@@ -333,11 +333,11 @@ You should see an output identical to the following:
   b568de3fe931        dev-peer1.org2.example.com-mycc-1.0   "chaincode -peer.a..."   4 minutes ago       Up 4 minutes                                                           dev-peer1.org2.example.com-mycc-1.0
   17c1c82087e7        dev-peer0.org1.example.com-mycc-1.0   "chaincode -peer.a..."   4 minutes ago       Up 4 minutes                                                           dev-peer0.org1.example.com-mycc-1.0
   0e1c5034c47b        dev-peer0.org2.example.com-mycc-1.0   "chaincode -peer.a..."   4 minutes ago       Up 4 minutes                                                           dev-peer0.org2.example.com-mycc-1.0
-  71339e7e1d38        hyperledger/fabric-peer               "peer node start -..."   5 minutes ago       Up 5 minutes        0.0.0.0:8051->7051/tcp, 0.0.0.0:8053->7053/tcp     peer1.org1.example.com
-  add6113ffdcf        hyperledger/fabric-peer               "peer node start -..."   5 minutes ago       Up 5 minutes        0.0.0.0:10051->7051/tcp, 0.0.0.0:10053->7053/tcp   peer1.org2.example.com
-  689396c0e520        hyperledger/fabric-peer               "peer node start -..."   5 minutes ago       Up 5 minutes        0.0.0.0:7051->7051/tcp, 0.0.0.0:7053->7053/tcp     peer0.org1.example.com
-  65424407a653        hyperledger/fabric-orderer            "orderer"                5 minutes ago       Up 5 minutes        0.0.0.0:7050->7050/tcp                             orderer.example.com
-  ce14853db660        hyperledger/fabric-peer               "peer node start -..."   5 minutes ago       Up 5 minutes        0.0.0.0:9051->7051/tcp, 0.0.0.0:9053->7053/tcp     peer0.org2.example.com
+  71339e7e1d38        ledgerone/fabric-ledgerone-peer               "peer node start -..."   5 minutes ago       Up 5 minutes        0.0.0.0:8051->7051/tcp, 0.0.0.0:8053->7053/tcp     peer1.org1.example.com
+  add6113ffdcf        ledgerone/fabric-ledgerone-peer               "peer node start -..."   5 minutes ago       Up 5 minutes        0.0.0.0:10051->7051/tcp, 0.0.0.0:10053->7053/tcp   peer1.org2.example.com
+  689396c0e520        ledgerone/fabric-ledgerone-peer               "peer node start -..."   5 minutes ago       Up 5 minutes        0.0.0.0:7051->7051/tcp, 0.0.0.0:7053->7053/tcp     peer0.org1.example.com
+  65424407a653        ledgerone/fabric-ledgerone-orderer            "orderer"                5 minutes ago       Up 5 minutes        0.0.0.0:7050->7050/tcp                             orderer.example.com
+  ce14853db660        ledgerone/fabric-ledgerone-peer               "peer node start -..."   5 minutes ago       Up 5 minutes        0.0.0.0:9051->7051/tcp, 0.0.0.0:9053->7053/tcp     peer0.org2.example.com
 
 If you set a moderately high ``TIMEOUT`` value, then you will see your cli
 container as well.
@@ -680,7 +680,7 @@ The command is:
     peer chaincode instantiate -o orderer.example.com:7050 --tls --cafile /opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/cacerts/ca.example.com-cert.pem -C $CHANNEL_NAME -n mycc -v 1.0 -p github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/chaincode_example02 -c '{"Args":["init","a", "100", "b","200"]}' -P "OR ('Org1MSP.member','Org2MSP.member')"
 
 See the `endorsement
-policies <http://hyperledger-fabric.readthedocs.io/en/latest/endorsement-policies.html>`__
+policies <http://ledgerone-fabric-ledgerone.readthedocs.io/en/latest/endorsement-policies.html>`__
 documentation for more details on policy implementation.
 
 Invoke chaincode
@@ -741,7 +741,7 @@ You can use **chaincode_example02** chaincode against the CouchDB state database
 using the steps outlined above, however in order to exercise the CouchDB query
 capabilities you will need to use a chaincode that has data modeled as JSON,
 (e.g. **marbles02**). You can locate the **marbles02** chaincode in the
-``fabric/examples/chaincode/go`` directory.
+``fabric-ledgerone/examples/chaincode/go`` directory.
 
 We will follow the same process to create and join the channel as outlined in the
 **Manually exercise the commands** section above.  Once you have joined your
@@ -829,7 +829,7 @@ the peer container specification in the ``docker-compose-base.yaml`` file:
 .. code:: bash
 
        volumes:
-        - /var/hyperledger/peer0:/var/hyperledger/production
+        - /var/ledgerone/peer0:/var/ledgerone/production
 
 
 For the CouchDB container, you may add the following two lines in the CouchDB
@@ -838,7 +838,7 @@ container specification:
 .. code:: bash
 
        volumes:
-        - /var/hyperledger/couchdb0:/opt/couchdb/data
+        - /var/ledgerone/couchdb0:/opt/couchdb/data
 
 Troubleshooting
 ---------------
@@ -867,7 +867,7 @@ Troubleshooting
 
 .. code:: bash
 
-       Error: Error endorsing chaincode: rpc error: code = 2 desc = Error installing chaincode code mycc:1.0(chaincode /var/hyperledger/production/chaincodes/mycc.1.0 exits)
+       Error: Error endorsing chaincode: rpc error: code = 2 desc = Error installing chaincode code mycc:1.0(chaincode /var/ledgerone/production/chaincodes/mycc.1.0 exits)
 
 You likely have chaincode images (e.g. ``dev-peer1.org2.example.com-mycc-1.0`` or
 ``dev-peer0.org1.example.com-mycc-1.0``) from prior runs. Remove them and try
@@ -906,7 +906,7 @@ back and recreate your channel artifacts.
        ./network_setup.sh down
 
 - If you continue to see errors, share your logs on the **# fabric-questions**
-  channel on `Hyperledger Rocket Chat <https://chat.hyperledger.org/home>`__.
+  channel on `Hyperledger Rocket Chat <https://chat.ledgerone.org/home>`__.
 
 .. Licensed under Creative Commons Attribution 4.0 International License
    https://creativecommons.org/licenses/by/4.0/

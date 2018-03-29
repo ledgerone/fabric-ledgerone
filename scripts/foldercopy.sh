@@ -6,7 +6,7 @@
 #
 
 
-if [ "$2" != "hyperledger" ]; then
+if [ "$2" != "ledgerone" ]; then
 
         echo " Pull Request number is $1 "
         echo " User Name is $2 "

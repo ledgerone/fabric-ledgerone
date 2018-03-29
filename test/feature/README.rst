@@ -24,9 +24,9 @@ The following are links to the Jenkins execution of these tests:
  * `weekly`_
  * `release`_
 
-.. _daily: https://jenkins.hyperledger.org/view/Daily
-.. _weekly: https://jenkins.hyperledger.org/view/Weekly
-.. _release: https://jenkins.hyperledger.org/view/Release
+.. _daily: https://jenkins.ledgerone.org/view/Daily
+.. _weekly: https://jenkins.ledgerone.org/view/Weekly
+.. _release: https://jenkins.ledgerone.org/view/Release
 
 
 Pre-requisites
@@ -66,11 +66,11 @@ You can install Behave and additional packages either using the ``scripts/instal
 .. _pykafka: https://pypi.python.org/pypi/pykafka
 
 You should also clone the following repositories
-    * `hyperledger-fabric`_
-    * `hyperledger-fabric-ca`_
+    * `ledgerone-fabric`_
+    * `ledgerone-fabric-ca`_
 
-.. _hyperledger-fabric: https://github.com/hyperledger/fabric
-.. _hyperledger-fabric-ca: https://github.com/hyperledger/fabric-ca
+.. _hyperledger-fabric: https://github.com/ledgerone/fabric
+.. _hyperledger-fabric-ca: https://github.com/ledgerone/fabric-ca
 
 ================
 Using VirtualEnv
@@ -120,15 +120,15 @@ The following are not covered in these BDD tests:
 ======================
 Building docker images
 ======================
-When executing tests that are using docker-compose fabric-ca images, be sure to have the fabric-ca docker images built. You must perform a ``make docker`` in the ``/path/to/hyperledger/fabric-ca`` directory.
+When executing tests that are using docker-compose fabric-ca images, be sure to have the fabric-ca docker images built. You must perform a ``make docker`` in the ``/path/to/ledgerone/fabric-ca`` directory.
 
-The docker images for ``peer``, ``orderer``, ``kafka``, and ``zookeeper`` are needed. You must perform a ``make docker`` in the ``/path/to/hyperledger/fabric`` directory.
+The docker images for ``peer``, ``orderer``, ``kafka``, and ``zookeeper`` are needed. You must perform a ``make docker`` in the ``/path/to/ledgerone/fabric`` directory.
 
 
 =========================
 Building tool executables
 =========================
-The **configtxgen** and **cryptogen** tools are used when bootstrapping the networks in these tests. As a result, you must perform a ``make configtxgen && make cryptogen`` in the ``/path/to/hyperledger/fabric`` directory. Be sure that the executable location is added to your PATH.
+The **configtxgen** and **cryptogen** tools are used when bootstrapping the networks in these tests. As a result, you must perform a ``make configtxgen && make cryptogen`` in the ``/path/to/ledgerone/fabric`` directory. Be sure that the executable location is added to your PATH.
 
 
 How to Contribute
@@ -271,8 +271,8 @@ Helpful Docker Commands
       * ``$ docker rm -f $(docker ps -aq)``
    * Remove all images
       * ``$ docker rmi -f $(docker images -q)``
-   * Remove all images except for hyperledger/fabric-baseimage
-      * ``$ docker rmi $(docker images | grep -v 'hyperledger/fabric-baseimage:latest' | awk {'print $3'})``
+   * Remove all images except for ledgerone/fabric-baseimage
+      * ``$ docker rmi $(docker images | grep -v 'ledgerone/fabric-baseimage:latest' | awk {'print $3'})``
    * Start a container
       * ``$ docker start <containerID>``
    * Stop a containerID

@@ -22,8 +22,8 @@ import static java.util.stream.Collectors.joining;
 
 import java.util.List;
 
-import org.hyperledger.fabric.shim.ChaincodeBase;
-import org.hyperledger.fabric.shim.ChaincodeStub;
+import org.ledgerone.fabric_ledgerone.shim.ChaincodeBase;
+import org.ledgerone.fabric_ledgerone.shim.ChaincodeStub;
 
 public class EventSender extends ChaincodeBase {
 

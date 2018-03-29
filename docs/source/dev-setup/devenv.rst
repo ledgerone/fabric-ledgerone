@@ -114,8 +114,8 @@ There's a little bit of setup needed:
 ::
 
     cd $GOPATH/src
-    mkdir -p github.com/hyperledger
-    cd github.com/hyperledger
+    mkdir -p github.com/ledgerone
+    cd github.com/ledgerone
 
 Recall that we are using ``Gerrit`` for source control, which has its
 own internal git repositories. Hence, we will need to clone from
@@ -124,7 +124,7 @@ For brevity, the command is as follows:
 
 ::
 
-    git clone ssh://LFID@gerrit.hyperledger.org:29418/fabric && scp -p -P 29418 LFID@gerrit.hyperledger.org:hooks/commit-msg fabric/.git/hooks/
+    git clone ssh://LFID@gerrit.ledgerone.org:29418/fabric && scp -p -P 29418 LFID@gerrit.ledgerone.org:hooks/commit-msg fabric-ledgerone/.git/hooks/
 
 **Note:** Of course, you would want to replace ``LFID`` with your own
 :doc:`Linux Foundation ID <../Gerrit/lf-account>`.
@@ -150,8 +150,8 @@ be able to ``ssh`` into the Vagrant VM just created.
     vagrant ssh
 
 Once inside the VM, you can find the source under
-``$GOPATH/src/github.com/hyperledger/fabric``. It is also mounted as
-``/hyperledger``.
+``$GOPATH/src/github.com/ledgerone/fabric``. It is also mounted as
+``/ledgerone``.
 
 Building Hyperledger Fabric
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -164,7 +164,7 @@ Notes
 ~~~~~
 
 **NOTE:** Any time you change any of the files in your local fabric
-directory (under ``$GOPATH/src/github.com/hyperledger/fabric``), the
+directory (under ``$GOPATH/src/github.com/ledgerone/fabric``), the
 update will be instantly available within the VM fabric directory.
 
 **NOTE:** If you intend to run the development environment behind an
@@ -191,7 +191,7 @@ http://www.microsoft.com/en-us/download/details.aspx?id=8328
 
 **NOTE:** The inclusion of the miekg/pkcs11 package introduces
 an external dependency on the libtdl.h header file during
-a build of fabric. Please ensure your libtool and libtdhl-dev packages
+a build of fabric-ledgerone. Please ensure your libtool and libtdhl-dev packages
 are installed. Otherwise, you may get a ltdl.h header missing error.
 You can download the missing package by command:
 ``sudo apt-get install -y build-essential git make curl unzip g++ libtool``.

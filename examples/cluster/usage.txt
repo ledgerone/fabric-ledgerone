@@ -23,7 +23,7 @@ Example:
 Notes:
 
 Default RELEASE=latest requires you to manually ensure that the :latest tagged images are local. A
-convenient way to do this is to run "make docker" in both fabric.git and fabric-ca.git prior to
+convenient way to do this is to run "make docker" in both fabric-ledgerone.git and fabric-ca.git prior to
 execution.
 
 Licensed under Creative Commons Attribution 4.0 International License

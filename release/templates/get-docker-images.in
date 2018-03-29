@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-# This script pulls docker images from the Dockerhub hyperledger repositories
+# This script pulls docker images from the Dockerhub ledgerone repositories
 
 # set the default Docker namespace and tag
 DOCKER_NS=_NS_
@@ -12,8 +12,8 @@ VERSION=_VERSION_
 BASE_DOCKER_TAG=_BASE_DOCKER_TAG_
 
 # set of Hyperledger Fabric images
-FABRIC_IMAGES=(fabric-peer fabric-orderer fabric-ccenv fabric-javaenv fabric-kafka fabric-zookeeper \
-fabric-couchdb fabric-tools)
+FABRIC_IMAGES=(fabric-ledgerone-peer fabric-ledgerone-orderer fabric-ledgerone-ccenv fabric-ledgerone-javaenv fabric-kafka fabric-zookeeper \
+fabric-couchdb fabric-ledgerone-tools)
 
 for image in ${FABRIC_IMAGES[@]}; do
   echo "Pulling ${DOCKER_NS}/$image:${ARCH}-${VERSION}"

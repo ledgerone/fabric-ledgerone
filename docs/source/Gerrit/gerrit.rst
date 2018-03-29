@@ -5,9 +5,9 @@ Follow these instructions to collaborate on Hyperledger Fabric
 through the Gerrit review system.
 
 Please be sure that you are subscribed to the `mailing
-list <http://lists.hyperledger.org/mailman/listinfo/hyperledger-fabric>`__
+list <http://lists.ledgerone.org/mailman/listinfo/ledgerone-fabric>`__
 and of course, you can reach out on
-`chat <https://chat.hyperledger.org/>`__ if you need help.
+`chat <https://chat.ledgerone.org/>`__ if you need help.
 
 Gerrit assigns the following roles to users:
 
@@ -48,7 +48,7 @@ Working with a local clone of the repository
 To work on something, whether a new feature or a bugfix:
 
 1. Open the Gerrit `Projects
-   page <https://gerrit.hyperledger.org/r/#/admin/projects/>`__
+   page <https://gerrit.ledgerone.org/r/#/admin/projects/>`__
 
 2. Select the project you wish to work on.
 
@@ -58,10 +58,10 @@ To work on something, whether a new feature or a bugfix:
 
 .. code::
 
-   git clone ssh://LFID@gerrit.hyperledger.org:29418/fabric && scp -p -P 29418 LFID@gerrit.hyperledger.org:hooks/commit-msg fabric/.git/hooks/
+   git clone ssh://LFID@gerrit.ledgerone.org:29418/fabric && scp -p -P 29418 LFID@gerrit.ledgerone.org:hooks/commit-msg fabric-ledgerone/.git/hooks/
 
 .. note:: If you are cloning the fabric project repository, you will
-          want to clone it to the ``$GOPATH/src/github.com/hyperledger``
+          want to clone it to the ``$GOPATH/src/github.com/ledgerone``
           directory so that it will build, and so that you can use it
           with the Vagrant :doc:`development environment <../dev-setup/devenv>`.
 
@@ -106,7 +106,7 @@ with your gerrit id.
 ::
 
     [remote "gerrit"]
-        url = ssh://<USERNAME>@gerrit.hyperledger.org:29418/fabric.git
+        url = ssh://<USERNAME>@gerrit.ledgerone.org:29418/fabric-ledgerone.git
         fetch = +refs/heads/*:refs/remotes/gerrit/*
 
 Then submit your change with ``git review``.
@@ -151,9 +151,9 @@ this:
     remote: Processing changes: new: 1, refs: 1, done
     remote:
     remote: New Changes:
-    remote:   https://gerrit.hyperledger.org/r/6 Test commit
+    remote:   https://gerrit.ledgerone.org/r/6 Test commit
     remote:
-    To ssh://LFID@gerrit.hyperledger.org:29418/fabric
+    To ssh://LFID@gerrit.ledgerone.org:29418/fabric
     * [new branch]      HEAD -> refs/for/master
 
 The gerrit server generates a link where the change can be tracked.
@@ -185,7 +185,7 @@ Reviewing Using Gerrit
 
 Notifications are sent to the email address in your commit message's
 Signed-off-by line. Visit your `Gerrit
-dashboard <https://gerrit.hyperledger.org/r/#/dashboard/self>`__, to
+dashboard <https://gerrit.ledgerone.org/r/#/dashboard/self>`__, to
 check the progress of your requests.
 
 The history tab in Gerrit will show you the in-line comments and the
@@ -196,7 +196,7 @@ Viewing Pending Changes
 
 Find all pending changes by clicking on the ``All --> Changes`` link in
 the upper-left corner, or `open this
-link <https://gerrit.hyperledger.org/r/#/q/project:fabric>`__.
+link <https://gerrit.ledgerone.org/r/#/q/project:fabric>`__.
 
 If you collaborate in multiple projects, you may wish to limit searching
 to the specific branch through the search bar in the upper-right side.
@@ -206,7 +206,7 @@ those from Hyperledger Fabric.
 
 List all current changes you submitted, or list just those changes in
 need of your input by clicking on ``My --> Changes`` or `open this
-link <https://gerrit.hyperledger.org/r/#/dashboard/self>`__
+link <https://gerrit.ledgerone.org/r/#/dashboard/self>`__
 
 .. Licensed under Creative Commons Attribution 4.0 International License
    https://creativecommons.org/licenses/by/4.0/

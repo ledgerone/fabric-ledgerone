@@ -24,7 +24,7 @@ import (
 )
 
 func TestMain(m *testing.M) {
-	viper.Set("peer.fileSystemPath", "/tmp/fabric/core/transientdata")
+	viper.Set("peer.fileSystemPath", "/tmp/fabric-ledgerone/core/transientdata")
 	os.Exit(m.Run())
 }
 

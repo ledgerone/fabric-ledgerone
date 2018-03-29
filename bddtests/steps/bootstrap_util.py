@@ -841,7 +841,7 @@ def getMSPConfig(org, directory):
 
 
 class CallbackHelper:
-    def __init__(self, discriminator, volumeRootPathInContainer = "/var/hyperledger/bddtests"):
+    def __init__(self, discriminator, volumeRootPathInContainer = "/var/ledgerone/bddtests"):
         self.volumeRootPathInContainer = volumeRootPathInContainer
         self.discriminator = discriminator
 

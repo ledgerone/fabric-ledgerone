@@ -40,7 +40,7 @@ also:
 These operations would typically be done by an organizational or peer admin.
 The script uses the CLI to execute these commands, however there is support in
 the SDK as well. Refer to the `Hyperledger Fabric Node SDK repo
-<https://github.com/hyperledger/fabric-sdk-node>`__ for example scripts.
+<https://github.com/ledgerone/fabric-sdk-node>`__ for example scripts.
 
 How an Application Interacts with the Network
 ---------------------------------------------

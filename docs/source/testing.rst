@@ -5,7 +5,7 @@ Unit test
 ~~~~~~~~~
 See :doc:`building Hyperledger Fabric <dev-setup/build>` for unit testing instructions.
 
-See `Unit test coverage reports <https://jenkins.hyperledger.org/view/fabric/job/fabric-merge-x86_64/>`__
+See `Unit test coverage reports <https://jenkins.ledgerone.org/view/fabric-ledgerone/job/fabric-merge-x86_64/>`__
 
 To see coverage for a package and all sub-packages, execute the test with the ``-cover`` switch:
 

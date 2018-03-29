@@ -19,7 +19,7 @@ services:
         max-size: "25m"
         max-file: "2"
     volumes:
-      - ./nodes/ca:/etc/hyperledger/fabric-ca-server
+      - ./nodes/ca:/etc/ledgerone/fabric-ca-server
 
   tlsca:
     container_name: tlsca
@@ -30,18 +30,18 @@ services:
     logging:
       <<: *logging
     volumes:
-      - ./nodes/tlsca:/etc/hyperledger/fabric-ca-server
+      - ./nodes/tlsca:/etc/ledgerone/fabric-ca-server
 
   orderer:
     container_name: orderer
-    image: _DOCKER_NS_/fabric-orderer:_FABRIC_RELEASE_
+    image: _DOCKER_NS_/fabric-ledgerone-orderer:_FABRIC_RELEASE_
     dns_search: .
     environment:
       - ORDERER_GENERAL_TLS_ENABLED=_TLS_ENABLED_
     logging:
       <<: *logging
     volumes:
-      - ./nodes/orderer:/etc/hyperledger/fabric
+      - ./nodes/orderer:/etc/ledgerone/fabric
     depends_on:
       - ca
 
@@ -56,7 +56,7 @@ services:
       retries: 10
 
   peer-base:
-    image: _DOCKER_NS_/fabric-peer:_FABRIC_RELEASE_
+    image: _DOCKER_NS_/fabric-ledgerone-peer:_FABRIC_RELEASE_
     dns_search: .
     logging:
       <<: *logging
@@ -85,7 +85,7 @@ services:
       - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1.org1.net:7051
       - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb1:5984
     volumes:
-        - ./nodes/peer1:/etc/hyperledger/fabric
+        - ./nodes/peer1:/etc/ledgerone/fabric
     depends_on:
       orderer:
           condition: service_started
@@ -108,7 +108,7 @@ services:
       - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer2.org1.net:7051
       - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb2:5984
     volumes:
-        - ./nodes/peer2:/etc/hyperledger/fabric
+        - ./nodes/peer2:/etc/ledgerone/fabric
     depends_on:
       orderer:
         condition: service_started
@@ -133,7 +133,7 @@ services:
       - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer3.org1.net:7051
       - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb3:5984
     volumes:
-        - ./nodes/peer3:/etc/hyperledger/fabric
+        - ./nodes/peer3:/etc/ledgerone/fabric
     depends_on:
       orderer:
         condition: service_started
@@ -158,7 +158,7 @@ services:
       - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer4.org1.net:7051
       - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb4:5984
     volumes:
-        - ./nodes/peer4:/etc/hyperledger/fabric
+        - ./nodes/peer4:/etc/ledgerone/fabric
     depends_on:
       orderer:
         condition: service_started
@@ -168,14 +168,14 @@ services:
         condition: service_healthy
 
   cli:
-    image: _DOCKER_NS_/fabric-peer:_FABRIC_RELEASE_
+    image: _DOCKER_NS_/fabric-ledgerone-peer:_FABRIC_RELEASE_
     dns_search: .
     environment:
       - CORE_PEER_TLS_ENABLED=_TLS_ENABLED_
       - CORE_NEXT=true
       - CORE_LOGGING_LEVEL=DEBUG
     volumes:
-      - ./nodes/cli:/etc/hyperledger/fabric
+      - ./nodes/cli:/etc/ledgerone/fabric
       - .:/cli
     working_dir: /cli
     depends_on:

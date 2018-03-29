@@ -64,7 +64,7 @@ Follow these steps to add your public key ``id_rsa.pub`` to the Gerrit
 account:
 
 1. Go to
-   `Gerrit <https://gerrit.hyperledger.org/r/#/admin/projects/fabric>`__.
+   `Gerrit <https://gerrit.ledgerone.org/r/#/admin/projects/fabric>`__.
 
 2. Click on your account name in the upper right corner.
 
@@ -90,8 +90,8 @@ below.
 
 ::
 
-    host gerrit.hyperledger.org
-     HostName gerrit.hyperledger.org
+    host gerrit.ledgerone.org
+     HostName gerrit.ledgerone.org
      IdentityFile ~/.ssh/id_rsa_hyperledger_gerrit
      User <LFID>
 
@@ -111,7 +111,7 @@ Checking Out the Source Code
 
 ::
 
-    git clone ssh://<LFID>@gerrit.hyperledger.org:29418/fabric fabric
+    git clone ssh://<LFID>@gerrit.ledgerone.org:29418/fabric fabric
 
 You have successfully checked out a copy of the source code to your
 local machine.

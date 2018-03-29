@@ -196,7 +196,7 @@ func finitMockPeer(chainIDs ...string) {
 	ledgermgmt.CleanupTestEnv()
 	ledgerPath := config.GetPath("peer.fileSystemPath")
 	os.RemoveAll(ledgerPath)
-	os.RemoveAll(filepath.Join(os.TempDir(), "hyperledger"))
+	os.RemoveAll(filepath.Join(os.TempDir(), "ledgerone"))
 }
 
 //store the stream CC mappings here
@@ -399,7 +399,7 @@ func initializeCC(t *testing.T, chainID, ccname string, ccSide *mockpeer.MockCCC
 	badcccid := ccprovider.NewCCContext(chainID, ccname, "unknownver", txid, false, sprop, prop)
 
 	//we are not going to reach the chaincode and so won't get a response from it. processDone will not
-	//be triggered by the chaincode stream.  We just expect an error from fabric. Hence pass nil for done
+	//be triggered by the chaincode stream.  We just expect an error from fabric-ledgerone. Hence pass nil for done
 	execCC(t, ctxt, ccSide, badcccid, false, true, nil, cis, respSet)
 
 	//---------try a successful init at last-------

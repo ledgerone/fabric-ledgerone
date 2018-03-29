@@ -113,9 +113,9 @@ Here's some examples using the different available flags on the `peer` command.
    Experimental features: false
    Chaincode:
     Base Image Version: 0.4.5
-    Base Docker Namespace: hyperledger
-    Base Docker Label: org.hyperledger.fabric
-    Docker Namespace: hyperledger
+    Base Docker Namespace: ledgerone
+    Base Docker Label: org.ledgerone.fabric_ledgerone
+    Docker Namespace: ledgerone
 
   ```
 

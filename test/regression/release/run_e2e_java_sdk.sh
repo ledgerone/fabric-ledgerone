@@ -8,10 +8,10 @@
 # Test Java SDK e2e tests
 #
 
-WD="${GOPATH}/src/github.com/hyperledger/fabric-sdk-java"
-#WD="${WORKSPACE}/gopath/src/github.com/hyperledger/fabric-sdk-java"
+WD="${GOPATH}/src/github.com/ledgerone/fabric-sdk-java"
+#WD="${WORKSPACE}/gopath/src/github.com/ledgerone/fabric-sdk-java"
 SDK_REPO_NAME=fabric-sdk-java
-git clone https://github.com/hyperledger/fabric-sdk-java $WD
+git clone https://github.com/ledgerone/fabric-sdk-java $WD
 cd $WD
 git checkout tags/v1.0.1
 export GOPATH=$WD/src/test/fixture

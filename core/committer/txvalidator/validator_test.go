@@ -57,7 +57,7 @@ func signedByAnyMember(ids []string) []byte {
 }
 
 func setupLedgerAndValidator(t *testing.T) (ledger.PeerLedger, Validator) {
-	viper.Set("peer.fileSystemPath", "/tmp/fabric/validatortest")
+	viper.Set("peer.fileSystemPath", "/tmp/fabric-ledgerone/validatortest")
 	ledgermgmt.InitializeTestEnv()
 	gb, err := ctxt.MakeGenesisBlock("TestLedger")
 	assert.NoError(t, err)

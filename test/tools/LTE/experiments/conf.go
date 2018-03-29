@@ -47,7 +47,7 @@ type configuration struct {
 // defaultConf returns a configuration loaded with default values
 func defaultConf() *configuration {
 	conf := &configuration{}
-	conf.chainMgrConf = &chainmgmt.ChainMgrConf{DataDir: "/tmp/fabric/ledgerPerfTests", NumChains: 1}
+	conf.chainMgrConf = &chainmgmt.ChainMgrConf{DataDir: "/tmp/fabric-ledgerone/ledgerPerfTests", NumChains: 1}
 	conf.batchConf = &chainmgmt.BatchConf{BatchSize: 10, SignBlock: false}
 	conf.txConf = &txConf{numTotalTxs: 100000, numParallelTxsPerChain: 100, numWritesPerTx: 4, numReadsPerTx: 4}
 	conf.dataConf = &dataConf{numKVs: 100000, kvSize: 200, useJSON: false}

@@ -9,7 +9,7 @@ function filterExcludedFiles {
   CHECK=`echo "$CHECK" | grep -v .png$ | grep -v .rst$ | grep -v ^.git/ \
   | grep -v .pem$ | grep -v .block$ | grep -v .tx$ | grep -v ^LICENSE$ | grep -v _sk$ \
   | grep -v .key$ | grep -v \\.gen.go$ | grep -v ^Gopkg.lock$ \
-  | grep -v .md$ | grep -v ^vendor/ | grep -v ^build/ | grep -v .pb.go$ | grep -v ^bddtests | grep -v .txt$ | grep -v .json$ | sort -u`
+  | grep -v .md$ | grep -v ^vendor/ | grep -v ^build/ | grep -v .pb.go$ | grep -v ^bddtests |grep -v ^docs | grep -v ^test | grep -v ^devenv | grep -v .txt$ | grep -v .json$ | sort -u`
 }
 
 CHECK=$(git diff --name-only --diff-filter=ACMRTUXB HEAD)

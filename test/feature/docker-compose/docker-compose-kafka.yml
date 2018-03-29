@@ -12,7 +12,7 @@ services:
 
     zookeeper0:
         container_name: zookeeper0
-        image: hyperledger/fabric-zookeeper
+        image: ledgerone/fabric-zookeeper
         environment:
             - ZOO_MY_ID=1
             - ZOO_SERVERS=server.1=zookeeper0:2888:3888 server.2=zookeeper1:2888:3888 server.3=zookeeper2:2888:3888
@@ -27,7 +27,7 @@ services:
 
     zookeeper1:
         container_name: zookeeper1
-        image: hyperledger/fabric-zookeeper
+        image: ledgerone/fabric-zookeeper
         environment:
             - ZOO_MY_ID=2
             - ZOO_SERVERS=server.1=zookeeper0:2888:3888 server.2=zookeeper1:2888:3888 server.3=zookeeper2:2888:3888
@@ -42,7 +42,7 @@ services:
 
     zookeeper2:
         container_name: zookeeper2
-        image: hyperledger/fabric-zookeeper
+        image: ledgerone/fabric-zookeeper
         environment:
             - ZOO_MY_ID=3
             - ZOO_SERVERS=server.1=zookeeper0:2888:3888 server.2=zookeeper1:2888:3888 server.3=zookeeper2:2888:3888
@@ -56,7 +56,7 @@ services:
                - ${CORE_PEER_NETWORKID}
 
     kafka0:
-        image: hyperledger/fabric-kafka
+        image: ledgerone/fabric-kafka
         container_name: kafka0
         environment:
             - KAFKA_LOG_RETENTION_MS=-1
@@ -83,7 +83,7 @@ services:
                - ${CORE_PEER_NETWORKID}
 
     kafka1:
-        image: hyperledger/fabric-kafka
+        image: ledgerone/fabric-kafka
         container_name: kafka1
         environment:
             - KAFKA_LOG_RETENTION_MS=-1
@@ -110,7 +110,7 @@ services:
                - ${CORE_PEER_NETWORKID}
 
     kafka2:
-        image: hyperledger/fabric-kafka
+        image: ledgerone/fabric-kafka
         container_name: kafka2
         environment:
             - KAFKA_LOG_RETENTION_MS=-1
@@ -137,7 +137,7 @@ services:
                - ${CORE_PEER_NETWORKID}
 
     kafka3:
-        image: hyperledger/fabric-kafka
+        image: ledgerone/fabric-kafka
         container_name: kafka3
         environment:
             - KAFKA_LOG_RETENTION_MS=-1
@@ -165,11 +165,11 @@ services:
 
     orderer0.example.com:
         container_name: orderer0.example.com
-        image: hyperledger/fabric-orderer
+        image: ledgerone/fabric-ledgerone-orderer
         environment:
             - ORDERER_GENERAL_LOGLEVEL=debug
             - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=${CORE_PEER_NETWORKID}_default
-            - ORDERER_GENERAL_LOCALMSPDIR=/var/hyperledger/msp
+            - ORDERER_GENERAL_LOCALMSPDIR=/var/ledgerone/msp
             - ORDERER_GENERAL_LOCALMSPID=example.com
             - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
             - ORDERER_GENERAL_LISTENPORT=7050
@@ -182,16 +182,16 @@ services:
             - ORDERER_GENERAL_LEDGERTYPE=ram
             - ORDERER_GENERAL_GENESISPROFILE=SampleInsecureKafka
             - ORDERER_GENERAL_GENESISMETHOD=file
-            - ORDERER_GENERAL_GENESISFILE=/var/hyperledger/configs/orderer.block
+            - ORDERER_GENERAL_GENESISFILE=/var/ledgerone/configs/orderer.block
             # TLS settings
             - ORDERER_GENERAL_TLS_ENABLED=false
-            - ORDERER_GENERAL_TLS_PRIVATEKEY=/var/hyperledger/tls/server.key
-            - ORDERER_GENERAL_TLS_CERTIFICATE=/var/hyperledger/tls/server.crt
-            - ORDERER_GENERAL_TLS_ROOTCAS=[/var/hyperledger/tls/ca.crt]
+            - ORDERER_GENERAL_TLS_PRIVATEKEY=/var/ledgerone/tls/server.key
+            - ORDERER_GENERAL_TLS_CERTIFICATE=/var/ledgerone/tls/server.crt
+            - ORDERER_GENERAL_TLS_ROOTCAS=[/var/ledgerone/tls/ca.crt]
         volumes:
-            - ../configs/${CORE_PEER_NETWORKID}:/var/hyperledger/configs
-            - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer0.example.com/msp:/var/hyperledger/msp
-            - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer0.example.com/tls:/var/hyperledger/tls
+            - ../configs/${CORE_PEER_NETWORKID}:/var/ledgerone/configs
+            - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer0.example.com/msp:/var/ledgerone/msp
+            - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer0.example.com/tls:/var/ledgerone/tls
         working_dir: /opt/gopath/src/github.com/ledgerone/fabric-ledgerone/orderer
         command: orderer
         ports:
@@ -213,11 +213,11 @@ services:
 
     orderer1.example.com:
         container_name: orderer1.example.com
-        image: hyperledger/fabric-orderer
+        image: ledgerone/fabric-ledgerone-orderer
         environment:
             - ORDERER_GENERAL_LOGLEVEL=debug
             - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=${CORE_PEER_NETWORKID}_default
-            - ORDERER_GENERAL_LOCALMSPDIR=/var/hyperledger/msp
+            - ORDERER_GENERAL_LOCALMSPDIR=/var/ledgerone/msp
             - ORDERER_GENERAL_LOCALMSPID=example.com
             - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
             - ORDERER_GENERAL_LISTENPORT=7050
@@ -230,16 +230,16 @@ services:
             - ORDERER_GENERAL_LEDGERTYPE=ram
             - ORDERER_GENERAL_GENESISPROFILE=SampleInsecureKafka
             - ORDERER_GENERAL_GENESISMETHOD=file
-            - ORDERER_GENERAL_GENESISFILE=/var/hyperledger/configs/orderer.block
+            - ORDERER_GENERAL_GENESISFILE=/var/ledgerone/configs/orderer.block
             # TLS settings
             - ORDERER_GENERAL_TLS_ENABLED=false
-            - ORDERER_GENERAL_TLS_PRIVATEKEY=/var/hyperledger/tls/server.key
-            - ORDERER_GENERAL_TLS_CERTIFICATE=/var/hyperledger/tls/server.crt
-            - ORDERER_GENERAL_TLS_ROOTCAS=[/var/hyperledger/tls/ca.crt]
+            - ORDERER_GENERAL_TLS_PRIVATEKEY=/var/ledgerone/tls/server.key
+            - ORDERER_GENERAL_TLS_CERTIFICATE=/var/ledgerone/tls/server.crt
+            - ORDERER_GENERAL_TLS_ROOTCAS=[/var/ledgerone/tls/ca.crt]
         volumes:
-            - ../configs/${CORE_PEER_NETWORKID}:/var/hyperledger/configs
-            - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer1.example.com/msp:/var/hyperledger/msp
-            - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer1.example.com/tls:/var/hyperledger/tls
+            - ../configs/${CORE_PEER_NETWORKID}:/var/ledgerone/configs
+            - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer1.example.com/msp:/var/ledgerone/msp
+            - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer1.example.com/tls:/var/ledgerone/tls
         working_dir: /opt/gopath/src/github.com/ledgerone/fabric-ledgerone/orderer
         command: orderer
         ports:
@@ -261,11 +261,11 @@ services:
 
     orderer2.example.com:
         container_name: orderer2.example.com
-        image: hyperledger/fabric-orderer
+        image: ledgerone/fabric-ledgerone-orderer
         environment:
             - ORDERER_GENERAL_LOGLEVEL=debug
             - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=${CORE_PEER_NETWORKID}_default
-            - ORDERER_GENERAL_LOCALMSPDIR=/var/hyperledger/msp
+            - ORDERER_GENERAL_LOCALMSPDIR=/var/ledgerone/msp
             - ORDERER_GENERAL_LOCALMSPID=example.com
             - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
             - ORDERER_GENERAL_LISTENPORT=7050
@@ -278,16 +278,16 @@ services:
             - ORDERER_GENERAL_LEDGERTYPE=ram
             - ORDERER_GENERAL_GENESISPROFILE=SampleInsecureKafka
             - ORDERER_GENERAL_GENESISMETHOD=file
-            - ORDERER_GENERAL_GENESISFILE=/var/hyperledger/configs/orderer.block
+            - ORDERER_GENERAL_GENESISFILE=/var/ledgerone/configs/orderer.block
             # TLS settings
             - ORDERER_GENERAL_TLS_ENABLED=false
-            - ORDERER_GENERAL_TLS_PRIVATEKEY=/var/hyperledger/tls/server.key
-            - ORDERER_GENERAL_TLS_CERTIFICATE=/var/hyperledger/tls/server.crt
-            - ORDERER_GENERAL_TLS_ROOTCAS=[/var/hyperledger/tls/ca.crt]
+            - ORDERER_GENERAL_TLS_PRIVATEKEY=/var/ledgerone/tls/server.key
+            - ORDERER_GENERAL_TLS_CERTIFICATE=/var/ledgerone/tls/server.crt
+            - ORDERER_GENERAL_TLS_ROOTCAS=[/var/ledgerone/tls/ca.crt]
         volumes:
-            - ../configs/${CORE_PEER_NETWORKID}:/var/hyperledger/configs
-            - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer2.example.com/msp:/var/hyperledger/msp
-            - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer2.example.com/tls:/var/hyperledger/tls
+            - ../configs/${CORE_PEER_NETWORKID}:/var/ledgerone/configs
+            - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer2.example.com/msp:/var/ledgerone/msp
+            - ../configs/${CORE_PEER_NETWORKID}/ordererOrganizations/example.com/orderers/orderer2.example.com/tls:/var/ledgerone/tls
         working_dir: /opt/gopath/src/github.com/ledgerone/fabric-ledgerone/orderer
         command: orderer
         ports:
@@ -309,7 +309,7 @@ services:
 
     peer0.org1.example.com:
         container_name: peer0.org1.example.com
-        image: hyperledger/fabric-peer
+        image: ledgerone/fabric-ledgerone-peer
         environment:
             - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
             - CORE_PEER_NETWORKID=${CORE_PEER_NETWORKID}
@@ -322,19 +322,19 @@ services:
             - CORE_PEER_GOSSIP_USELEADERELECTION=true
             - CORE_PEER_GOSSIP_SKIPHANDSHAKE=true
             - CORE_PEER_PROFILE_ENABLED=true
-            - CORE_PEER_MSPCONFIGPATH=/var/hyperledger/msp
+            - CORE_PEER_MSPCONFIGPATH=/var/ledgerone/msp
             - CORE_PEER_LOCALMSPID=org1.example.com
             - CORE_LOGGING_LEVEL=DEBUG
             # TLS settings
             - CORE_PEER_TLS_ENABLED=false
-            - CORE_PEER_TLS_CERT_FILE=/var/hyperledger/tls/server.crt
-            - CORE_PEER_TLS_KEY_FILE=/var/hyperledger/tls/server.key
-            - CORE_PEER_TLS_ROOTCERT_FILE=/var/hyperledger/tls/ca.crt
+            - CORE_PEER_TLS_CERT_FILE=/var/ledgerone/tls/server.crt
+            - CORE_PEER_TLS_KEY_FILE=/var/ledgerone/tls/server.key
+            - CORE_PEER_TLS_ROOTCERT_FILE=/var/ledgerone/tls/ca.crt
         volumes:
             - /var/run/:/host/var/run/
-            - ../configs:/var/hyperledger/configs
-            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp:/var/hyperledger/msp
-            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls:/var/hyperledger/tls
+            - ../configs:/var/ledgerone/configs
+            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp:/var/ledgerone/msp
+            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls:/var/ledgerone/tls
         ports:
             - '7051'
             - '7053'
@@ -353,7 +353,7 @@ services:
                - ${CORE_PEER_NETWORKID}
 
     peer0.org2.example.com:
-        image: hyperledger/fabric-peer
+        image: ledgerone/fabric-ledgerone-peer
         container_name: peer0.org2.example.com
         environment:
             - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
@@ -367,19 +367,19 @@ services:
             - CORE_PEER_GOSSIP_USELEADERELECTION=true
             - CORE_PEER_GOSSIP_SKIPHANDSHAKE=true
             - CORE_PEER_PROFILE_ENABLED=true
-            - CORE_PEER_MSPCONFIGPATH=/var/hyperledger/msp
+            - CORE_PEER_MSPCONFIGPATH=/var/ledgerone/msp
             - CORE_PEER_LOCALMSPID=org2.example.com
             - CORE_LOGGING_LEVEL=DEBUG
             # TLS settings
             - CORE_PEER_TLS_ENABLED=false
-            - CORE_PEER_TLS_CERT_FILE=/var/hyperledger/tls/server.crt
-            - CORE_PEER_TLS_KEY_FILE=/var/hyperledger/tls/server.key
-            - CORE_PEER_TLS_ROOTCERT_FILE=/var/hyperledger/tls/ca.crt
+            - CORE_PEER_TLS_CERT_FILE=/var/ledgerone/tls/server.crt
+            - CORE_PEER_TLS_KEY_FILE=/var/ledgerone/tls/server.key
+            - CORE_PEER_TLS_ROOTCERT_FILE=/var/ledgerone/tls/ca.crt
         volumes:
             - /var/run/:/host/var/run/
-            - ../configs:/var/hyperledger/configs
-            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/msp:/var/hyperledger/msp
-            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls:/var/hyperledger/tls
+            - ../configs:/var/ledgerone/configs
+            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/msp:/var/ledgerone/msp
+            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls:/var/ledgerone/tls
         ports:
             - '7051'
             - '7053'
@@ -398,7 +398,7 @@ services:
                - ${CORE_PEER_NETWORKID}
 
     peer1.org1.example.com:
-        image: hyperledger/fabric-peer
+        image: ledgerone/fabric-ledgerone-peer
         container_name: peer1.org1.example.com
         environment:
             - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
@@ -412,19 +412,19 @@ services:
             - CORE_PEER_GOSSIP_USELEADERELECTION=true
             - CORE_PEER_GOSSIP_SKIPHANDSHAKE=true
             - CORE_PEER_PROFILE_ENABLED=true
-            - CORE_PEER_MSPCONFIGPATH=/var/hyperledger/msp
+            - CORE_PEER_MSPCONFIGPATH=/var/ledgerone/msp
             - CORE_PEER_LOCALMSPID=org1.example.com
             - CORE_LOGGING_LEVEL=DEBUG
             # TLS settings
             - CORE_PEER_TLS_ENABLED=false
-            - CORE_PEER_TLS_CERT_FILE=/var/hyperledger/tls/server.crt
-            - CORE_PEER_TLS_KEY_FILE=/var/hyperledger/tls/server.key
-            - CORE_PEER_TLS_ROOTCERT_FILE=/var/hyperledger/tls/ca.crt
+            - CORE_PEER_TLS_CERT_FILE=/var/ledgerone/tls/server.crt
+            - CORE_PEER_TLS_KEY_FILE=/var/ledgerone/tls/server.key
+            - CORE_PEER_TLS_ROOTCERT_FILE=/var/ledgerone/tls/ca.crt
         volumes:
             - /var/run/:/host/var/run/
-            - ../configs:/var/hyperledger/configs
-            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/msp:/var/hyperledger/msp
-            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls:/var/hyperledger/tls
+            - ../configs:/var/ledgerone/configs
+            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/msp:/var/ledgerone/msp
+            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls:/var/ledgerone/tls
         ports:
             - '7051'
             - '7053'
@@ -444,7 +444,7 @@ services:
                - ${CORE_PEER_NETWORKID}
 
     peer1.org2.example.com:
-        image: hyperledger/fabric-peer
+        image: ledgerone/fabric-ledgerone-peer
         container_name: peer1.org2.example.com
         environment:
             - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
@@ -458,19 +458,19 @@ services:
             - CORE_PEER_GOSSIP_USELEADERELECTION=true
             - CORE_PEER_GOSSIP_SKIPHANDSHAKE=true
             - CORE_PEER_PROFILE_ENABLED=true
-            - CORE_PEER_MSPCONFIGPATH=/var/hyperledger/msp
+            - CORE_PEER_MSPCONFIGPATH=/var/ledgerone/msp
             - CORE_PEER_LOCALMSPID=org2.example.com
             - CORE_LOGGING_LEVEL=DEBUG
             # TLS settings
             - CORE_PEER_TLS_ENABLED=false
-            - CORE_PEER_TLS_CERT_FILE=/var/hyperledger/tls/server.crt
-            - CORE_PEER_TLS_KEY_FILE=/var/hyperledger/tls/server.key
-            - CORE_PEER_TLS_ROOTCERT_FILE=/var/hyperledger/tls/ca.crt
+            - CORE_PEER_TLS_CERT_FILE=/var/ledgerone/tls/server.crt
+            - CORE_PEER_TLS_KEY_FILE=/var/ledgerone/tls/server.key
+            - CORE_PEER_TLS_ROOTCERT_FILE=/var/ledgerone/tls/ca.crt
         volumes:
             - /var/run/:/host/var/run/
-            - ../configs:/var/hyperledger/configs
-            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/msp:/var/hyperledger/msp
-            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls:/var/hyperledger/tls
+            - ../configs:/var/ledgerone/configs
+            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/msp:/var/ledgerone/msp
+            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls:/var/ledgerone/tls
         ports:
             - '7051'
             - '7053'
@@ -491,7 +491,7 @@ services:
 
     cli:
         container_name: cli
-        image: hyperledger/fabric-tools
+        image: ledgerone/fabric-ledgerone-tools
         tty: true
         environment:
             - GOPATH=/opt/gopath
@@ -499,16 +499,16 @@ services:
             - CORE_LOGGING_LEVEL=DEBUG
             # TLS settings
             - CORE_PEER_TLS_ENABLED=false
-            - CORE_PEER_TLS_CERT_FILE=/var/hyperledger/tls/server.crt
-            - CORE_PEER_TLS_KEY_FILE=/var/hyperledger/tls/server.key
-            - CORE_PEER_TLS_ROOTCERT_FILE=/var/hyperledger/tls/ca.crt
+            - CORE_PEER_TLS_CERT_FILE=/var/ledgerone/tls/server.crt
+            - CORE_PEER_TLS_KEY_FILE=/var/ledgerone/tls/server.key
+            - CORE_PEER_TLS_ROOTCERT_FILE=/var/ledgerone/tls/ca.crt
         working_dir: /opt/gopath/src/github.com/ledgerone/fabric-ledgerone/peer
         command: /bin/bash -c 'sleep 6000000000000000000'
         volumes:
             - /var/run/:/host/var/run/
             - ../../../examples/chaincode:/opt/gopath/src/github.com/ledgerone/fabric-ledgerone/examples/chaincode
-            - ../configs:/var/hyperledger/configs
-            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls:/var/hyperledger/tls
+            - ../configs:/var/ledgerone/configs
+            - ../configs/${CORE_PEER_NETWORKID}/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls:/var/ledgerone/tls
         ports:
             - '9092'
         depends_on:

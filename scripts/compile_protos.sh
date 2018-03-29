@@ -9,7 +9,7 @@
 set -eux
 
 # To set a proto root for a set of protos, create a .protoroot file in one of the parent directories
-# which you wish to use as the proto root.  If no .protoroot file exists within fabric/.../<your_proto>
+# which you wish to use as the proto root.  If no .protoroot file exists within fabric-ledgerone/.../<your_proto>
 # then the proto root for that proto is inferred to be its containing directory.
 
 # Find explicit proto roots
@@ -34,3 +34,6 @@ echo Working on dir $dir
 	       protoc --proto_path="$dir" --go_out=plugins=grpc:$GOPATH/src "$protos"/*.proto
 	done
 done
+
+
+#NOTICE: the bddtest will use the proto, but the pb file did not auto generate,at most of time regenerate is not needed .

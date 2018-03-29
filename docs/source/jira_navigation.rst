@@ -4,7 +4,7 @@ Using Jira to understand current work items
 This document has been created to give further insight into the work in
 progress towards the Hyperledger Fabric v1 architecture based on the
 community roadmap. The requirements for the roadmap are being tracked in
-`Jira <https://jira.hyperledger.org/>`__.
+`Jira <https://jira.ledgerone.org/>`__.
 
 It was determined to organize in sprints to better track and show a
 prioritized order of items to be implemented based on feedback received.

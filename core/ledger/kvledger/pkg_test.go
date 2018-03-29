@@ -29,7 +29,7 @@ type testEnv struct {
 }
 
 func newTestEnv(t testing.TB) *testEnv {
-	return createTestEnv(t, "/tmp/fabric/ledgertests/kvledger")
+	return createTestEnv(t, "/tmp/fabric-ledgerone/ledgertests/kvledger")
 }
 
 func createTestEnv(t testing.TB, path string) *testEnv {

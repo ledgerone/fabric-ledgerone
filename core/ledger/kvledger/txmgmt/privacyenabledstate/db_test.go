@@ -21,7 +21,7 @@ import (
 )
 
 func TestMain(m *testing.M) {
-	viper.Set("peer.fileSystemPath", "/tmp/fabric/ledgertests/kvledger/txmgmt/privacyenabledstate")
+	viper.Set("peer.fileSystemPath", "/tmp/fabric-ledgerone/ledgertests/kvledger/txmgmt/privacyenabledstate")
 	os.Exit(m.Run())
 }
 

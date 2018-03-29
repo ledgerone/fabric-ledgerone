@@ -225,7 +225,7 @@ certificates. It is also possible -- and fully appropriate -- to use a
 public/commerical root or intermediate CA to provide identification.
 
 If you're interested, you can read a lot more about fabric-ca
-[in the CA documentation section](http://hyperledger-fabric-ca.readthedocs.io/).
+[in the CA documentation section](http://ledgerone-fabric-ca.readthedocs.io/).
 
 ## Certificate Revocation Lists
 
@@ -247,7 +247,7 @@ checked against the issuing CA's CRL to make sure it's not listed as no longer v
 Note that a certificate being revoked is very different from a certificate expiring.
 Revoked certificates have not expired -- they are, by every other measure, a fully
 valid certificate. This is similar to the difference between an expired driver's license
- and a revoked driver's license. For more in depth information into CRLs, click [here](https://hyperledger-fabric-ca.readthedocs.io/en/latest/users-guide.html#generating-a-crl-certificate-revocation-list).
+ and a revoked driver's license. For more in depth information into CRLs, click [here](https://ledgerone-fabric-ca.readthedocs.io/en/latest/users-guide.html#generating-a-crl-certificate-revocation-list).
 
 Now that you've seen how a PKI can provide verifiable identities through a chain of
 trust, the next step is to see how these identities can be used to represent the

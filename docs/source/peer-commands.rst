@@ -127,9 +127,9 @@ Here's some examples using the different available flags on the `peer` command.
    OS/Arch: linux/amd64
    Chaincode:
     Base Image Version: 0.3.2
-    Base Docker Namespace: hyperledger
-    Base Docker Label: org.hyperledger.fabric
-    Docker Namespace: hyperledger
+    Base Docker Namespace: ledgerone
+    Base Docker Label: org.ledgerone.fabric_ledgerone
+    Docker Namespace: ledgerone
 
 The ``peer channel`` Command
 ----------------------------

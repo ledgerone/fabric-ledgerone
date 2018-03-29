@@ -27,7 +27,7 @@ events (if there are chaincode events being sent).
 
 2. ./block-listener -events-address=<peer-address> -events-from-chaincode=<chaincode-id> -events-mspdir=<msp-directory> -events-mspid=<msp-id>
 ```
-Please note that the default MSP under fabric/sampleconfig will be used if no
+Please note that the default MSP under fabric-ledgerone/sampleconfig will be used if no
 MSP parameters are provided.
 
 # Example with the e2e_cli example

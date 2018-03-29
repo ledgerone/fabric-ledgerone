@@ -7,7 +7,7 @@
 
 export useCouchDB="yes"
 UseJSONFormat="true"
-DataDir="/tmp/fabric/test/tools/LTE/data"
+DataDir="/tmp/fabric-ledgerone/test/tools/LTE/data"
 NumChains=10
 NumParallelTxPerChain=10
 NumKVs=10000

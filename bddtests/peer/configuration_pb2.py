@@ -19,9 +19,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='peer/configuration.proto',
   package='protos',
   syntax='proto3',
-  serialized_pb=_b('\n\x18peer/configuration.proto\x12\x06protos\"7\n\x0b\x41nchorPeers\x12(\n\x0c\x61nchor_peers\x18\x01 \x03(\x0b\x32\x12.protos.AnchorPeer\"(\n\nAnchorPeer\x12\x0c\n\x04host\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\x05\x42O\n\"org.hyperledger.fabric.protos.peerZ)github.com/ledgerone/fabric-ledgerone/protos/peerb\x06proto3')
+  serialized_pb=_b('\n\x18peer/configuration.proto\x12\x06protos\"7\n\x0b\x41nchorPeers\x12(\n\x0c\x61nchor_peers\x18\x01 \x03(\x0b\x32\x12.protos.AnchorPeer\"(\n\nAnchorPeer\x12\x0c\n\x04host\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\x05\x42_\n*org.ledgerone.fabric_ledgerone.protos.peerZ1github.com/ledgerone/fabric-ledgerone/protos/peerb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -39,7 +38,7 @@ _ANCHORPEERS = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -70,14 +69,14 @@ _ANCHORPEER = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='port', full_name='protos.AnchorPeer.port', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -97,6 +96,7 @@ _ANCHORPEER = _descriptor.Descriptor(
 _ANCHORPEERS.fields_by_name['anchor_peers'].message_type = _ANCHORPEER
 DESCRIPTOR.message_types_by_name['AnchorPeers'] = _ANCHORPEERS
 DESCRIPTOR.message_types_by_name['AnchorPeer'] = _ANCHORPEER
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 AnchorPeers = _reflection.GeneratedProtocolMessageType('AnchorPeers', (_message.Message,), dict(
   DESCRIPTOR = _ANCHORPEERS,
@@ -114,15 +114,5 @@ _sym_db.RegisterMessage(AnchorPeer)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\"org.hyperledger.fabric.protos.peerZ)github.com/ledgerone/fabric-ledgerone/protos/peer'))
-try:
-  # THESE ELEMENTS WILL BE DEPRECATED.
-  # Please use the generated *_pb2_grpc.py files instead.
-  import grpc
-  from grpc.framework.common import cardinality
-  from grpc.framework.interfaces.face import utilities as face_utilities
-  from grpc.beta import implementations as beta_implementations
-  from grpc.beta import interfaces as beta_interfaces
-except ImportError:
-  pass
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n*org.ledgerone.fabric_ledgerone.protos.peerZ1github.com/ledgerone/fabric-ledgerone/protos/peer'))
 # @@protoc_insertion_point(module_scope)

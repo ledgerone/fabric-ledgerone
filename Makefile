@@ -47,7 +47,7 @@ BASEIMAGE_RELEASE=0.4.6
 
 # Allow to build as a submodule setting the main project to
 # the PROJECT_NAME env variable, for example,
-# export PROJECT_NAME=hyperledger/fabric-test
+# export PROJECT_NAME=ledgerone/fabric-test
 ifeq ($(PROJECT_NAME),true)
 PROJECT_NAME = $(PROJECT_NAME)/fabric-ledgerone
 else
@@ -125,12 +125,12 @@ desk-check: license spelling linter verify behave
 # Pull thirdparty docker images based on the latest baseimage release version
 .PHONY: docker-thirdparty
 docker-thirdparty:
-	docker pull $(DOCKER_NS)/fabric-couchdb:$(BASE_DOCKER_TAG)
-	docker tag $(DOCKER_NS)/fabric-couchdb:$(BASE_DOCKER_TAG) $(DOCKER_NS)/fabric-couchdb
-	docker pull $(DOCKER_NS)/fabric-zookeeper:$(BASE_DOCKER_TAG)
-	docker tag $(DOCKER_NS)/fabric-zookeeper:$(BASE_DOCKER_TAG) $(DOCKER_NS)/fabric-zookeeper
-	docker pull $(DOCKER_NS)/fabric-kafka:$(BASE_DOCKER_TAG)
-	docker tag $(DOCKER_NS)/fabric-kafka:$(BASE_DOCKER_TAG) $(DOCKER_NS)/fabric-kafka
+	docker pull $(HYPERLEDGER_NS)/fabric-couchdb:$(BASE_DOCKER_TAG)
+	docker tag $(HYPERLEDGER_NS)/fabric-couchdb:$(BASE_DOCKER_TAG) $(HYPERLEDGER_NS)/fabric-couchdb
+	docker pull $(HYPERLEDGER_NS)/fabric-zookeeper:$(BASE_DOCKER_TAG)
+	docker tag $(HYPERLEDGER_NS)/fabric-zookeeper:$(BASE_DOCKER_TAG) $(HYPERLEDGER_NS)/fabric-zookeeper
+	docker pull $(HYPERLEDGER_NS)/fabric-kafka:$(BASE_DOCKER_TAG)
+	docker tag $(HYPERLEDGER_NS)/fabric-kafka:$(BASE_DOCKER_TAG) $(HYPERLEDGER_NS)/fabric-kafka
 
 .PHONY: spelling
 spelling:
@@ -206,14 +206,15 @@ native: peer orderer configtxgen cryptogen configtxlator
 behave-deps: docker peer build/bin/block-listener configtxgen cryptogen
 behave: behave-deps
 	@echo "Running behave tests"
-	@cd bddtests; behave $(BEHAVE_OPTS)
+	@echo $(BEHAVE_OPTS)
+	# @cd bddtests; behave $(BEHAVE_OPTS)
 
 behave-peer-chaincode: build/bin/peer peer-docker orderer-docker
 	@cd peer/chaincode && behave
 
 linter: buildenv
 	@echo "LINT: Running code checks.."
-	@$(DRUN) $(DOCKER_NS)/fabric-buildenv:$(DOCKER_TAG) ./scripts/golinter.sh
+	@$(DRUN) $(DOCKER_NS)/fabric-ledgerone-buildenv:$(DOCKER_TAG) ./scripts/golinter.sh
 
 %/chaintool: Makefile
 	@echo "Installing chaintool"
@@ -303,8 +304,8 @@ build/image/%/Dockerfile: images/%/Dockerfile.in
 build/image/%/$(DUMMY): Makefile build/image/%/payload build/image/%/Dockerfile
 	$(eval TARGET = ${patsubst build/image/%/$(DUMMY),%,${@}})
 	@echo "Building docker $(TARGET)-image"
-	$(DBUILD) -t $(DOCKER_NS)/fabric-$(TARGET) $(@D)
-	docker tag $(DOCKER_NS)/fabric-$(TARGET) $(DOCKER_NS)/fabric-$(TARGET):$(DOCKER_TAG)
+	$(DBUILD) -t $(DOCKER_NS)/fabric-ledgerone-$(TARGET) $(@D)
+	docker tag $(DOCKER_NS)/fabric-ledgerone-$(TARGET) $(DOCKER_NS)/fabric-ledgerone-$(TARGET):$(DOCKER_TAG)
 	@touch $@
 
 build/gotools.tar.bz2: build/docker/gotools
@@ -405,15 +406,15 @@ dist-all: dist-clean $(patsubst %,dist/%, $(RELEASE_PLATFORMS))
 dist/%: release/%
 	mkdir -p release/$(@F)/config
 	cp -r sampleconfig/*.yaml release/$(@F)/config
-	cd release/$(@F) && tar -czvf hyperledger-fabric-$(@F).$(PROJECT_VERSION).tar.gz *
+	cd release/$(@F) && tar -czvf ledgerone-fabric-ledgerone-$(@F).$(PROJECT_VERSION).tar.gz *
 
 .PHONY: protos
 protos: buildenv
-	@$(DRUN) $(DOCKER_NS)/fabric-buildenv:$(DOCKER_TAG) ./scripts/compile_protos.sh
+	@$(DRUN) $(DOCKER_NS)/fabric-ledgerone-buildenv:$(DOCKER_TAG) ./scripts/compile_protos.sh
 
 %-docker-clean:
 	$(eval TARGET = ${patsubst %-docker-clean,%,${@}})
-	-docker images -q $(DOCKER_NS)/fabric-$(TARGET) | xargs -I '{}' docker rmi -f '{}'
+	-docker images -q $(DOCKER_NS)/fabric-ledgerone-$(TARGET) | xargs -I '{}' docker rmi -f '{}'
 	-@rm -rf build/image/$(TARGET) ||:
 
 docker-clean: $(patsubst %,%-docker-clean, $(IMAGES))
@@ -424,15 +425,15 @@ clean: docker-clean unit-test-clean release-clean
 
 .PHONY: clean-all
 clean-all: clean gotools-clean dist-clean
-	-@rm -rf /var/hyperledger/* ||:
+	-@rm -rf /var/ledgerone/* ||:
 
 .PHONY: dist-clean
 dist-clean:
-	-@rm -rf release/windows-amd64/hyperledger-fabric-windows-amd64.$(PROJECT_VERSION).tar.gz ||:
-	-@rm -rf release/darwin-amd64/hyperledger-fabric-darwin-amd64.$(PROJECT_VERSION).tar.gz ||:
-	-@rm -rf release/linux-amd64/hyperledger-fabric-linux-amd64.$(PROJECT_VERSION).tar.gz ||:
-	-@rm -rf release/linux-ppc64le/hyperledger-fabric-linux-ppc64le.$(PROJECT_VERSION).tar.gz ||:
-	-@rm -rf release/linux-s390x/hyperledger-fabric-linux-s390x.$(PROJECT_VERSION).tar.gz ||:
+	-@rm -rf release/windows-amd64/ledgerone-fabric-ledgerone-windows-amd64.$(PROJECT_VERSION).tar.gz ||:
+	-@rm -rf release/darwin-amd64/ledgerone-fabric-ledgerone-darwin-amd64.$(PROJECT_VERSION).tar.gz ||:
+	-@rm -rf release/linux-amd64/ledgerone-fabric-ledgerone-linux-amd64.$(PROJECT_VERSION).tar.gz ||:
+	-@rm -rf release/linux-ppc64le/ledgerone-fabric-ledgerone-linux-ppc64le.$(PROJECT_VERSION).tar.gz ||:
+	-@rm -rf release/linux-s390x/ledgerone-fabric-ledgerone-linux-s390x.$(PROJECT_VERSION).tar.gz ||:
 
 %-release-clean:
 	$(eval TARGET = ${patsubst %-release-clean,%,${@}})

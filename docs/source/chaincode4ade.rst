@@ -429,16 +429,16 @@ should see something similar to following:
 
   docker images
   REPOSITORY                     TAG                                  IMAGE ID            CREATED             SIZE
-  hyperledger/fabric-tools       latest                           b7bfddf508bc        About an hour ago   1.46GB
-  hyperledger/fabric-tools       x86_64-1.1.0                     b7bfddf508bc        About an hour ago   1.46GB
-  hyperledger/fabric-orderer     latest                           ce0c810df36a        About an hour ago   180MB
-  hyperledger/fabric-orderer     x86_64-1.1.0                     ce0c810df36a        About an hour ago   180MB
-  hyperledger/fabric-peer        latest                           b023f9be0771        About an hour ago   187MB
-  hyperledger/fabric-peer        x86_64-1.1.0                     b023f9be0771        About an hour ago   187MB
-  hyperledger/fabric-javaenv     latest                           82098abb1a17        About an hour ago   1.52GB
-  hyperledger/fabric-javaenv     x86_64-1.1.0                     82098abb1a17        About an hour ago   1.52GB
-  hyperledger/fabric-ccenv       latest                           c8b4909d8d46        About an hour ago   1.39GB
-  hyperledger/fabric-ccenv       x86_64-1.1.0                     c8b4909d8d46        About an hour ago   1.39GB
+  ledgerone/fabric-ledgerone-tools       latest                           b7bfddf508bc        About an hour ago   1.46GB
+  ledgerone/fabric-ledgerone-tools       x86_64-1.1.0                     b7bfddf508bc        About an hour ago   1.46GB
+  ledgerone/fabric-ledgerone-orderer     latest                           ce0c810df36a        About an hour ago   180MB
+  ledgerone/fabric-ledgerone-orderer     x86_64-1.1.0                     ce0c810df36a        About an hour ago   180MB
+  ledgerone/fabric-ledgerone-peer        latest                           b023f9be0771        About an hour ago   187MB
+  ledgerone/fabric-ledgerone-peer        x86_64-1.1.0                     b023f9be0771        About an hour ago   187MB
+  ledgerone/fabric-ledgerone-javaenv     latest                           82098abb1a17        About an hour ago   1.52GB
+  ledgerone/fabric-ledgerone-javaenv     x86_64-1.1.0                     82098abb1a17        About an hour ago   1.52GB
+  ledgerone/fabric-ledgerone-ccenv       latest                           c8b4909d8d46        About an hour ago   1.39GB
+  ledgerone/fabric-ledgerone-ccenv       x86_64-1.1.0                     c8b4909d8d46        About an hour ago   1.39GB
 
 .. note:: If you retrieved the images through the :ref:`binaries`,
           then you will see additional images listed.  However, we are only concerned with
@@ -543,7 +543,7 @@ for proper decryption of the encrypted state values.
 
 For more information and samples, see the
 `Encc Example <https://github.com/ledgerone/fabric-ledgerone/tree/master/examples/chaincode/go/enccc_example>`__
-within the ``fabric/examples`` directory.  Pay specific attention to the ``utils.go``
+within the ``fabric-ledgerone/examples`` directory.  Pay specific attention to the ``utils.go``
 helper program.  This utility loads the chaincode shim APIs and Entities extension
 and builds a new class of functions (e.g. ``encryptAndPutState`` & ``getStateAndDecrypt``)
 that the sample encryption chaincode then leverages.  As such, the chaincode can

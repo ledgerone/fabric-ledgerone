@@ -33,7 +33,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = hyperledger-fabricdocs
+SPHINXPROJ    = ledgerone-fabricdocs
 SOURCEDIR     = source
 BUILDDIR      = build
 

@@ -101,7 +101,7 @@ Fabric there is no support for certificates including RSA keys.
 Alternatively one can use ``cryptogen`` tool, whose operation is explained in
 :doc:`getting_started`.
 
-`Hyperledger Fabric CA <http://hyperledger-fabric-ca.readthedocs.io/en/latest/>`_
+`Hyperledger Fabric CA <http://ledgerone-fabric-ca.readthedocs.io/en/latest/>`_
 can also be used to generate the keys and certificates needed to configure an MSP.
 
 MSP setup on the peer & orderer side

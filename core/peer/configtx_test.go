@@ -74,8 +74,8 @@ func TestConfigTxExtractFullConfigFromSeedTx(t *testing.T) {
 
 func TestConfigTxCreateLedger(t *testing.T) {
 	helper := &testHelper{}
-	viper.Set("peer.fileSystemPath", "/var/hyperledger/test/")
-	defer os.RemoveAll("/var/hyperledger/test/")
+	viper.Set("peer.fileSystemPath", "/var/ledgerone/test/")
+	defer os.RemoveAll("/var/ledgerone/test/")
 
 	chainid := "testchain1"
 	ledgermgmt.InitializeTestEnvWithCustomProcessors(ConfigTxProcessors)
@@ -99,8 +99,8 @@ func TestConfigTxCreateLedger(t *testing.T) {
 
 func TestConfigTxUpdateResConfig(t *testing.T) {
 	helper := &testHelper{}
-	viper.Set("peer.fileSystemPath", "/var/hyperledger/test/")
-	defer os.RemoveAll("/var/hyperledger/test/")
+	viper.Set("peer.fileSystemPath", "/var/ledgerone/test/")
+	defer os.RemoveAll("/var/ledgerone/test/")
 	chainid := "testchain1"
 	ledgermgmt.InitializeTestEnvWithCustomProcessors(ConfigTxProcessors)
 	defer ledgermgmt.CleanupTestEnv()
@@ -163,8 +163,8 @@ func TestConfigTxUpdateResConfig(t *testing.T) {
 }
 
 func TestGenesisBlockCreateLedger(t *testing.T) {
-	viper.Set("peer.fileSystemPath", "/var/hyperledger/test/")
-	defer os.RemoveAll("/var/hyperledger/test/")
+	viper.Set("peer.fileSystemPath", "/var/ledgerone/test/")
+	defer os.RemoveAll("/var/ledgerone/test/")
 
 	b, err := configtxtest.MakeGenesisBlock("testchain")
 	assert.NoError(t, err)

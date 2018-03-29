@@ -25,7 +25,7 @@ This sample demonstrates connecting to both of these services.
 
 # General use
 ```sh
-cd fabric/examples/events/eventsclient
+cd fabric-ledgerone/examples/events/eventsclient
 go build
 ```
 You will see the executable **eventsclient** if there are no compilation errors.

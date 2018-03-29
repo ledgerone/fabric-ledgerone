@@ -20,12 +20,12 @@ none
 
 Resolved Vulnerabilities
 ------------------------
-https://jira.hyperledger.org/browse/FAB-4824
-https://jira.hyperledger.org/browse/FAB-5406
+https://jira.ledgerone.org/browse/FAB-4824
+https://jira.ledgerone.org/browse/FAB-5406
 
 Known Issues & Workarounds
 --------------------------
-The fabric-ccenv image which is used to build chaincode, currently includes
+The fabric-ledgerone-ccenv image which is used to build chaincode, currently includes
 the github.com/ledgerone/fabric-ledgerone/core/chaincode/shim ("shim") package.
 This is convenient, as it provides the ability to package chaincode
 without the need to include the "shim". However, this may cause issues in future
@@ -35,9 +35,9 @@ In order to avoid any issues, users are advised to manually vendor the "shim"
 package with their chaincode prior to using the peer CLI for packaging and/or
 for installing chaincode.
 
-Please refer to `FAB-5177 <https://jira.hyperledger.org/browse/FAB-5177>`__ for more details,
+Please refer to `FAB-5177 <https://jira.ledgerone.org/browse/FAB-5177>`__ for more details,
 and kindly be aware that given the above, we may end up changing the
-fabric-ccenv in the future.
+fabric-ledgerone-ccenv in the future.
 
 `Change Log <https://github.com/ledgerone/fabric-ledgerone/blob/master/CHANGELOG.md#v110>`__
 
@@ -61,7 +61,7 @@ none
 
 Known Issues & Workarounds
 --------------------------
-The fabric-ccenv image which is used to build chaincode, currently includes
+The fabric-ledgerone-ccenv image which is used to build chaincode, currently includes
 the github.com/ledgerone/fabric-ledgerone/core/chaincode/shim ("shim") package.
 This is convenient, as it provides the ability to package chaincode
 without the need to include the "shim". However, this may cause issues in future
@@ -71,9 +71,9 @@ In order to avoid any issues, users are advised to manually vendor the "shim"
 package with their chaincode prior to using the peer CLI for packaging and/or
 for installing chaincode.
 
-Please refer to `FAB-5177 <https://jira.hyperledger.org/browse/FAB-5177>`__ for more details,
+Please refer to `FAB-5177 <https://jira.ledgerone.org/browse/FAB-5177>`__ for more details,
 and kindly be aware that given the above, we may end up changing the
-fabric-ccenv in the future.
+fabric-ledgerone-ccenv in the future.
 
 `Change Log <https://github.com/ledgerone/fabric-ledgerone/blob/master/CHANGELOG.md#v110-rc1>`__
 
@@ -82,18 +82,18 @@ fabric-ccenv in the future.
 This is a feature-complete *alpha* release of the up-coming 1.1 release. The 1.1 release
 includes the following new major features:
 
-  - `FAB-6911 <https://jira.hyperledger.org/browse/FAB-6911>`__ - Event service for blocks
-  - `FAB-5481 <https://jira.hyperledger.org/browse/FAB-5481>`__ - Event service for block transaction events
-  - `FAB-5300 <https://jira.hyperledger.org/browse/FAB-5300>`__ - Certificate Revocation List from CA
-  - `FAB-3067 <https://jira.hyperledger.org/browse/FAB-3067>`__ - Peer management of CouchDB indexes
-  - `FAB-6715 <https://jira.hyperledger.org/browse/FAB-6715>`__ - Mutual TLS between all components
-  - `FAB-5556 <https://jira.hyperledger.org/browse/FAB-5556>`__ - Rolling Upgrade via configured capabilities
-  - `FAB-2331 <https://jira.hyperledger.org/browse/FAB-2331>`__ - Node.js Chaincode support
-  - `FAB-5363 <https://jira.hyperledger.org/browse/FAB-5363>`__ - Node.js SDK Connection Profile
-  - `FAB-830 <https://jira.hyperledger.org/browse/FAB-830>`__ - Encryption library for chaincode
-  - `FAB-5346 <https://jira.hyperledger.org/browse/FAB-5346>`__ - Attribute-based Access Control
-  - `FAB-6089 <https://jira.hyperledger.org/browse/FAB-6089>`__ - Chaincode APIs for creator identity
-  - `FAB-6421 <https://jira.hyperledger.org/browse/FAB-6421>`__ - Performance improvements
+  - `FAB-6911 <https://jira.ledgerone.org/browse/FAB-6911>`__ - Event service for blocks
+  - `FAB-5481 <https://jira.ledgerone.org/browse/FAB-5481>`__ - Event service for block transaction events
+  - `FAB-5300 <https://jira.ledgerone.org/browse/FAB-5300>`__ - Certificate Revocation List from CA
+  - `FAB-3067 <https://jira.ledgerone.org/browse/FAB-3067>`__ - Peer management of CouchDB indexes
+  - `FAB-6715 <https://jira.ledgerone.org/browse/FAB-6715>`__ - Mutual TLS between all components
+  - `FAB-5556 <https://jira.ledgerone.org/browse/FAB-5556>`__ - Rolling Upgrade via configured capabilities
+  - `FAB-2331 <https://jira.ledgerone.org/browse/FAB-2331>`__ - Node.js Chaincode support
+  - `FAB-5363 <https://jira.ledgerone.org/browse/FAB-5363>`__ - Node.js SDK Connection Profile
+  - `FAB-830 <https://jira.ledgerone.org/browse/FAB-830>`__ - Encryption library for chaincode
+  - `FAB-5346 <https://jira.ledgerone.org/browse/FAB-5346>`__ - Attribute-based Access Control
+  - `FAB-6089 <https://jira.ledgerone.org/browse/FAB-6089>`__ - Chaincode APIs for creator identity
+  - `FAB-6421 <https://jira.ledgerone.org/browse/FAB-6421>`__ - Performance improvements
 
   Additionally, there are feature improvements, bug fixes, documentation and test
   coverage improvements, UX improvements based on user feedback and changes to address a
@@ -110,7 +110,7 @@ none
 
 Known Issues & Workarounds
 --------------------------
-The fabric-ccenv image which is used to build chaincode, currently includes
+The fabric-ledgerone-ccenv image which is used to build chaincode, currently includes
 the github.com/ledgerone/fabric-ledgerone/core/chaincode/shim ("shim") package.
 This is convenient, as it provides the ability to package chaincode
 without the need to include the "shim". However, this may cause issues in future
@@ -120,9 +120,9 @@ In order to avoid any issues, users are advised to manually vendor the "shim"
 package with their chaincode prior to using the peer CLI for packaging and/or
 for installing chaincode.
 
-Please refer to `FAB-5177 <https://jira.hyperledger.org/browse/FAB-5177>`__ for more details,
+Please refer to `FAB-5177 <https://jira.ledgerone.org/browse/FAB-5177>`__ for more details,
 and kindly be aware that given the above, we may end up changing the
-fabric-ccenv in the future.
+fabric-ledgerone-ccenv in the future.
 
 `Change Log <https://github.com/ledgerone/fabric-ledgerone/blob/master/CHANGELOG.md#v110-alpha>`__
 
@@ -132,12 +132,12 @@ This is a *preview* release of the up-coming 1.1 release. We are not feature
 complete for 1.1 just yet, but we wanted to get the following functionality
 published to gain some early community feedback on the following features:
 
-  - `FAB-2331 <https://jira.hyperledger.org/browse/FAB-2331>`__ - Node.js Chaincode
-  - `FAB-5363 <https://jira.hyperledger.org/browse/FAB-5363>`__ - Node.js SDK Connection Profile
-  - `FAB-830 <https://jira.hyperledger.org/browse/FAB-830>`__ - Encryption library for chaincode
-  - `FAB-5346 <https://jira.hyperledger.org/browse/FAB-5346>`__ - Attribute-based Access Control
-  - `FAB-6089 <https://jira.hyperledger.org/browse/FAB-6089>`__ - Chaincode APIs to retrieve creator cert info
-  - `FAB-6421 <https://jira.hyperledger.org/browse/FAB-6421>`__ - Performance improvements
+  - `FAB-2331 <https://jira.ledgerone.org/browse/FAB-2331>`__ - Node.js Chaincode
+  - `FAB-5363 <https://jira.ledgerone.org/browse/FAB-5363>`__ - Node.js SDK Connection Profile
+  - `FAB-830 <https://jira.ledgerone.org/browse/FAB-830>`__ - Encryption library for chaincode
+  - `FAB-5346 <https://jira.ledgerone.org/browse/FAB-5346>`__ - Attribute-based Access Control
+  - `FAB-6089 <https://jira.ledgerone.org/browse/FAB-6089>`__ - Chaincode APIs to retrieve creator cert info
+  - `FAB-6421 <https://jira.ledgerone.org/browse/FAB-6421>`__ - Performance improvements
 
 Additionally, there are the usual bug fixes, documentation and test coverage
 improvements, UX improvements based on user feedback and changes to address a
@@ -154,7 +154,7 @@ none
 
 Known Issues & Workarounds
 --------------------------
-The fabric-ccenv image which is used to build chaincode, currently includes
+The fabric-ledgerone-ccenv image which is used to build chaincode, currently includes
 the github.com/ledgerone/fabric-ledgerone/core/chaincode/shim ("shim") package.
 This is convenient, as it provides the ability to package chaincode
 without the need to include the "shim". However, this may cause issues in future
@@ -164,9 +164,9 @@ In order to avoid any issues, users are advised to manually vendor the "shim"
 package with their chaincode prior to using the peer CLI for packaging and/or
 for installing chaincode.
 
-Please refer to `FAB-5177 <https://jira.hyperledger.org/browse/FAB-5177>`__ for more details,
+Please refer to `FAB-5177 <https://jira.ledgerone.org/browse/FAB-5177>`__ for more details,
 and kindly be aware that given the above, we may end up changing the
-fabric-ccenv in the future.
+fabric-ledgerone-ccenv in the future.
 
 `Change Log <https://github.com/ledgerone/fabric-ledgerone/blob/master/CHANGELOG.md#v110-preview>`__
 
@@ -186,7 +186,7 @@ none
 
 Known Issues & Workarounds
 --------------------------
-The fabric-ccenv image which is used to build chaincode, currently includes
+The fabric-ledgerone-ccenv image which is used to build chaincode, currently includes
 the github.com/ledgerone/fabric-ledgerone/core/chaincode/shim ("shim") package.
 This is convenient, as it provides the ability to package chaincode
 without the need to include the "shim". However, this may cause issues in future
@@ -196,9 +196,9 @@ In order to avoid any issues, users are advised to manually vendor the "shim"
 package with their chaincode prior to using the peer CLI for packaging and/or
 for installing chaincode.
 
-Please refer to https://jira.hyperledger.org/browse/FAB-5177 for more details,
+Please refer to https://jira.ledgerone.org/browse/FAB-5177 for more details,
 and kindly be aware that given the above, we may end up changing the
-fabric-ccenv in the future.
+fabric-ledgerone-ccenv in the future.
 
 `Change Log <https://github.com/ledgerone/fabric-ledgerone/blob/v1.0.4/CHANGELOG.md#v104>`__
 
@@ -216,7 +216,7 @@ Resolved Vulnerabilities
 none
 
 Known Issues & Workarounds
-The fabric-ccenv image which is used to build chaincode, currently includes
+The fabric-ledgerone-ccenv image which is used to build chaincode, currently includes
 the github.com/ledgerone/fabric-ledgerone/core/chaincode/shim ("shim") package.
 This is convenient, as it provides the ability to package chaincode
 without the need to include the "shim". However, this may cause issues in future
@@ -226,9 +226,9 @@ In order to avoid any issues, users are advised to manually vendor the "shim"
 package with their chaincode prior to using the peer CLI for packaging and/or
 for installing chaincode.
 
-Please refer to https://jira.hyperledger.org/browse/FAB-5177 for more details,
+Please refer to https://jira.ledgerone.org/browse/FAB-5177 for more details,
 and kindly be aware that given the above, we may end up changing the
-fabric-ccenv in the future.
+fabric-ledgerone-ccenv in the future.
 
 `Change Log <https://github.com/ledgerone/fabric-ledgerone/blob/master/CHANGELOG.md#v103>`__
 
@@ -243,11 +243,11 @@ Known Vulnerabilities
 none
 
 Resolved Vulnerabilities
-https://jira.hyperledger.org/browse/FAB-5753
-https://jira.hyperledger.org/browse/FAB-5899
+https://jira.ledgerone.org/browse/FAB-5753
+https://jira.ledgerone.org/browse/FAB-5899
 
 Known Issues & Workarounds
-The fabric-ccenv image which is used to build chaincode, currently includes
+The fabric-ledgerone-ccenv image which is used to build chaincode, currently includes
 the github.com/ledgerone/fabric-ledgerone/core/chaincode/shim ("shim") package.
 This is convenient, as it provides the ability to package chaincode
 without the need to include the "shim". However, this may cause issues in future
@@ -257,9 +257,9 @@ In order to avoid any issues, users are advised to manually vendor the "shim"
 package with their chaincode prior to using the peer CLI for packaging and/or
 for installing chaincode.
 
-Please refer to https://jira.hyperledger.org/browse/FAB-5177 for more details,
+Please refer to https://jira.ledgerone.org/browse/FAB-5177 for more details,
 and kindly be aware that given the above, we may end up changing the
-fabric-ccenv in the future.
+fabric-ledgerone-ccenv in the future.
 
 `Change Log <https://github.com/ledgerone/fabric-ledgerone/blob/master/CHANGELOG.md#v102>`__
 
@@ -274,15 +274,15 @@ Known Vulnerabilities
 none
 
 Resolved Vulnerabilities
-https://jira.hyperledger.org/browse/FAB-5329
-https://jira.hyperledger.org/browse/FAB-5330
-https://jira.hyperledger.org/browse/FAB-5353
-https://jira.hyperledger.org/browse/FAB-5529
-https://jira.hyperledger.org/browse/FAB-5606
-https://jira.hyperledger.org/browse/FAB-5627
+https://jira.ledgerone.org/browse/FAB-5329
+https://jira.ledgerone.org/browse/FAB-5330
+https://jira.ledgerone.org/browse/FAB-5353
+https://jira.ledgerone.org/browse/FAB-5529
+https://jira.ledgerone.org/browse/FAB-5606
+https://jira.ledgerone.org/browse/FAB-5627
 
 Known Issues & Workarounds
-The fabric-ccenv image which is used to build chaincode, currently includes
+The fabric-ledgerone-ccenv image which is used to build chaincode, currently includes
 the github.com/ledgerone/fabric-ledgerone/core/chaincode/shim ("shim") package.
 This is convenient, as it provides the ability to package chaincode
 without the need to include the "shim". However, this may cause issues in future
@@ -292,9 +292,9 @@ In order to avoid any issues, users are advised to manually vendor the "shim"
 package with their chaincode prior to using the peer CLI for packaging and/or
 for installing chaincode.
 
-Please refer to https://jira.hyperledger.org/browse/FAB-5177 for more details,
+Please refer to https://jira.ledgerone.org/browse/FAB-5177 for more details,
 and kindly be aware that given the above, we may end up changing the
-fabric-ccenv in the future.
+fabric-ledgerone-ccenv in the future.
 
 `Change Log <https://github.com/ledgerone/fabric-ledgerone/blob/master/CHANGELOG.md#v101>`__
 
@@ -310,10 +310,10 @@ Known Vulnerabilities
 none
 
 Resolved Vulnerabilities
-https://jira.hyperledger.org/browse/FAB-5207
+https://jira.ledgerone.org/browse/FAB-5207
 
 Known Issues & Workarounds
-The fabric-ccenv image which is used to build chaincode, currently includes
+The fabric-ledgerone-ccenv image which is used to build chaincode, currently includes
 the github.com/ledgerone/fabric-ledgerone/core/chaincode/shim ("shim") package.
 This is convenient, as it provides the ability to package chaincode
 without the need to include the "shim". However, this may cause issues in future
@@ -323,9 +323,9 @@ In order to avoid any issues, users are advised to manually vendor the "shim"
 package with their chaincode prior to using the peer CLI for packaging and/or
 for installing chaincode.
 
-Please refer to https://jira.hyperledger.org/browse/FAB-5177 for more details,
+Please refer to https://jira.ledgerone.org/browse/FAB-5177 for more details,
 and kindly be aware that given the above, we may end up changing the
-fabric-ccenv in the future.
+fabric-ledgerone-ccenv in the future.
 
 `Change Log <https://github.com/ledgerone/fabric-ledgerone/blob/master/CHANGELOG.md#v100>`__
 
@@ -340,12 +340,12 @@ Known Vulnerabilities
 none
 
 Resolved Vulnerabilities
-https://jira.hyperledger.org/browse/FAB-4856
-https://jira.hyperledger.org/browse/FAB-4848
-https://jira.hyperledger.org/browse/FAB-4751
-https://jira.hyperledger.org/browse/FAB-4626
-https://jira.hyperledger.org/browse/FAB-4567
-https://jira.hyperledger.org/browse/FAB-3715
+https://jira.ledgerone.org/browse/FAB-4856
+https://jira.ledgerone.org/browse/FAB-4848
+https://jira.ledgerone.org/browse/FAB-4751
+https://jira.ledgerone.org/browse/FAB-4626
+https://jira.ledgerone.org/browse/FAB-4567
+https://jira.ledgerone.org/browse/FAB-3715
 
 Known Issues & Workarounds
 none
@@ -379,7 +379,7 @@ Known Issues & Workarounds
 
 BCCSP content in the configtx.yaml has been `removed <https://github.com/ledgerone/fabric-ledgerone/commit/a997c30>`__. This change will cause a panic when running `configtxgen` tool with a configtx.yaml file that includes the removed BCCSP content.
 
-Java Chaincode support has been disabled until post 1.0.0 as it is not yet fully mature. It may be re-enabled for experimentation by cloning the hyperledger/fabric repository, reversing `this commit <https://github.com/ledgerone/fabric-ledgerone/commit/29e0c40>`__ and building your own fork.
+Java Chaincode support has been disabled until post 1.0.0 as it is not yet fully mature. It may be re-enabled for experimentation by cloning the ledgerone/fabric repository, reversing `this commit <https://github.com/ledgerone/fabric-ledgerone/commit/29e0c40>`__ and building your own fork.
 
 `Change Log <https://github.com/ledgerone/fabric-ledgerone/blob/master/CHANGELOG.md#v100-beta>`__
 
@@ -413,7 +413,7 @@ architecture.
 
 `Change Log <https://github.com/ledgerone/fabric-ledgerone/blob/master/CHANGELOG.md#v06-preview-september-16-2016>`__
 
-`v0.5-developer-preview <https://github.com/hyperledger-archives/fabric/tree/v0.5-developer-preview>`__ - June 17, 2016
+`v0.5-developer-preview <https://github.com/ledgerone-archives/fabric-ledgerone/tree/v0.5-developer-preview>`__ - June 17, 2016
 -----------------------------------------------------------------------------------------------------------------------
 
 A developer preview release of the Hyperledger Fabric intended to

@@ -50,7 +50,7 @@ General:
         ServerTimeout: 20s
 
     # Log Level: The level at which to log. This accepts logging specifications
-    # per: fabric/docs/Setup/logging-control.md
+    # per: fabric-ledgerone/docs/Setup/logging-control.md
     LogLevel: info
 
     # Log Format:  The format string to use when logging.  Especially useful to disable color logging
@@ -134,11 +134,11 @@ FileLedger:
     # Location: The directory to store the blocks in.
     # NOTE: If this is unset, a new temporary location will be chosen every time
     # the orderer is restarted, using the prefix specified by Prefix.
-    Location: /var/hyperledger/production/orderer
+    Location: /var/ledgerone/production/orderer
 
     # The prefix to use when generating a ledger directory in temporary space.
     # Otherwise, this value is ignored.
-    Prefix: hyperledger-fabric-ordererledger
+    Prefix: ledgerone-fabric-ordererledger
 
 ################################################################################
 #

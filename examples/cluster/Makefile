@@ -36,13 +36,13 @@ RELEASE ?= latest
 CA_RELEASE ?= $(RELEASE)
 COUCH_RELEASE ?= $(RELEASE)
 FABRIC_RELEASE ?= $(RELEASE)
-DOCKER_NS ?= hyperledger
+DOCKER_NS ?= ledgerone
 TLS ?= true
 
 CRYPTOGEN=build/bin/cryptogen
 CONFIGTXGEN=build/bin/configtxgen
 
-FABRICPKG=github.com/hyperledger/fabric
+FABRICPKG=github.com/ledgerone/fabric
 pkgmap.cryptogen      := $(FABRICPKG)/common/tools/cryptogen
 pkgmap.configtxgen    := $(FABRICPKG)/common/tools/configtxgen
 

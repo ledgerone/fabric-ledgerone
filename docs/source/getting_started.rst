@@ -33,7 +33,7 @@ API Documentation
 ^^^^^^^^^^^^^^^^^
 
 The API documentation for Hyperledger Fabric's Golang APIs can be found on
-the godoc site for `Fabric <http://godoc.org/github.com/hyperledger/fabric>`_.
+the godoc site for `Fabric <http://godoc.org/github.com/ledgerone/fabric>`_.
 If you plan on doing any development using these APIs, you may want to
 bookmark those links now.
 
@@ -45,13 +45,13 @@ programming languages. The first two delivered SDKs are the Node.js and Java
 SDKs. We hope to provide Python, REST and Go SDKs in a subsequent release.
 
   * `Hyperledger Fabric Node SDK documentation <https://fabric-sdk-node.github.io/>`__.
-  * `Hyperledger Fabric Java SDK documentation <https://github.com/hyperledger/fabric-sdk-java>`__.
+  * `Hyperledger Fabric Java SDK documentation <https://github.com/ledgerone/fabric-sdk-java>`__.
 
 Hyperledger Fabric CA
 ^^^^^^^^^^^^^^^^^^^^^
 
 Hyperledger Fabric provides an optional
-`certificate authority service <http://hyperledger-fabric-ca.readthedocs.io/en/latest>`_
+`certificate authority service <http://ledgerone-fabric-ca.readthedocs.io/en/latest>`_
 that you may choose to use to generate the certificates and key material
 to configure and manage identity in your blockchain network. However, any CA
 that can generate ECDSA certificates may be used.

@@ -9,7 +9,7 @@ syntax = "proto3";
 import "common/policies.proto";
 
 option go_package = "github.com/ledgerone/fabric-ledgerone/protos/common";
-option java_package = "org.hyperledger.fabric.protos.common";
+option java_package = "org.ledgerone.fabric_ledgerone.protos.common";
 
 package common;
 

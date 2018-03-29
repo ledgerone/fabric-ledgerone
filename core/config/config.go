@@ -125,7 +125,7 @@ func GetPath(key string) string {
 	return TranslatePath(filepath.Dir(viper.ConfigFileUsed()), p)
 }
 
-const OfficialPath = "/etc/hyperledger/fabric"
+const OfficialPath = "/etc/ledgerone/fabric"
 
 //----------------------------------------------------------------------------------
 // InitViper()
@@ -151,7 +151,7 @@ func InitViper(v *viper.Viper, configName string) error {
 		//
 		// *) CWD
 		// *) The $GOPATH based development tree
-		// *) /etc/hyperledger/fabric
+		// *) /etc/ledgerone/fabric
 		//
 
 		// CWD

@@ -33,7 +33,7 @@ import (
 )
 
 func TestKVLedgerBlockStorage(t *testing.T) {
-	viper.Set("peer.fileSystemPath", "/tmp/fabric/committertest")
+	viper.Set("peer.fileSystemPath", "/tmp/fabric-ledgerone/committertest")
 	ledgermgmt.InitializeTestEnv()
 	defer ledgermgmt.CleanupTestEnv()
 	gb, _ := test.MakeGenesisBlock("TestLedger")
@@ -82,7 +82,7 @@ func TestKVLedgerBlockStorage(t *testing.T) {
 }
 
 func TestNewLedgerCommitterReactive(t *testing.T) {
-	viper.Set("peer.fileSystemPath", "/tmp/fabric/committertest")
+	viper.Set("peer.fileSystemPath", "/tmp/fabric-ledgerone/committertest")
 	chainID := "TestLedger"
 
 	ledgermgmt.InitializeTestEnv()

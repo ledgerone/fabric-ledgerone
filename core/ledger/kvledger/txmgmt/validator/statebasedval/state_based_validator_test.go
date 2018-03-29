@@ -47,7 +47,7 @@ func TestMain(m *testing.M) {
 	flogging.SetModuleLevel("statevalidator", "debug")
 	flogging.SetModuleLevel("statebasedval", "debug")
 	flogging.SetModuleLevel("statecouchdb", "debug")
-	viper.Set("peer.fileSystemPath", "/tmp/fabric/ledgertests/kvledger/txmgmt/validator/statebasedval")
+	viper.Set("peer.fileSystemPath", "/tmp/fabric-ledgerone/ledgertests/kvledger/txmgmt/validator/statebasedval")
 	os.Exit(m.Run())
 }
 

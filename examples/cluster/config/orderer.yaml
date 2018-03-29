@@ -38,7 +38,7 @@ General:
         ClientRootCAs:
 
     # Log Level: The level at which to log. This accepts logging specifications
-    # per: fabric/docs/Setup/logging-control.md
+    # per: fabric-ledgerone/docs/Setup/logging-control.md
     LogLevel: debug
 
     # Genesis method: The method by which the genesis block for the orderer
@@ -116,7 +116,7 @@ FileLedger:
 
     # The prefix to use when generating a ledger directory in temporary space.
     # Otherwise, this value is ignored.
-    Prefix: hyperledger-fabric-ordererledger
+    Prefix: ledgerone-fabric-ordererledger
 
 ################################################################################
 #

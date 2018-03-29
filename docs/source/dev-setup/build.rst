@@ -8,7 +8,7 @@ To build Hyperledger Fabric:
 
 ::
 
-    cd $GOPATH/src/github.com/hyperledger/fabric
+    cd $GOPATH/src/github.com/ledgerone/fabric
     make dist-clean all
 
 Running the unit tests
@@ -18,7 +18,7 @@ Use the following sequence to run all unit tests
 
 ::
 
-    cd $GOPATH/src/github.com/hyperledger/fabric
+    cd $GOPATH/src/github.com/ledgerone/fabric
     make unit-test
 
 To run a subset of tests, set the TEST_PKGS environment variable.
@@ -47,7 +47,7 @@ Running Node.js Client SDK Unit Tests
 You must also run the Node.js unit tests to ensure that the Node.js
 client SDK is not broken by your changes. To run the Node.js unit tests,
 follow the instructions
-`here <https://github.com/hyperledger/fabric-sdk-node/blob/master/README.md>`__.
+`here <https://github.com/ledgerone/fabric-sdk-node/blob/master/README.md>`__.
 
 Running Behave BDD Tests
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -62,7 +62,7 @@ that transactions run properly. To run these tests
 
 ::
 
-    cd $GOPATH/src/github.com/hyperledger/fabric
+    cd $GOPATH/src/github.com/ledgerone/fabric
     make behave
 
 Some of the Behave tests run inside Docker containers. If a test fails
@@ -100,17 +100,17 @@ To get started, from a freshly installed OS:
 
     sudo su
     yum install git
-    mkdir -p $HOME/git/src/github.com/hyperledger
-    cd $HOME/git/src/github.com/hyperledger
-    git clone http://gerrit.hyperledger.org/r/fabric
-    source fabric/devenv/setupRHELonZ.sh
+    mkdir -p $HOME/git/src/github.com/ledgerone
+    cd $HOME/git/src/github.com/ledgerone
+    git clone http://gerrit.ledgerone.org/r/fabric
+    source fabric-ledgerone/devenv/setupRHELonZ.sh
 
 From this point, you can proceed as described above for the Vagrant
 development environment.
 
 ::
 
-    cd $GOPATH/src/github.com/hyperledger/fabric
+    cd $GOPATH/src/github.com/ledgerone/fabric
     make peer unit-test behave
 
 Building on Power Platform
@@ -131,11 +131,11 @@ the following commands to build the fabric code:
 
 ::
 
-    mkdir -p $GOPATH/src/github.com/hyperledger
-    cd $GOPATH/src/github.com/hyperledger
-    git clone http://gerrit.hyperledger.org/r/fabric
-    sudo ./fabric/devenv/setupUbuntuOnPPC64le.sh
-    cd $GOPATH/src/github.com/hyperledger/fabric
+    mkdir -p $GOPATH/src/github.com/ledgerone
+    cd $GOPATH/src/github.com/ledgerone
+    git clone http://gerrit.ledgerone.org/r/fabric
+    sudo ./fabric-ledgerone/devenv/setupUbuntuOnPPC64le.sh
+    cd $GOPATH/src/github.com/ledgerone/fabric
     make dist-clean all
 
 Configuration

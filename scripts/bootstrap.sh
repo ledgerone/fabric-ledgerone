@@ -20,8 +20,8 @@ dockerFabricPull() {
   for IMAGES in peer orderer ccenv javaenv tools; do
       echo "==> FABRIC IMAGE: $IMAGES"
       echo
-      docker pull hyperledger/fabric-$IMAGES:$FABRIC_TAG
-      docker tag hyperledger/fabric-$IMAGES:$FABRIC_TAG hyperledger/fabric-$IMAGES
+      docker pull ledgerone/fabric-$IMAGES:$FABRIC_TAG
+      docker tag ledgerone/fabric-$IMAGES:$FABRIC_TAG ledgerone/fabric-$IMAGES
   done
 }
 
@@ -30,8 +30,8 @@ dockerThirdPartyImagesPull() {
   for IMAGES in couchdb kafka zookeeper; do
       echo "==> THIRDPARTY DOCKER IMAGE: $IMAGES"
       echo
-      docker pull hyperledger/fabric-$IMAGES:$THIRDPARTY_TAG
-      docker tag hyperledger/fabric-$IMAGES:$THIRDPARTY_TAG hyperledger/fabric-$IMAGES
+      docker pull ledgerone/fabric-$IMAGES:$THIRDPARTY_TAG
+      docker tag ledgerone/fabric-$IMAGES:$THIRDPARTY_TAG ledgerone/fabric-$IMAGES
   done
 }
 
@@ -39,8 +39,8 @@ dockerCaPull() {
       local CA_TAG=$1
       echo "==> FABRIC CA IMAGE"
       echo
-      docker pull hyperledger/fabric-ca:$CA_TAG
-      docker tag hyperledger/fabric-ca:$CA_TAG hyperledger/fabric-ca
+      docker pull ledgerone/fabric-ca:$CA_TAG
+      docker tag ledgerone/fabric-ca:$CA_TAG ledgerone/fabric-ca
 }
 
 : ${CA_TAG:="$MARCH-$CA_VERSION"}
@@ -48,10 +48,10 @@ dockerCaPull() {
 : ${THIRDPARTY_TAG:="$MARCH-$THIRDPARTY_IMAGE_VERSION"}
 
 echo "===> Downloading platform specific fabric binaries"
-curl https://nexus.hyperledger.org/content/repositories/releases/org/hyperledger/fabric/hyperledger-fabric/${ARCH}-${VERSION}/hyperledger-fabric-${ARCH}-${VERSION}.tar.gz | tar xz
+curl https://nexus.ledgerone.org/content/repositories/releases/org/ledgerone/fabric-ledgerone/ledgerone-fabric-ledgerone/${ARCH}-${VERSION}/ledgerone-fabric-${ARCH}-${VERSION}.tar.gz | tar xz
 
 echo "===> Downloading platform specific fabric-ca-client binary"
-curl https://nexus.hyperledger.org/content/repositories/releases/org/hyperledger/fabric-ca/hyperledger-fabric-ca/${ARCH}-${VERSION}/hyperledger-fabric-ca-${ARCH}-${VERSION}.tar.gz | tar xz
+curl https://nexus.ledgerone.org/content/repositories/releases/org/ledgerone/fabric-ca/ledgerone-fabric-ca/${ARCH}-${VERSION}/ledgerone-fabric-ca-${ARCH}-${VERSION}.tar.gz | tar xz
 if [ $? != 0 ]; then
      echo
      echo "------> $VERSION fabric-ca-client binary is not available to download  (Avaialble from 1.1.0-rc1) <----"
@@ -67,5 +67,5 @@ echo "===> Pulling thirdparty docker images"
 dockerThirdPartyImagesPull ${THIRDPARTY_TAG}
 
 echo
-echo "===> List out hyperledger docker images"
-docker images | grep hyperledger*
+echo "===> List out ledgerone docker images"
+docker images | grep ledgerone*

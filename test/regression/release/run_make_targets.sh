@@ -8,7 +8,7 @@
 
 set -o pipefail
 
-CWD=$GOPATH/src/github.com/hyperledger/fabric
+CWD=$GOPATH/src/github.com/ledgerone/fabric
 cd $CWD
 
 VERSION=`cat Makefile | grep BASE_VERSION | awk '{print $3}' | head -n1`

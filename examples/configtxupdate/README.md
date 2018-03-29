@@ -64,7 +64,7 @@ First build and start the `configtxlator`.
 ```
 $ make configtxlator
 build/bin/configtxlator
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-42434e60f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/common/tools/configtxlator
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-42434e60f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.ledgerone.fabric_ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=ledgerone" github.com/ledgerone/fabric-ledgerone/common/tools/configtxlator
 Binary available as build/bin/configtxlator
 ```
 ```
@@ -77,11 +77,11 @@ Then, in another window, build the `configtxgen` tool.
 ```
 $ make configtxgen
 build/bin/configtxgen
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "nopkcs11" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/common/configtx/tool/configtxgen
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "nopkcs11" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.ledgerone.fabric_ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=ledgerone" github.com/ledgerone/fabric-ledgerone/common/configtx/tool/configtxgen
 Binary available as build/bin/configtxgen
 ```
 
-It is recommended to run the example by invoking the script `fabric/examples/configtxupdate/bootstrap_batchsize/script.sh` as follows:
+It is recommended to run the example by invoking the script `fabric-ledgerone/examples/configtxupdate/bootstrap_batchsize/script.sh` as follows:
 
 ```
 INTERACTIVE=true ./script.sh
@@ -129,7 +129,7 @@ First build and start the `configtxlator`.
 ```
 $ make configtxlator
 build/bin/configtxlator
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-42434e60f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/common/tools/configtxlator
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-42434e60f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.ledgerone.fabric_ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=ledgerone" github.com/ledgerone/fabric-ledgerone/common/tools/configtxlator
 Binary available as build/bin/configtxlator
 ```
 ```
@@ -142,14 +142,14 @@ Then, in another window, build the orderer and peer.
 ```
 $ make peer
 Installing chaintool
-curl -L https://github.com/hyperledger/fabric-chaintool/releases/download/v0.10.3/chaintool > build/bin/chaintool
+curl -L https://github.com/ledgerone/fabric-chaintool/releases/download/v0.10.3/chaintool > build/bin/chaintool
 ...
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/peer
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.ledgerone.fabric_ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=ledgerone" github.com/ledgerone/fabric-ledgerone/peer
 Binary available as build/bin/peer
 
 $ make orderer
 build/bin/orderer
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/orderer
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.ledgerone.fabric_ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=ledgerone" github.com/ledgerone/fabric-ledgerone/orderer
 Binary available as build/bin/orderer
 ```
 Start the orderer using the default options, including the provisional bootstrapper which will create a `testchainid` ordering system channel.
@@ -160,7 +160,7 @@ ORDERER_GENERAL_LOGLEVEL=debug orderer
 
 Reconfiguring a channel can be performed in a very similar way to modifying a genesis config.
 
-The recommended path to proceed with this example is to run the script located at `fabric/examples/configtxupdate/reconfigure_batchsize/script.sh` by invoking
+The recommended path to proceed with this example is to run the script located at `fabric-ledgerone/examples/configtxupdate/reconfigure_batchsize/script.sh` by invoking
 
 ```
 INTERACTIVE=true ./script.sh
@@ -248,7 +248,7 @@ First build and start the `configtxlator`.
 ```
 $ make configtxlator
 build/bin/configtxlator
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-42434e60f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/common/tools/configtxlator
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-42434e60f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.ledgerone.fabric_ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=ledgerone" github.com/ledgerone/fabric-ledgerone/common/tools/configtxlator
 Binary available as build/bin/configtxlator
 ```
 ```
@@ -261,7 +261,7 @@ Then, in another window, build the `configtxgen` tool.
 ```
 $ make configtxgen
 build/bin/configtxgen
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "nopkcs11" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/common/configtx/tool/configtxgen
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "nopkcs11" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.ledgerone.fabric_ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=ledgerone" github.com/ledgerone/fabric-ledgerone/common/configtx/tool/configtxgen
 Binary available as build/bin/configtxgen
 ```
 
@@ -270,14 +270,14 @@ Then, build the orderer and peer.
 ```
 $ make peer
 Installing chaintool
-curl -L https://github.com/hyperledger/fabric-chaintool/releases/download/v0.10.3/chaintool > build/bin/chaintool
+curl -L https://github.com/ledgerone/fabric-chaintool/releases/download/v0.10.3/chaintool > build/bin/chaintool
 ...
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/peer
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.ledgerone.fabric_ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=ledgerone" github.com/ledgerone/fabric-ledgerone/peer
 Binary available as build/bin/peer
 
 $ make orderer
 build/bin/orderer
-CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.hyperledger.fabric -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=hyperledger -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=hyperledger" github.com/ledgerone/fabric-ledgerone/orderer
+CGO_CFLAGS=" " GOBIN=/home/yellickj/go/src/github.com/ledgerone/fabric-ledgerone/build/bin go install -tags "" -ldflags "-X github.com/ledgerone/fabric-ledgerone/common/metadata.Version=1.0.0-alpha3-snapshot-63e0dc80f -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseVersion=0.3.1 -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerLabel=org.ledgerone.fabric_ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.DockerNamespace=ledgerone -X github.com/ledgerone/fabric-ledgerone/common/metadata.BaseDockerNamespace=ledgerone" github.com/ledgerone/fabric-ledgerone/orderer
 Binary available as build/bin/orderer
 ```
 
@@ -289,7 +289,7 @@ ORDERER_GENERAL_LOGLEVEL=debug ORDERER_GENERAL_GENESISPROFILE=SampleDevModeSolo 
 
 The process to add an organization then follows exactly like the batch size example, but, instead of setting the batch size, a new org is defined at the application level.  Adding an organization is slightly more involved, because we must first create a channel, then modify its membership set.
 
-To see this example run the script `fabric/examples/configtxupdate/reconfig_membership/script.sh` by:
+To see this example run the script `fabric-ledgerone/examples/configtxupdate/reconfig_membership/script.sh` by:
 
 ```
 INTERACTIVE=true ./script.sh

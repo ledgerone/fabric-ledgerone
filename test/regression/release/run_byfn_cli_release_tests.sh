@@ -9,12 +9,12 @@
 #####################
 
 CH_NAME="$1"
-rm -rf ${GOPATH}/src/github.com/hyperledger/fabric-samples
+rm -rf ${GOPATH}/src/github.com/ledgerone/fabric-samples
 
-WD="${GOPATH}/src/github.com/hyperledger/fabric-samples"
+WD="${GOPATH}/src/github.com/ledgerone/fabric-samples"
 REPO_NAME=fabric-samples
 
-git clone ssh://hyperledger-jobbuilder@gerrit.hyperledger.org:29418/$REPO_NAME $WD
+git clone ssh://ledgerone-jobbuilder@gerrit.ledgerone.org:29418/$REPO_NAME $WD
 cd $WD
 
 curl -L https://raw.githubusercontent.com/ledgerone/fabric-ledgerone/master/scripts/bootstrap-1.0.1.sh -o bootstrap-1.0.1.sh

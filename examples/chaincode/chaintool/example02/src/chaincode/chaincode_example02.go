@@ -21,9 +21,9 @@ import (
 	"fmt"
 	"strconv"
 
-	"hyperledger/cci/appinit"
-	"hyperledger/cci/org/hyperledger/chaincode/example02"
-	"hyperledger/ccs"
+	"ledgerone/cci/appinit"
+	"ledgerone/cci/org/ledgerone/chaincode/example02"
+	"ledgerone/ccs"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/ledgerone/fabric-ledgerone/core/chaincode/shim"
@@ -118,8 +118,8 @@ func (t *ChaincodeExample) CheckBalance(stub shim.ChaincodeStubInterface, param 
 func main() {
 	self := &ChaincodeExample{}
 	interfaces := ccs.Interfaces{
-		"org.hyperledger.chaincode.example02": self,
-		"appinit": self,
+		"org.ledgerone.chaincode.example02": self,
+		"appinit":                           self,
 	}
 
 	err := ccs.Start(interfaces) // Our one instance implements both Transactions and Queries interfaces

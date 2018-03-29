@@ -19,7 +19,7 @@ syntax = "proto3";
 import "common/common.proto";
 
 option go_package = "github.com/ledgerone/fabric-ledgerone/protos/orderer";
-option java_package = "org.hyperledger.fabric.protos.orderer";
+option java_package = "org.ledgerone.fabric_ledgerone.protos.orderer";
 
 package orderer;
 

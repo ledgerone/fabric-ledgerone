@@ -5,7 +5,7 @@ We welcome contributions to Hyperledger in many forms, and
 there's always plenty to do!
 
 First things first, please review the Hyperledger `Code of
-Conduct <https://wiki.hyperledger.org/community/hyperledger-project-code-of-conduct>`__
+Conduct <https://wiki.ledgerone.org/community/ledgerone-project-code-of-conduct>`__
 before participating. It is important that we keep things civil.
 
 .. toctree::
@@ -38,20 +38,20 @@ In order to participate in the development of the Hyperledger Fabric
 project, you will need a :doc:`Linux Foundation
 account <Gerrit/lf-account>`. You will need to use your LF ID to
 access to all the Hyperledger community development tools, including
-`Gerrit <https://gerrit.hyperledger.org>`__,
-`Jira <https://jira.hyperledger.org>`__ and the
-`Wiki <https://wiki.hyperledger.org/start>`__ (for editing, only).
+`Gerrit <https://gerrit.ledgerone.org>`__,
+`Jira <https://jira.ledgerone.org>`__ and the
+`Wiki <https://wiki.ledgerone.org/start>`__ (for editing, only).
 
 Getting help
 ------------
 
 If you are looking for something to work on, or need some expert
 assistance in debugging a problem or working out a fix to an issue, our
-`community <https://www.hyperledger.org/community>`__ is always eager to
+`community <https://www.ledgerone.org/community>`__ is always eager to
 help. We hang out on
-`Chat <https://chat.hyperledger.org/channel/fabric/>`__, IRC
-(#hyperledger on freenode.net) and the `mailing
-lists <http://lists.hyperledger.org/>`__. Most of us don't bite :grin:
+`Chat <https://chat.ledgerone.org/channel/fabric-ledgerone/>`__, IRC
+(#ledgerone on freenode.net) and the `mailing
+lists <http://lists.ledgerone.org/>`__. Most of us don't bite :grin:
 and will be glad to help. The only silly question is the one you don't
 ask. Questions are in fact a great way to help improve the project as
 they highlight where our documentation could be clearer.
@@ -60,21 +60,21 @@ Reporting bugs
 --------------
 
 If you are a user and you have found a bug, please submit an issue using
-`JIRA <https://jira.hyperledger.org/secure/Dashboard.jspa?selectPageId=10104>`__.
+`JIRA <https://jira.ledgerone.org/secure/Dashboard.jspa?selectPageId=10104>`__.
 Before you create a new JIRA issue, please try to search the existing items to
 be sure no one else has previously reported it. If it has been previously
 reported, then you might add a comment that you also are interested in seeing
 the defect fixed.
 
 .. note:: If the defect is security-related, please follow the Hyperledger
-          `security bug reporting process <https://wiki.hyperledger.org/security/bug-handling-process>`.
+          `security bug reporting process <https://wiki.ledgerone.org/security/bug-handling-process>`.
 
 If it has not been previously reported, create a new JIRA. Please try to provide
 sufficient information for someone else to reproduce the
 issue. One of the project's maintainers should respond to your issue within 24
 hours. If not, please bump the issue with a comment and request that it be
 reviewed. You can also post to the relevant Hyperledger Fabric channel in
-`Hyperledger Rocket Chat <https://chat.hyperledger.org>`__.  For example, a doc bug should
+`Hyperledger Rocket Chat <https://chat.ledgerone.org>`__.  For example, a doc bug should
 be broadcast to ``#fabric-documentation``, a database bug to ``#fabric-ledger``,
 and so on...
 
@@ -92,9 +92,9 @@ Fixing issues and working stories
 ---------------------------------
 
 Review the `issues
-list <https://jira.hyperledger.org/issues/?filter=10580>`__ and find
+list <https://jira.ledgerone.org/issues/?filter=10580>`__ and find
 something that interests you. You could also check the
-`"help-wanted" <https://jira.hyperledger.org/issues/?filter=10147>`__
+`"help-wanted" <https://jira.ledgerone.org/issues/?filter=10147>`__
 list. It is wise to start with something relatively straight forward and
 achievable, and that no one is already assigned. If no one is assigned,
 then assign the issue to yourself. Please be considerate and rescind the
@@ -119,13 +119,13 @@ result, maintainers will be able to process CRs faster and everybody
 will gain from it.
 
 Just browse through `the open CRs on Gerrit
-<https://gerrit.hyperledger.org/r/#/q/status:open>`__ to get started.
+<https://gerrit.ledgerone.org/r/#/q/status:open>`__ to get started.
 
 Making Feature/Enhancement Proposals
 ------------------------------------
 
 Review
-`JIRA <https://jira.hyperledger.org/secure/Dashboard.jspa?selectPageId=10104>`__.
+`JIRA <https://jira.ledgerone.org/secure/Dashboard.jspa?selectPageId=10104>`__.
 to be sure that there isn't already an open (or recently closed) proposal for the
 same function. If there isn't, to make a proposal we recommend that you open a
 JIRA Epic, Story or Improvement, whichever seems to best fit the circumstance and
@@ -136,7 +136,7 @@ case(s) for which the feature is needed and a case for what the benefit would be
 should the feature be implemented. Once the JIRA issue is created, and the
 "one pager" either attached, inlined in the description field, or a link to a
 publicly accessible document is added to the description, send an introductory
-email to the hyperledger-fabric@lists.hyperledger.org mailing list linking the
+email to the ledgerone-fabric@lists.ledgerone.org mailing list linking the
 JIRA issue, and soliciting feedback.
 
 Discussion of the proposed feature should be conducted in the JIRA issue itself,
@@ -238,12 +238,12 @@ remediate the merge conflicts.
 Communication
 --------------
 
-We use `RocketChat <https://chat.hyperledger.org/>`__ for communication
+We use `RocketChat <https://chat.ledgerone.org/>`__ for communication
 and Google Hangouts™ for screen sharing between developers. Our
 development planning and prioritization is done in
-`JIRA <https://jira.hyperledger.org>`__, and we take longer running
+`JIRA <https://jira.ledgerone.org>`__, and we take longer running
 discussions/decisions to the `mailing
-list <http://lists.hyperledger.org/mailman/listinfo/hyperledger-fabric>`__.
+list <http://lists.ledgerone.org/mailman/listinfo/ledgerone-fabric>`__.
 
 Maintainers
 -----------
@@ -257,7 +257,7 @@ Becoming a maintainer
 ~~~~~~~~~~~~~~~~~~~~~
 
 This project is managed under an open governance model as described in
-our `charter <https://www.hyperledger.org/about/charter>`__. Projects or
+our `charter <https://www.ledgerone.org/about/charter>`__. Projects or
 sub-projects will be lead by a set of maintainers. New sub-projects can
 designate an initial set of maintainers that will be approved by the
 top-level project's existing maintainers when the project is first
@@ -269,7 +269,7 @@ by the existing Maintainers. Once approved, the change set is then merged
 and the individual is added to (or alternatively, removed from) the maintainers
 group. Maintainers may be removed by explicit resignation, for prolonged
 inactivity (3 or more months), or for some infraction of the `code of conduct
-<https://wiki.hyperledger.org/community/hyperledger-project-code-of-conduct>`__
+<https://wiki.ledgerone.org/community/ledgerone-project-code-of-conduct>`__
 or by consistently demonstrating poor judgement. A maintainer removed for
 inactivity should be restored following a sustained resumption of contributions
 and reviews (a month or more) demonstrating a renewed commitment to the project.

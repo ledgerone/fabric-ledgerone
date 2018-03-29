@@ -12,9 +12,9 @@ if experimental features are turned on, and chaincode information. For example:
    Experimental features: true
    Chaincode:
     Base Image Version: 0.4.5
-    Base Docker Namespace: hyperledger
-    Base Docker Label: org.hyperledger.fabric
-    Docker Namespace: hyperledger
+    Base Docker Namespace: ledgerone
+    Base Docker Label: org.ledgerone.fabric_ledgerone
+    Docker Namespace: ledgerone
 ```
 
 ## Syntax

@@ -15,7 +15,7 @@ limitations under the License.
 */
 syntax = "proto3";
 package protos;
-option java_package = "org.hyperledger.fabric.protos.peer";
+option java_package = "org.ledgerone.fabric_ledgerone.protos.peer";
 option java_outer_classname = "ChaincodeEventPackage";
 option go_package = "github.com/ledgerone/fabric-ledgerone/protos/peer";
 

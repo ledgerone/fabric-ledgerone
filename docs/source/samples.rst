@@ -25,7 +25,7 @@ execute the following commands:
 
 .. code:: bash
 
-  git clone -b master https://github.com/hyperledger/fabric-samples.git
+  git clone -b master https://github.com/ledgerone/fabric-samples.git
   cd fabric-samples
   git checkout {TAG}　
 
@@ -88,7 +88,7 @@ can be picked up without fully qualifying the path to each binary. e.g.:
   export PATH=<path to download location>/bin:$PATH
 
 Finally, the script will download the Hyperledger Fabric docker images from
-`Docker Hub <https://hub.docker.com/u/hyperledger/>`__ into
+`Docker Hub <https://hub.docker.com/u/ledgerone/>`__ into
 your local Docker registry and tag them as 'latest'.
 
 The script lists out the Docker images installed upon conclusion.

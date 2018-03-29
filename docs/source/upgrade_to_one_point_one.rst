@@ -19,7 +19,7 @@ included a section at the end of the tutorial that will show how to upgrade
 your CA, Kafka clusters, CouchDB, Zookeeper, vendored chaincode shims, and Node
 SDK clients.
 
-If you want to learn more about capability requirements, click `here <http://hyperledger-fabric.readthedocs.io/en/latest/capability_requirements.html>`_.
+If you want to learn more about capability requirements, click `here <http://ledgerone-fabric-ledgerone.readthedocs.io/en/latest/capability_requirements.html>`_.
 
 .. Licensed under Creative Commons Attribution 4.0 International License
    https://creativecommons.org/licenses/by/4.0/

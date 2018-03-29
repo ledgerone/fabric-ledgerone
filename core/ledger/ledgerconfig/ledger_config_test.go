@@ -50,40 +50,40 @@ func TestLedgerConfigPathDefault(t *testing.T) {
 	setUpCoreYAMLConfig()
 	testutil.AssertEquals(t,
 		GetRootPath(),
-		"/var/hyperledger/production/ledgersData")
+		"/var/ledgerone/production/ledgersData")
 	testutil.AssertEquals(t,
 		GetLedgerProviderPath(),
-		"/var/hyperledger/production/ledgersData/ledgerProvider")
+		"/var/ledgerone/production/ledgersData/ledgerProvider")
 	testutil.AssertEquals(t,
 		GetStateLevelDBPath(),
-		"/var/hyperledger/production/ledgersData/stateLeveldb")
+		"/var/ledgerone/production/ledgersData/stateLeveldb")
 	testutil.AssertEquals(t,
 		GetHistoryLevelDBPath(),
-		"/var/hyperledger/production/ledgersData/historyLeveldb")
+		"/var/ledgerone/production/ledgersData/historyLeveldb")
 	testutil.AssertEquals(t,
 		GetBlockStorePath(),
-		"/var/hyperledger/production/ledgersData/chains")
+		"/var/ledgerone/production/ledgersData/chains")
 }
 
 func TestLedgerConfigPath(t *testing.T) {
 	setUpCoreYAMLConfig()
 	defer ledgertestutil.ResetConfigToDefaultValues()
-	viper.Set("peer.fileSystemPath", "/tmp/hyperledger/production")
+	viper.Set("peer.fileSystemPath", "/tmp/ledgerone/production")
 	testutil.AssertEquals(t,
 		GetRootPath(),
-		"/tmp/hyperledger/production/ledgersData")
+		"/tmp/ledgerone/production/ledgersData")
 	testutil.AssertEquals(t,
 		GetLedgerProviderPath(),
-		"/tmp/hyperledger/production/ledgersData/ledgerProvider")
+		"/tmp/ledgerone/production/ledgersData/ledgerProvider")
 	testutil.AssertEquals(t,
 		GetStateLevelDBPath(),
-		"/tmp/hyperledger/production/ledgersData/stateLeveldb")
+		"/tmp/ledgerone/production/ledgersData/stateLeveldb")
 	testutil.AssertEquals(t,
 		GetHistoryLevelDBPath(),
-		"/tmp/hyperledger/production/ledgersData/historyLeveldb")
+		"/tmp/ledgerone/production/ledgersData/historyLeveldb")
 	testutil.AssertEquals(t,
 		GetBlockStorePath(),
-		"/tmp/hyperledger/production/ledgersData/chains")
+		"/tmp/ledgerone/production/ledgersData/chains")
 }
 
 func TestGetQueryLimitDefault(t *testing.T) {

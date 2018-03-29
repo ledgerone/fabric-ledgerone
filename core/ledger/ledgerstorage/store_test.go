@@ -34,7 +34,7 @@ import (
 func TestMain(m *testing.M) {
 	flogging.SetModuleLevel("ledgerstorage", "debug")
 	flogging.SetModuleLevel("pvtdatastorage", "debug")
-	viper.Set("peer.fileSystemPath", "/tmp/fabric/core/ledger/ledgerstorage")
+	viper.Set("peer.fileSystemPath", "/tmp/fabric-ledgerone/core/ledger/ledgerstorage")
 	os.Exit(m.Run())
 }
 

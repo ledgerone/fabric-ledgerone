@@ -45,7 +45,7 @@ func TestCar_BuildImage(t *testing.T) {
 		return
 	}
 
-	chaincodePath := cwd + "/org.hyperledger.chaincode.example02-0.1-SNAPSHOT.car"
+	chaincodePath := cwd + "/org.ledgerone.chaincode.example02-0.1-SNAPSHOT.car"
 	spec := &pb.ChaincodeSpec{Type: pb.ChaincodeSpec_CAR, ChaincodeId: &pb.ChaincodeID{Name: "cartest", Path: chaincodePath}, Input: &pb.ChaincodeInput{Args: util.ToChaincodeArgs("f")}}
 	if err := vm.BuildChaincodeContainer(spec); err != nil {
 		t.Error(err)

@@ -40,7 +40,7 @@ services:
 
   cli:
     container_name: cli
-    image: hyperledger/fabric-tools
+    image: ledgerone/fabric-ledgerone-tools
     tty: true
     environment:
       - GOPATH=/opt/gopath

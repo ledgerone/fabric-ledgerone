@@ -16,13 +16,13 @@ package example;
 
 import static java.lang.String.format;
 import static java.nio.charset.StandardCharsets.UTF_8;
-import static org.hyperledger.fabric.shim.Chaincode.Response.Status.INTERNAL_SERVER_ERROR;
+import static org.ledgerone.fabric_ledgerone.shim.Chaincode.Response.Status.INTERNAL_SERVER_ERROR;
 
 import java.util.Arrays;
 import java.util.List;
 
-import org.hyperledger.fabric.shim.ChaincodeBase;
-import org.hyperledger.fabric.shim.ChaincodeStub;
+import org.ledgerone.fabric_ledgerone.shim.ChaincodeBase;
+import org.ledgerone.fabric_ledgerone.shim.ChaincodeStub;
 
 public class Example05 extends ChaincodeBase {
 

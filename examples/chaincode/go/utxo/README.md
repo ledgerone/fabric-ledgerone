@@ -8,7 +8,7 @@ The purpose of this chaincode is to
 
 2. Demonstrate how to include and use a C library from within a chaincode.
 
-A client for exercising this chaincode is avilable at https://github.com/srderson/hyperledger-fabric-utxo-client-java.
+A client for exercising this chaincode is avilable at https://github.com/srderson/ledgerone-fabric-utxo-client-java.
 
 
 The following are instructions for building and deploying the UTXO chaincode in Hypereledger Fabric. All commands should be run with vagrant.
@@ -20,7 +20,7 @@ cd $GOPATH/src/github.com/ledgerone/fabric-ledgerone/examples/chaincode/go/utxo/
 docker build -t utxo:0.1.0 .
 ```
 
-Next, modify the `core.yaml` file in the Hyperledger Fabric project to point to the local Docker image that was built in the previous step. In the core.yaml file find `chaincode.golang.Dockerfile` and change it from from `hyperledger/fabric-baseimage` to `utxo:0.1.0`
+Next, modify the `core.yaml` file in the Hyperledger Fabric project to point to the local Docker image that was built in the previous step. In the core.yaml file find `chaincode.golang.Dockerfile` and change it from from `ledgerone/fabric-baseimage` to `utxo:0.1.0`
 
 Start the peer using the following commands
 ```
@@ -52,7 +52,7 @@ go test github.com/ledgerone/fabric-ledgerone/core/container -run=BuildImage_Pee
 
 Using the Docker image that we just built, start a peer within a container in `chaincodedev` mode.
 ```
-docker run -it -p 7051:7051 -p 7053:7053 hyperledger/fabric-peer peer node start --peer-chaincodedev
+docker run -it -p 7051:7051 -p 7053:7053 ledgerone/fabric-ledgerone-peer peer node start --peer-chaincodedev
 ```
 
 

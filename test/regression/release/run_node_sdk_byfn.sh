@@ -8,16 +8,16 @@
 
 # RUN END-to-END Test
 #####################
-rm -rf ${WORKSPACE}/gopath/src/github.com/hyperledger/fabric-sdk-node
+rm -rf ${WORKSPACE}/gopath/src/github.com/ledgerone/fabric-sdk-node
 
-WD="${WORKSPACE}/gopath/src/github.com/hyperledger/fabric-sdk-node"
+WD="${WORKSPACE}/gopath/src/github.com/ledgerone/fabric-sdk-node"
 SDK_REPO_NAME=fabric-sdk-node
-git clone ssh://hyperledger-jobbuilder@gerrit.hyperledger.org:29418/$SDK_REPO_NAME $WD
+git clone ssh://ledgerone-jobbuilder@gerrit.ledgerone.org:29418/$SDK_REPO_NAME $WD
 cd $WD
 git checkout tags/v1.0.1
 NODE_SDK_COMMIT=$(git log -1 --pretty=format:"%h")
 
-echo "FABRIC NODE SDK COMMIT ========> " $NODE_SDK_COMMIT >> ${WORKSPACE}/gopath/src/github.com/hyperledger/commit_history.log
+echo "FABRIC NODE SDK COMMIT ========> " $NODE_SDK_COMMIT >> ${WORKSPACE}/gopath/src/github.com/ledgerone/commit_history.log
 
 cd test/fixtures
 cat docker-compose.yaml > docker-compose.log

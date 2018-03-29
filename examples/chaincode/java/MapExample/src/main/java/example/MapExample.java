@@ -16,8 +16,8 @@ limitations under the License.
 
 package example;
 
-import org.hyperledger.fabric.shim.ChaincodeBase;
-import org.hyperledger.fabric.shim.ChaincodeStub;
+import org.ledgerone.fabric_ledgerone.shim.ChaincodeBase;
+import org.ledgerone.fabric_ledgerone.shim.ChaincodeStub;
 
 public class MapExample extends ChaincodeBase {
 

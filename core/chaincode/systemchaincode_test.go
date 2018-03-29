@@ -47,8 +47,8 @@ func (osyscc *oldSysCCInfo) reset() {
 func initSysCCTests() (*oldSysCCInfo, net.Listener, error) {
 	var opts []grpc.ServerOption
 	grpcServer := grpc.NewServer(opts...)
-	viper.Set("peer.fileSystemPath", "/tmp/hyperledger/test/tmpdb")
-	defer os.RemoveAll("/tmp/hyperledger/test/tmpdb")
+	viper.Set("peer.fileSystemPath", "/tmp/ledgerone/test/tmpdb")
+	defer os.RemoveAll("/tmp/ledgerone/test/tmpdb")
 
 	peer.MockInitialize()
 

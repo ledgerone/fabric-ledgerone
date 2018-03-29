@@ -153,7 +153,7 @@ func main() {
 	flag.StringVar(&mspId, "events-mspid", "", "set up the mspid")
 	flag.Parse()
 
-	//if no msp info provided, we use the default MSP under fabric/sampleconfig
+	//if no msp info provided, we use the default MSP under fabric-ledgerone/sampleconfig
 	if mspDir == "" {
 		err := msptesttools.LoadMSPSetupForTesting()
 		if err != nil {

@@ -8,7 +8,7 @@ version: '2'
 services:
 
   orderer:
-    image: hyperledger/fabric-orderer
+    image: ledgerone/fabric-ledgerone-orderer
     environment:
       - ORDERER_GENERAL_GENESISMETHOD=${ORDERER_GENERAL_GENESISMETHOD}
       - ORDERER_GENERAL_GENESISFILE=${ORDERER_GENERAL_GENESISFILE}
@@ -19,8 +19,8 @@ services:
       - ORDERER_KAFKA_RETRY_SHORTTOTAL=30s
       - ORDERER_KAFKA_VERBOSE=true
     volumes:
-      - ./volumes/orderer:/var/hyperledger/bddtests/volumes/orderer
-      - /etc/hyperledger/msp:/etc/hyperledger/msp
+      - ./volumes/orderer:/var/ledgerone/bddtests/volumes/orderer
+      - /etc/ledgerone/msp:/etc/ledgerone/msp
     working_dir: /opt/gopath/src/github.com/ledgerone/fabric-ledgerone/orderer
     command: orderer
     ports:

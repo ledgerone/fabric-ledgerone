@@ -38,7 +38,7 @@ type fileLedgerTestEnv struct {
 
 func (env *fileLedgerTestEnv) Initialize() (ledgerTestFactory, error) {
 	var err error
-	location, err := ioutil.TempDir("", "hyperledger")
+	location, err := ioutil.TempDir("", "ledgerone")
 	if err != nil {
 		return nil, err
 	}

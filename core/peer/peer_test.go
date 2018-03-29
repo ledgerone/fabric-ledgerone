@@ -86,7 +86,7 @@ func TestInitChain(t *testing.T) {
 }
 
 func TestInitialize(t *testing.T) {
-	viper.Set("peer.fileSystemPath", "/var/hyperledger/test/")
+	viper.Set("peer.fileSystemPath", "/var/ledgerone/test/")
 
 	// we mock this because we can't import the chaincode package lest we create an import cycle
 	ccp.RegisterChaincodeProviderFactory(&ccprovider.MockCcProviderFactory{})
@@ -96,8 +96,8 @@ func TestInitialize(t *testing.T) {
 }
 
 func TestCreateChainFromBlock(t *testing.T) {
-	viper.Set("peer.fileSystemPath", "/var/hyperledger/test/")
-	defer os.RemoveAll("/var/hyperledger/test/")
+	viper.Set("peer.fileSystemPath", "/var/ledgerone/test/")
+	defer os.RemoveAll("/var/ledgerone/test/")
 	testChainID := "mytestchainid"
 	block, err := configtxtest.MakeGenesisBlock(testChainID)
 	if err != nil {

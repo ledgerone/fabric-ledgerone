@@ -23,7 +23,7 @@ import (
 	"github.com/ledgerone/fabric-ledgerone/common/ledger/testutil"
 )
 
-const testDBPath = "/tmp/fabric/ledgertests/util/leveldbhelper"
+const testDBPath = "/tmp/fabric-ledgerone/ledgertests/util/leveldbhelper"
 
 type testDBEnv struct {
 	t    *testing.T

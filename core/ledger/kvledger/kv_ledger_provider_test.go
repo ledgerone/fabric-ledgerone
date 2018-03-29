@@ -171,8 +171,8 @@ func TestMultipleLedgerBasicRW(t *testing.T) {
 
 func TestLedgerBackup(t *testing.T) {
 	ledgerid := "TestLedger"
-	originalPath := "/tmp/fabric/ledgertests/kvledger1"
-	restorePath := "/tmp/fabric/ledgertests/kvledger2"
+	originalPath := "/tmp/fabric-ledgerone/ledgertests/kvledger1"
+	restorePath := "/tmp/fabric-ledgerone/ledgertests/kvledger2"
 	viper.Set("ledger.history.enableHistoryDatabase", true)
 
 	// create and populate a ledger in the original environment

@@ -36,7 +36,7 @@ key-value pairs, with state changes recorded as transactions on a :ref:`Channel`
 ledger.  Assets can be represented in binary and/or JSON form.
 
 You can easily define and use assets in your Hyperledger Fabric applications
-using the `Hyperledger Composer <https://github.com/hyperledger/composer>`__ tool.
+using the `Hyperledger Composer <https://github.com/ledgerone/composer>`__ tool.
 
 .. _Chaincode:
 
@@ -55,7 +55,7 @@ the ledger on all peers.
 Ledger Features
 ---------------
 
-The ledger is the sequenced, tamper-resistant record of all state transitions in the fabric.  State
+The ledger is the sequenced, tamper-resistant record of all state transitions in the fabric-ledgerone.  State
 transitions are a result of chaincode invocations ('transactions') submitted by participating
 parties.  Each transaction results in a set of asset key-value pairs that are committed to the
 ledger as creates, updates, or deletes.

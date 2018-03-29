@@ -255,7 +255,7 @@ Verification of dependencies can be implemented in different ways, according to 
 
 Note that this is sufficient to have all (correct) peers have the same state after processing a deliver event (block) with a given sequence number. Namely, by the guarantees of the ordering service, all correct peers will receive an identical sequence of `deliver(seqno, prevhash, blob)` events. As the evaluation of the endorsement policy and evaluation of version dependencies in `readset` are deterministic, all correct peers will also come to the same conclusion whether a transaction contained in a blob is valid.  Hence, all peers commit and apply the same sequence of transactions and update their state in the same way.
 
-![Illustration of the transaction flow (common-case path).](http://vukolic.com/hyperledger/flow-4.png)
+![Illustration of the transaction flow (common-case path).](http://vukolic.com/ledgerone/flow-4.png)
 
 Figure 1. Illustration of one possible transaction flow (common-case path).
 
@@ -324,7 +324,7 @@ How useful these policies are will depend on the application, on the desired res
 To maintain the abstraction of a ledger that contains only valid and committed transactions (that appears in Bitcoin, for example), peers may, in addition to state and Ledger, maintain the *Validated Ledger (or VLedger)*. This is a hash chain derived from the ledger by filtering out invalid transactions.
 
 The construction of the VLedger blocks (called here *vBlocks*) proceeds as follows. As the `PeerLedger` blocks may contain invalid transactions (i.e., transactions with invalid endorsement or with invalid version dependencies), such transactions are filtered out by peers before a transaction from a block becomes added to a vBlock. Every peer does this by itself (e.g., by using the bitmask associated with `PeerLedger`). A vBlock is defined as a block without the invalid transactions, that have been filtered out. Such vBlocks are inherently dynamic in size and may be empty. An illustration of vBlock construction is given in the figure below.
-     ![Illustration of the transaction flow (common-case path).](http://vukolic.com/hyperledger/blocks-3.png)
+     ![Illustration of the transaction flow (common-case path).](http://vukolic.com/ledgerone/blocks-3.png)
 
 Figure 2. Illustration of validated ledger block (vBlock) formation from ledger (`PeerLedger`) blocks.
 

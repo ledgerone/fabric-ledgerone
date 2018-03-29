@@ -167,8 +167,8 @@ func TestUpdateRootsFromConfigBlock(t *testing.T) {
 			"Org1-server1-key.pem"))
 		viper.Set("peer.tls.rootcert.file", filepath.Join("testdata",
 			"Org1-cert.pem"))
-		viper.Set("peer.fileSystemPath", "/var/hyperledger/test/")
-		defer os.RemoveAll("/var/hyperledger/test/")
+		viper.Set("peer.fileSystemPath", "/var/ledgerone/test/")
+		defer os.RemoveAll("/var/ledgerone/test/")
 		err := peer.CreateChainFromBlock(block)
 		if err != nil {
 			t.Fatalf("Failed to create config block (%s)", err)

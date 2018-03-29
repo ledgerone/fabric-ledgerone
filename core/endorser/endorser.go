@@ -41,7 +41,7 @@ func (ce chaincodeError) Error() string {
 var endorserLogger = flogging.MustGetLogger("endorser")
 
 // The Jira issue that documents Endorser flow along with its relationship to
-// the lifecycle chaincode - https://jira.hyperledger.org/browse/FAB-181
+// the lifecycle chaincode - https://jira.ledgerone.org/browse/FAB-181
 
 type privateDataDistributor func(channel string, txID string, privateData *rwset.TxPvtReadWriteSet) error
 

@@ -14,10 +14,10 @@
 # To get started:
 #       sudo su
 #       yum install git
-#       mkdir -p $HOME/git/src/github.com/hyperledger
-#       cd $HOME/git/src/github.com/hyperledger
-#       git clone http://gerrit.hyperledger.org/r/fabric
-#       source fabric/devenv/setupRHELonZ.sh
+#       mkdir -p $HOME/git/src/github.com/ledgerone
+#       cd $HOME/git/src/github.com/ledgerone
+#       git clone http://gerrit.ledgerone.org/r/fabric
+#       source fabric-ledgerone/devenv/setupRHELonZ.sh
 #       make peer unit-test behave
 
 if [ xroot != x$(whoami) ]
@@ -26,9 +26,9 @@ then
    exit
 fi
 
-if [ -n -d $HOME/git/src/github.com/hyperledger/fabric ]
+if [ -n -d $HOME/git/src/github.com/ledgerone/fabric ]
 then
-    echo "Script fabric code is under $HOME/git/src/github.com/hyperledger/fabric "
+    echo "Script fabric code is under $HOME/git/src/github.com/ledgerone/fabric "
     exit
 fi
 
@@ -111,6 +111,6 @@ HEREDOC
 
 source ~/.bashrc
 
-# Build the actual hyperledger peer
-cd $GOPATH/src/github.com/hyperledger/fabric
+# Build the actual ledgerone peer
+cd $GOPATH/src/github.com/ledgerone/fabric
 make clean peer

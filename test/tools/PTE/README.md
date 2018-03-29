@@ -2,7 +2,7 @@
 # Performance Traffic Engine - PTE
 
 The Performance Traffic Engine (PTE) uses [Hyperledger Fabric Client (HFC) Node SDK](https://fabric-sdk-node.github.io/index.html)
-to interact with a [Hyperledger Fabric](http://hyperledger-fabric.readthedocs.io/en/latest/) network.
+to interact with a [Hyperledger Fabric](http://ledgerone-fabric-ledgerone.readthedocs.io/en/latest/) network.
 
 ## Table Of Contents:
 - [Prerequisites](#prerequisites)
@@ -42,7 +42,7 @@ Below is the v1.0.0-alpha commit levels.
 - PTE needs to supports any number of organizations in a channel. PTE supports two organizations per channel now (FAB-3809).
 - PTE can only send transactions to the anchor peer of an organization. It will need to be able to send transactions to any peer.
 - Endorsement policy is not supported yet.
-- Replace `git clone https://github.com/hyperledger/fabric-sdk-node.git` with fabric-client and fabric-ca-client.
+- Replace `git clone https://github.com/ledgerone/fabric-sdk-node.git` with fabric-client and fabric-ca-client.
 - Post-alpha2, remove v1performance info.
 
 ## Prerequisites
@@ -58,20 +58,20 @@ To build and test the following prerequisites must be installed first:
     - in Ubuntu: `apt install -y build-essential python libltdl-dev`
     - or refer to your distribution's repository
 
-If planning to run your Fabric network locally, you'll need docker and a bit more. See [Hyperledger Fabric - Getting Started](http://hyperledger-fabric.readthedocs.io/en/latest/getting_started.html) for details.
+If planning to run your Fabric network locally, you'll need docker and a bit more. See [Hyperledger Fabric - Getting Started](http://ledgerone-fabric-ledgerone.readthedocs.io/en/latest/getting_started.html) for details.
 
 ## Setup
 1. Download fabric sources and checkout appropriate commit levels (v1.0.0-alpha2 shown here):
-    - `go get -d github.com/hyperledger/fabric`
+    - `go get -d github.com/ledgerone/fabric`
     - `cd $GOPATH/src/github.com/ledgerone/fabric-ledgerone/`
     - `git checkout v1.0.0-alpha2`
     - Optional: `make docker`
-    - `go get -d github.com/hyperledger/fabric-ca`
-    - `cd $GOPATH/src/github.com/hyperledger/fabric-ca/`
+    - `go get -d github.com/ledgerone/fabric-ca`
+    - `cd $GOPATH/src/github.com/ledgerone/fabric-ca/`
     - `git checkout v1.0.0-alpha2`
     - Optional: `make docker`
-    - `go get -d github.com/hyperledger/fabric-sdk-node`
-    - `cd $GOPATH/src/github.com/hyperledger/fabric-sdk-node`
+    - `go get -d github.com/ledgerone/fabric-sdk-node`
+    - `cd $GOPATH/src/github.com/ledgerone/fabric-sdk-node`
     - `git checkout v1.0.0-alpha2`
 
     If `make docker` is skipped, the assumption is that the user will either acquire docker images from another source, or PTE will run against a remote Fabric network. See [Creating a local Fabric network](#creating-a-local-fabric-network) for additional information on this.
@@ -278,12 +278,12 @@ The following chaincodes are tested and supported:
 * **example02**: This is a simple chaincode with limited capability.  This chaincode is **NOT** suitable for performance benchmark.
 * **ccchecker**:  This chaincode supports variable payload sizes.
 See userInput-ccchecker.json for example of userInput file. Take the following steps to install this chaincode:
-  - `cd $GOPATH/src/github.com/hyperledger/fabric-sdk-node/test/fixtures/src/github.com`
+  - `cd $GOPATH/src/github.com/ledgerone/fabric-sdk-node/test/fixtures/src/github.com`
   - `mkdir ccchecker`
   - download newkeyperinvoke.go into ccchecker directory
 * **sample_cc**: This chaincode supports variable (randomized) payload sizes and performs encryption and decryption on the payload. Specify ccType as ccchecker when using this chaincode.
 See userInput-samplecc.json for example of userInput file. Take the following steps to install this chaincode:
-  - `cd $GOPATH/src/github.com/hyperledger/fabric-sdk-node/test/fixtures/src/github.com`
+  - `cd $GOPATH/src/github.com/ledgerone/fabric-sdk-node/test/fixtures/src/github.com`
   - `mkdir sample_cc`
   - download chaincode_sample.go into sample_cc directory
 
@@ -523,7 +523,7 @@ PTE supports multi orderers by specifying an orderer to each organization using 
         ```
     - `./network_setup.sh up`
 - Alternatively, consider using the [NetworkLauncher](https://github.com/dongmingh/v1Launcher) tool:
-    - `cd $GOPATH/src/github.com/hyperledger/fabric-sdk-node/test`
+    - `cd $GOPATH/src/github.com/ledgerone/fabric-sdk-node/test`
     - `git clone https://github.com/dongmingh/v1Launcher`
     - `cd v1Launcher`
     - `./NetworkLauncher.sh -?`

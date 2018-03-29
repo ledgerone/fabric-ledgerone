@@ -510,9 +510,9 @@ and how some of these more low level application functions can be leveraged
 Additional Resources
 --------------------
 
-The `Hyperledger Fabric Node SDK repo <https://github.com/hyperledger/fabric-sdk-node>`__
+The `Hyperledger Fabric Node SDK repo <https://github.com/ledgerone/fabric-sdk-node>`__
 is an excellent resource for deeper documentation and sample code.  You can also consult
-the Fabric community and component experts on `Hyperledger Rocket Chat <https://chat.hyperledger.org/home>`__.
+the Fabric community and component experts on `Hyperledger Rocket Chat <https://chat.ledgerone.org/home>`__.
 
 .. Licensed under Creative Commons Attribution 4.0 International License
    https://creativecommons.org/licenses/by/4.0/

@@ -8,7 +8,7 @@ Refer to [../daily/README](../daily/README.md) Everything there is relevant.
 The tests are split into groups; each could be executed by different CI jobs in parallel.
 
 ```
-    cd /path/to/fabric/test/regression/weekly
+    cd /path/to/fabric-ledgerone/test/regression/weekly
 ```
 
 ```

@@ -6,7 +6,7 @@ Architecture Reference
 
    arch-deep-dive
    txflow
-   Hyperledger Fabric CA's User Guide <http://hyperledger-fabric-ca.readthedocs.io/en/latest>
+   Hyperledger Fabric CA's User Guide <http://ledgerone-fabric-ca.readthedocs.io/en/latest>
    fabric-sdks
    channels
    capability_requirements

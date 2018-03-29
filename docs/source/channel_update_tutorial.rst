@@ -116,7 +116,7 @@ Bring Org3 into the Channel Manually
 
             cli:
               container_name: cli
-              image: hyperledger/fabric-tools:$IMAGE_TAG
+              image: ledgerone/fabric-ledgerone-tools:$IMAGE_TAG
               tty: true
               stdin_open: true
               environment:
@@ -133,7 +133,7 @@ Bring Org3 into the Channel Manually
 
             Org3cli:
               container_name: Org3cli
-              image: hyperledger/fabric-tools:$IMAGE_TAG
+              image: ledgerone/fabric-ledgerone-tools:$IMAGE_TAG
               tty: true
               stdin_open: true
               environment:

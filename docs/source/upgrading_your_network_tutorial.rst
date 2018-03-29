@@ -200,7 +200,7 @@ Once the orderer is down, you'll want to **backup its ledger and MSP**:
 
   mkdir -p $LEDGERS_BACKUP
 
-  docker cp orderer.example.com:/var/hyperledger/production/orderer/ ./$LEDGERS_BACKUP/orderer.example.com
+  docker cp orderer.example.com:/var/ledgerone/production/orderer/ ./$LEDGERS_BACKUP/orderer.example.com
 
 In a production network this process would be repeated for each of the Kafka-based
 orderers in a rolling fashion.
@@ -255,7 +255,7 @@ We can then **backup the peer’s ledger and MSP**:
 
   mkdir -p $LEDGERS_BACKUP
 
-  docker cp $PEER:/var/hyperledger/production ./$LEDGERS_BACKUP/$PEER
+  docker cp $PEER:/var/ledgerone/production ./$LEDGERS_BACKUP/$PEER
 
 With the peer stopped and the ledger backed up, **remove the peer chaincode
 containers**:
@@ -846,7 +846,7 @@ section, we’ll talk through the process of updating them.
 Fabric CA Container
 ~~~~~~~~~~~~~~~~~~~
 
-To learn how to upgrade your Fabric CA server, click over to the `CA documentation. <http://hyperledger-fabric-ca.readthedocs.io/en/latest/users-guide.html#upgrading-the-server>`_
+To learn how to upgrade your Fabric CA server, click over to the `CA documentation. <http://ledgerone-fabric-ca.readthedocs.io/en/latest/users-guide.html#upgrading-the-server>`_
 
 Upgrade Node SDK Clients
 ~~~~~~~~~~~~~~~~~~~~~~~~

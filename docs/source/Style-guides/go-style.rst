@@ -20,7 +20,7 @@ generate/update the respective ``.pb.go`` files.
 
 ::
 
-    cd $GOPATH/src/github.com/hyperledger/fabric
+    cd $GOPATH/src/github.com/ledgerone/fabric
     make protos
 
 Adding or updating Go packages

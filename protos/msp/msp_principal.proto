@@ -18,7 +18,7 @@ limitations under the License.
 syntax = "proto3";
 
 option go_package = "github.com/ledgerone/fabric-ledgerone/protos/msp";
-option java_package = "org.hyperledger.fabric.protos.common";
+option java_package = "org.ledgerone.fabric_ledgerone.protos.common";
 
 package common;
 
@@ -120,7 +120,7 @@ message MSPRole {
 }
 
 
-// TODO: Bring msp.SerializedIdentity from fabric/msp/identities.proto here. Reason below.
+// TODO: Bring msp.SerializedIdentity from fabric-ledgerone/msp/identities.proto here. Reason below.
 // SerializedIdentity represents an serialized version of an identity;
 // this consists of an MSP-identifier this identity would correspond to
 // and the bytes of the actual identity. A serialized form of

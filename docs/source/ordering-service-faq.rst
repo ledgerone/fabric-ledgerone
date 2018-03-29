@@ -158,7 +158,7 @@ BFT
   i.e. it will come with a minor version upgrade in Fabric. Track FAB-33_ for
   updates.
 
-.. _FAB-33: https://jira.hyperledger.org/browse/FAB-33
+.. _FAB-33: https://jira.ledgerone.org/browse/FAB-33
 
 .. Licensed under Creative Commons Attribution 4.0 International License
    https://creativecommons.org/licenses/by/4.0/

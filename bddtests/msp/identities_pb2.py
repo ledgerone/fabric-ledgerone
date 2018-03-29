@@ -19,9 +19,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='msp/identities.proto',
   package='msp',
   syntax='proto3',
-  serialized_pb=_b('\n\x14msp/identities.proto\x12\x03msp\"5\n\x12SerializedIdentity\x12\r\n\x05mspid\x18\x01 \x01(\t\x12\x10\n\x08id_bytes\x18\x02 \x01(\x0c\x42M\n!org.hyperledger.fabric.protos.mspZ(github.com/ledgerone/fabric-ledgerone/protos/mspb\x06proto3')
+  serialized_pb=_b('\n\x14msp/identities.proto\x12\x03msp\"5\n\x12SerializedIdentity\x12\r\n\x05mspid\x18\x01 \x01(\t\x12\x10\n\x08id_bytes\x18\x02 \x01(\x0c\"_\n\x18SerializedIdemixIdentity\x12\x0c\n\x04NymX\x18\x01 \x01(\x0c\x12\x0c\n\x04NymY\x18\x02 \x01(\x0c\x12\n\n\x02OU\x18\x03 \x01(\x0c\x12\x0c\n\x04Role\x18\x04 \x01(\x0c\x12\r\n\x05Proof\x18\x05 \x01(\x0c\x42]\n)org.ledgerone.fabric_ledgerone.protos.mspZ0github.com/ledgerone/fabric-ledgerone/protos/mspb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -39,14 +38,14 @@ _SERIALIZEDIDENTITY = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='id_bytes', full_name='msp.SerializedIdentity.id_bytes', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -63,7 +62,68 @@ _SERIALIZEDIDENTITY = _descriptor.Descriptor(
   serialized_end=82,
 )
 
+
+_SERIALIZEDIDEMIXIDENTITY = _descriptor.Descriptor(
+  name='SerializedIdemixIdentity',
+  full_name='msp.SerializedIdemixIdentity',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='NymX', full_name='msp.SerializedIdemixIdentity.NymX', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='NymY', full_name='msp.SerializedIdemixIdentity.NymY', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='OU', full_name='msp.SerializedIdemixIdentity.OU', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Role', full_name='msp.SerializedIdemixIdentity.Role', index=3,
+      number=4, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Proof', full_name='msp.SerializedIdemixIdentity.Proof', index=4,
+      number=5, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=84,
+  serialized_end=179,
+)
+
 DESCRIPTOR.message_types_by_name['SerializedIdentity'] = _SERIALIZEDIDENTITY
+DESCRIPTOR.message_types_by_name['SerializedIdemixIdentity'] = _SERIALIZEDIDEMIXIDENTITY
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SerializedIdentity = _reflection.GeneratedProtocolMessageType('SerializedIdentity', (_message.Message,), dict(
   DESCRIPTOR = _SERIALIZEDIDENTITY,
@@ -72,17 +132,14 @@ SerializedIdentity = _reflection.GeneratedProtocolMessageType('SerializedIdentit
   ))
 _sym_db.RegisterMessage(SerializedIdentity)
 
+SerializedIdemixIdentity = _reflection.GeneratedProtocolMessageType('SerializedIdemixIdentity', (_message.Message,), dict(
+  DESCRIPTOR = _SERIALIZEDIDEMIXIDENTITY,
+  __module__ = 'msp.identities_pb2'
+  # @@protoc_insertion_point(class_scope:msp.SerializedIdemixIdentity)
+  ))
+_sym_db.RegisterMessage(SerializedIdemixIdentity)
+
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n!org.hyperledger.fabric.protos.mspZ(github.com/ledgerone/fabric-ledgerone/protos/msp'))
-try:
-  # THESE ELEMENTS WILL BE DEPRECATED.
-  # Please use the generated *_pb2_grpc.py files instead.
-  import grpc
-  from grpc.beta import implementations as beta_implementations
-  from grpc.beta import interfaces as beta_interfaces
-  from grpc.framework.common import cardinality
-  from grpc.framework.interfaces.face import utilities as face_utilities
-except ImportError:
-  pass
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n)org.ledgerone.fabric_ledgerone.protos.mspZ0github.com/ledgerone/fabric-ledgerone/protos/msp'))
 # @@protoc_insertion_point(module_scope)

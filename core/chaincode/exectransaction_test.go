@@ -138,7 +138,7 @@ func finitPeer(lis net.Listener, chainIDs ...string) {
 	ledgermgmt.CleanupTestEnv()
 	ledgerPath := config.GetPath("peer.fileSystemPath")
 	os.RemoveAll(ledgerPath)
-	os.RemoveAll(filepath.Join(os.TempDir(), "hyperledger"))
+	os.RemoveAll(filepath.Join(os.TempDir(), "ledgerone"))
 
 	//if couchdb is enabled, then cleanup the test couchdb
 	if ledgerconfig.IsCouchDBEnabled() == true {

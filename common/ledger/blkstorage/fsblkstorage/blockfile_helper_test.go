@@ -16,7 +16,7 @@ import (
 )
 
 func TestConstructCheckpointInfoFromBlockFiles(t *testing.T) {
-	testPath := "/tmp/tests/fabric/common/ledger/blkstorage/fsblkstorage"
+	testPath := "/tmp/tests/fabric-ledgerone/common/ledger/blkstorage/fsblkstorage"
 	ledgerid := "testLedger"
 	conf := NewConf(testPath, 0)
 	blkStoreDir := conf.getLedgerBlockDir(ledgerid)

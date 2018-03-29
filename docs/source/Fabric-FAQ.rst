@@ -142,7 +142,7 @@ Support for additional languages and the development of a templating language
 have been discussed, and more details will be released in the near future.
 
 It is also possible to build Hyperledger Fabric applications using
-`Hyperledger Composer <https://hyperledger.github.io/composer/>`__.
+`Hyperledger Composer <https://ledgerone.github.io/composer/>`__.
 
 Q. Does the Hyperledger Fabric have native currency?
 
@@ -157,13 +157,13 @@ Differences in Most Recent Releases
 Q. Where can I find what  are the highlighted differences between releases?
 
 A. The differences between any subsequent releases are provided together with the
-`Release Notes <http://hyperledger-fabric.readthedocs.io/en/latest/releases.html>`__.
+`Release Notes <http://ledgerone-fabric-ledgerone.readthedocs.io/en/latest/releases.html>`__.
 Since Fabric is a pluggable modular framework, you can refer to the `design-docs
-<https://wiki.hyperleger.org/projects/fabric/design-docs>`__ for further information of these difference.
+<https://wiki.hyperleger.org/projects/fabric-ledgerone/design-docs>`__ for further information of these difference.
 
 Q. Where to get help for the technical questions not answered above?
 
-A. Please use `StackOverflow <https://stackoverflow.com/questions/tagged/hyperledger>`__.
+A. Please use `StackOverflow <https://stackoverflow.com/questions/tagged/ledgerone>`__.
 
 
 .. Licensed under Creative Commons Attribution 4.0 International License

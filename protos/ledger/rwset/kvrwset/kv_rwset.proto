@@ -17,7 +17,7 @@ limitations under the License.
 syntax = "proto3";
 
 option go_package = "github.com/ledgerone/fabric-ledgerone/protos/ledger/rwset/kvrwset";
-option java_package = "org.hyperledger.fabric.protos.ledger.rwset.kvrwset";
+option java_package = "org.ledgerone.fabric_ledgerone.protos.ledger.rwset.kvrwset";
 
 package kvrwset;
 

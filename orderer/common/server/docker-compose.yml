@@ -42,28 +42,28 @@ version: '3'
 services:
 
   zookeeper0:
-    image: hyperledger/fabric-zookeeper
+    image: ledgerone/fabric-zookeeper
     restart: always
     environment:
       - ZOO_MY_ID=200
       - ZOO_SERVERS=server.200=zookeeper0:2888:3888 server.201=zookeeper1:2888:3888 server.202=zookeeper2:2888:3888
 
   zookeeper1:
-    image: hyperledger/fabric-zookeeper
+    image: ledgerone/fabric-zookeeper
     restart: always
     environment:
       - ZOO_MY_ID=201
       - ZOO_SERVERS=server.200=zookeeper0:2888:3888 server.201=zookeeper1:2888:3888 server.202=zookeeper2:2888:3888
 
   zookeeper2:
-    image: hyperledger/fabric-zookeeper
+    image: ledgerone/fabric-zookeeper
     restart: always
     environment:
       - ZOO_MY_ID=202
       - ZOO_SERVERS=server.200=zookeeper0:2888:3888 server.201=zookeeper1:2888:3888 server.202=zookeeper2:2888:3888
 
   kafka0:
-    image: hyperledger/fabric-kafka
+    image: ledgerone/fabric-kafka
     restart: always
     environment:
       - KAFKA_BROKER_ID=800
@@ -86,7 +86,7 @@ services:
       - 9092:9092
 
   kafka1:
-    image: hyperledger/fabric-kafka
+    image: ledgerone/fabric-kafka
     restart: always
     environment:
       - KAFKA_BROKER_ID=801
@@ -109,7 +109,7 @@ services:
       - 9192:9092
 
   kafka2:
-    image: hyperledger/fabric-kafka
+    image: ledgerone/fabric-kafka
     restart: always
     environment:
       - KAFKA_BROKER_ID=802

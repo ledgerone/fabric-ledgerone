@@ -4,12 +4,12 @@
 #
 
 ca:
-  image: hyperledger/fabric-ca
+  image: ledgerone/fabric-ca
   ports:
     - 7054:7054
 
 orderer:
-  image: hyperledger/fabric-orderer
+  image: ledgerone/fabric-ledgerone-orderer
   environment:
     - ORDERER_GENERAL_LEDGERTYPE=ram
     - ORDERER_GENERAL_BATCHTIMEOUT=10s
@@ -23,7 +23,7 @@ orderer:
     - 7050:7050
 
 vp:
-  image: hyperledger/fabric-peer
+  image: ledgerone/fabric-ledgerone-peer
   links:
     - orderer
   ports:
